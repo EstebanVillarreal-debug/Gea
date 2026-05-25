@@ -15,11 +15,11 @@ body {
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .landing {
-    margin: -20px;
-    width: min(100%, 760px);
+    width: min(100%, 10000px);
     min-height: 100vh;
     padding: 45px 64px 26px;
     position: relative;
@@ -28,15 +28,14 @@ body {
     column-gap: 42px;
     row-gap: 18px;
     align-items: center;
+    margin-top: 80px;
 }
 
 .titulo {
-/* el grid-column se utiliza para controlar la posición y el tamaño horizontal de un elemento dentro de un contenedor */
-    grid-column: 1 / -1;
-    width: min(82%, 650px);
-    min-height: 82px;
-    margin: 0 auto;
+    width: min(9000vw, 1800px);
+    margin-top: -990px;
     padding: 12px 34px;
+    justify-self: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,14 +44,17 @@ body {
     border-radius: 999px;
     box-shadow: 0 7px 8px rgba(0, 0, 0, 0.22);
     border: 2px solid black;
+    position: absolute;
 }
 
 .linea {
-    grid-column: 1 / -1;
-    width: 92%;
+    width: min(90vw, 1800px);
     height: 2px;
     background-color: #000000;
     margin: -6px auto 0;
+    position: absolute;
+    justify-self: center;
+    margin-top: -90.5vh;
 }
 
 .titulo h1 {
@@ -79,9 +81,11 @@ body {
 .info-mision,
 .info-vision,
 .info-creditos {
-    padding: 16px 18px;
+    min-height: 145px;
+    padding: 22px 24px;
     border-radius: 26px;
     box-shadow: 0 5px 7px rgba(0, 0, 0, 0.16);
+    position: relative;
 }
 
 .info-somos h2,
@@ -89,8 +93,8 @@ body {
 .info-mision h2,
 .info-vision h2,
 .info-creditos h2 {
-    margin-bottom: 8px;
-    font-size: 22px;
+    margin-bottom: 10px;
+    font-size: 25px;
 }
 
 .info-somos p,
@@ -98,25 +102,17 @@ body {
 .info-mision p,
 .info-vision p,
 .info-creditos p {
-    font-size: 14px;
-    line-height: 1.25;
+    font-size: 16px;
+    line-height: 1.35;
 }
 
-.info-somos {
-    background-color: #bcdbdb;
-    border: 2px solid black;
-}
-
-.info-funcion {
-    background-color: #ffe8e8;
-    border: 2px solid black;
-}
-
+.info-somos,
 .info-mision {
     background-color: #bcdbdb;
     border: 2px solid black;
 }
 
+.info-funcion,
 .info-vision {
     background-color: #ffe8e8;
     border: 2px solid black;
@@ -130,7 +126,7 @@ body {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
-    min-height: 130px;
+    min-height: 155px;
 }
 
 .img-logo {
@@ -274,15 +270,15 @@ button.entrar:hover {
     align-items: center;
     /* gap separa las columnas sin usar margin en cada elemento */
     gap: 20px;
-    background: linear-gradient(90deg, #8c2638, #9b3349);
-    border: 1px solid #ff5563;
+    background: #9b334af7;
+    border: 2px solid #ff5563;
     border-radius: 20px;
 }
 
 .foto-usuario,
 .escudo-home {
-    width: 74px;
-    height: 74px;
+    width: 110px;
+    height: 110px;
     /* object-fit controla como se acomoda una imagen dentro de su caja */
     /* contain hace que la imagen se vea completa sin recortarse */
     object-fit: contain;
@@ -345,23 +341,35 @@ button.entrar:hover {
 }
 
 .noticias {
-    background: linear-gradient(90deg, #8b8145, #6f672f);
+    background: #6f672fe4;
     border: 2px solid #f0d500;
+}
+button.noticias:hover {
+    background: #7e7534;
 }
 
 .registros {
-    background: linear-gradient(90deg, #234e36, #1f3d2e);
+    background: #234e36ef;
     border: 2px solid #3da451;
+}
+button.registros:hover {
+    background: #285e41;
 }
 
 .reportes {
-    background: linear-gradient(90deg, #8f0616, #5f0610);
+    background: #8f0616c5;
     border: 2px solid #d42028;
+}
+button.reportes:hover {
+    background: #8f0616e8;
 }
 
 .Docentes {
-    background: linear-gradient(90deg, #5b1b72, #40145a);
+    background: #5b1b72c3;
     border: 2px solid #9237c9;
+}
+button.Docentes:hover {
+    background: #5e1b77fc;
 }
 
 .Calendario {
@@ -370,8 +378,11 @@ button.entrar:hover {
     width: min(62%, 320px);
     /* justify-self center centra el boton calendario dentro de la fila completa */
     justify-self: center;
-    background: linear-gradient(90deg, #241064, #111e73);
+    background: #111e73e2;
     border: 2px solid #003cff;
+}
+button.Calendario:hover {
+    background: #122184;
 }
 
 .menu-docentes {
