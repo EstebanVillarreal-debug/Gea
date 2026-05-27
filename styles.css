@@ -1,3 +1,4 @@
+/* *: reinicia espacios y hace mas facil calcular tamanos */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/* body: fondo, letra general y posicion del contenido de la pagina */
 body {
     background-color: #f5f5f5;
     color: #000000;
@@ -18,56 +20,51 @@ body {
     overflow-x: hidden;
 }
 
+/* .landing: portada principal en tres columnas, con imagenes en el centro */
 .landing {
     width: min(100%, 10000px);
     min-height: 100vh;
-    padding: 45px 64px 26px;
+    padding: 130px 64px 0;
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 42px;
-    row-gap: 18px;
+    grid-template-columns: minmax(280px, 1fr) minmax(160px, 320px) minmax(280px, 1fr);
+    column-gap: 34px;
+    row-gap: 24px;
     align-items: center;
-    margin-top: 80px;
 }
 
+/* .titulo: barra superior fija con el nombre GEA y su subtitulo */
 .titulo {
-    width: min(9000vw, 1800px);
-    margin-top: -990px;
+    width: 100%;
+    min-height: 68px;
+    top: 0px;
+    left: 0;
     padding: 12px 34px;
-    justify-self: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(90deg, #9fd3d3 0%, #f59aa0 100%);
-    border-radius: 999px;
+    background: linear-gradient(40deg, #69cda2 0%, #ffffff , #ef4e59 100%);
+/* los dos 0 son para que  la parte de arriba no tenga */
+    border-radius: 0 0 25px 25px;
     box-shadow: 0 7px 8px rgba(0, 0, 0, 0.22);
+    border-bottom: 2px solid black;
+    position: fixed;
+    z-index: 10;
     border: 2px solid black;
-    position: absolute;
 }
 
-.linea {
-    width: min(90vw, 1800px);
-    height: 2px;
-    background-color: #000000;
-    margin: -6px auto 0;
-    position: absolute;
-    justify-self: center;
-    margin-top: -90.5vh;
-}
-
+/* .titulo h1: estilo del texto grande GEA */
 .titulo h1 {
     margin: 0;
     font-family: Georgia, 'Times New Roman', serif;
-/* el font-size: clamp sirve paracrear tipografía fluida y adaptable a diferentes tamaños de pantalla */
-    font-size: clamp(52px, 9vw, 56px);
-/* el font-weight controla el grosor o peso de los caracteres de texto */
+    font-size: clamp(42px, 7vw, 46px);
     font-weight: 900;
     color: #000;
     line-height: 0.9;
 }
 
+/* .titulo p: estilo del subtitulo Gestion Estudiantil Avanzada */
 .titulo p {
     margin: 4px 0 0;
     font-family: Georgia, 'Times New Roman', serif;
@@ -76,75 +73,179 @@ body {
     color: #000;
 }
 
+/* tarjetas informativas: forma base para las cajas de informacion */
 .info-somos,
 .info-funcion,
 .info-mision,
 .info-vision,
-.info-creditos {
-    min-height: 145px;
-    padding: 22px 24px;
-    border-radius: 26px;
-    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.16);
+.info-creditos,
+.info-chamba {
+    min-height: 150px;
+    padding: 24px 28px;
+    border-radius: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.14);
     position: relative;
+    text-align: left;
 }
 
+/* titulos de tarjetas: tamano de los encabezados internos */
 .info-somos h2,
 .info-funcion h2,
 .info-mision h2,
 .info-vision h2,
-.info-creditos h2 {
+.info-creditos h2,
+.info-chamba h2 {
     margin-bottom: 10px;
     font-size: 25px;
+    line-height: 1.1;
 }
 
+/* parrafos de tarjetas: tamano y espacio entre lineas del texto */
 .info-somos p,
 .info-funcion p,
 .info-mision p,
 .info-vision p,
-.info-creditos p {
-    font-size: 16px;
-    line-height: 1.35;
+.info-creditos p,
+.info-chamba p {
+    font-size: 18px;
+    line-height: 1.45;
 }
 
+/* .info-somos y .info-funcion: tarjetas con el color azul claro */
 .info-somos,
-.info-mision {
-    background-color: #bcdbdb;
+.info-funcion {
+    background-color: rgb(194, 221, 211);
     border: 2px solid black;
 }
 
-.info-funcion,
+/* .info-somos: ubica el primer cuadro en la izquierda */
+.info-somos {
+    /* grid-column: pone este cuadro en la primera columna */
+    grid-column: 1;
+    /* grid-row: pone este cuadro en la primera fila */
+    grid-row: 1;
+}
+
+/* .info-funcion: ubica el cuadro de funcion debajo de Que somos */
+.info-funcion {
+    /* grid-column: pone este cuadro en la primera columna */
+    grid-column: 1;
+    /* grid-row: pone este cuadro en la segunda fila */
+    grid-row: 2;
+}
+
+/* .info-mision y .info-vision: tarjetas con el color rosado claro */
+.info-mision,
 .info-vision {
-    background-color: #ffe8e8;
+    background-color: #facece;
     border: 2px solid black;
 }
 
-.info-creditos {
+/* .info-mision: ubica Mision arriba de Vision */
+.info-mision {
+    /* grid-column: pone este cuadro en la tercera columna */
+    grid-column: 3;
+    /* grid-row: pone este cuadro en la primera fila */
+    grid-row: 1;
+}
+
+/* .info-vision: ubica Vision en la derecha */
+.info-vision {
+    /* grid-column: mantiene este cuadro en la tercera columna */
+    grid-column: 3;
+    /* grid-row: pone este cuadro en la segunda fila */
+    grid-row: 2;
+}
+
+/* .info-chamba: ubica el cuadro de asociaciones abajo y al centro */
+.info-chamba {
     grid-column: 1 / -1;
-    background-color: #bcdbdb;
+    grid-row: 3;
+    width: min(100%, 720px);
+    justify-self: center;
+    background: #d9eafa;
     border: 2px solid black;
-    text-align: left;
+    margin-top: 20px;
+}
+
+/* .info-creditos: tarjeta que ocupa toda la fila de la portada */
+.info-creditos {
+    /* grid-column: hace que Creditos ocupe desde la primera hasta la ultima columna */
+    grid-column: 1 / -1;
+    /* grid-row: pone Creditos debajo del mapa */
+    grid-row: 5;
+    background-color: rgb(194, 221, 211);
+    border: 2px solid black;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 140px;
+    gap: 22px;
     align-items: center;
     min-height: 155px;
 }
 
-.img-logo {
-    width: 120px;
-    justify-self: center;
+/* .mapa: ubica el mapa debajo del cuadro de asociaciones */
+.mapa {
+    /* grid-column: pone el mapa al lado derecho de la imagen de directivos */
+    grid-column: 2 / 4;
+    /* grid-row: pone el mapa despues de info-chamba */
+    grid-row: 4;
+    width: 100%;
+    justify-self: stretch;
 }
 
+/* .mapa iframe: hace que el mapa se ajuste al ancho del contenedor */
+.mapa iframe {
+    width: 100%;
+    height: 360px;
+    border-radius: 14px;
+    border: 2px solid black;
+}
+
+/* .img-directivos: imagen que va al lado izquierdo del mapa */
+.img-directivos {
+    /* grid-column: pone la imagen en la primera columna */
+    grid-column: 1;
+    /* grid-row: alinea la imagen con el mapa */
+    grid-row: 4;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border: 2px solid black;
+    border-radius: 14px;
+}
+
+/* .img-logo: tamano del logo GEA en la portada */
+.img-logo {
+    /* grid-column: ubica el logo en la columna central */
+    grid-column: 2;
+    /* grid-row: hace que el logo ocupe la altura de las dos primeras filas */
+    grid-row: 1 / 3;
+    width: min(100%, 300px);
+    justify-self: center;
+    align-self: center;
+}
+
+/* .img-funcion: imagen secundaria debajo de los cuadros */
 .img-funcion {
+    /* grid-column: pone esta imagen debajo del lado izquierdo */
+    grid-column: 1 / 2;
+    /* grid-row: pone esta imagen en la tercera fila */
+    grid-row: 3;
     width: 240px;
     justify-self: center;
 }
 
+/* .img-mision-vision: imagen secundaria debajo de los cuadros */
 .img-mision-vision {
-    grid-column: 1 / -1;
-    width: 380px;
+    /* grid-column: pone esta imagen debajo del lado derecho */
+    grid-column: 3 / 4;
+    /* grid-row: pone esta imagen en la tercera fila */
+    grid-row: 3;
+    width: 280px;
     justify-self: center;
 }
 
+/* .btn-ingresar: boton fijo de arriba para abrir el formulario de login */
 .btn-ingresar {
     background-color: #000000;
     width: 200px;
@@ -153,18 +254,21 @@ body {
     font-size: 25px;
     color: white;
     position: fixed;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 25.5px;
+    right: 42px;
     border-radius: 15px;
+    z-index: 11;
+    cursor: pointer;
 }
 
+/* button.btn-ingresar:hover: efecto cuando el mouse pasa sobre el boton */
 button.btn-ingresar:hover {
     background-color: aliceblue;
     color: black;
     border: 2px solid black;
 }
 
+/* .login: formulario de inicio de sesion, oculto al cargar la pagina */
 .login {
     display: none;
     width: 460px;
@@ -177,12 +281,14 @@ button.btn-ingresar:hover {
     border-radius: 50px;
 }
 
+/* .login img: escudo centrado dentro del formulario */
 .login img {
     width: 190px;
     display: block;
     margin: 0 auto 45px;
 }
 
+/* .login label: nombres de los campos del formulario */
 .login label {
     display: block;
     margin-bottom: 8px;
@@ -190,10 +296,10 @@ button.btn-ingresar:hover {
     font-weight: bold;
 }
 
+/* .login input: campos para escribir correo y contrasena */
 .login input {
     width: 100%;
     height: 34px;
-    /* ese padding le da distancia del borde */
     padding: 0 12px;
     margin-bottom: 22px;
     border: none;
@@ -202,6 +308,7 @@ button.btn-ingresar:hover {
     flex-direction: column;
 }
 
+/* .login button: boton para intentar entrar al sistema */
 .login button {
     display: block;
     margin: 10px auto 0;
@@ -214,11 +321,13 @@ button.btn-ingresar:hover {
     font-weight: bold;
 }
 
+/* button.entrar:hover: efecto cuando el mouse pasa sobre Ingresar */
 button.entrar:hover {
     background-color: aliceblue;
     color: black;
 }
 
+/* .erorcontrasena: mensaje que aparece cuando los datos estan mal */
 .erorcontrasena {
     display: none;
     background-color: #cc7c7c;
@@ -227,11 +336,13 @@ button.entrar:hover {
     margin-top: 30px;
 }
 
+/* .erorcontrasena h1, h3: espacio interno del mensaje de error */
 .erorcontrasena h1, h3 {
     flex-direction: column;
     padding: 5px;
 }
 
+/* .homeadmin: pantalla principal del administrador, oculta al inicio */
 .homeadmin {
     display: none;
     width: 100%;
@@ -240,6 +351,7 @@ button.entrar:hover {
     color: white;
 }
 
+/* .homedocentes: pantalla principal del docente, oculta al inicio */
 .homedocentes {
     display: none;
     width: 100%;
@@ -248,83 +360,75 @@ button.entrar:hover {
     color: white;
 }
 
+/* .home-contenido: centra y limita el ancho de las pantallas internas */
 .home-contenido {
-    /* width con min() escoge el valor mas pequeno: 92% de la pantalla o maximo 940px */
     width: min(92%, 940px);
-    /* margin auto centra el contenedor horizontalmente */
     margin: 0 auto;
     padding: 36px 0 48px;
 }
 
+/* .barra-inicio: encabezado interno con imagen, titulo IPB y escudo */
 .barra-inicio {
-    /* width con min() evita que la barra sea mas grande que 640px */
     width: min(100%, 640px);
     min-height: 116px;
     margin: 0 auto 14px;
     padding: 14px 28px;
-    /* display grid organiza los elementos en columnas y filas */
     display: grid;
-    /* grid-template-columns crea 3 columnas: logo, titulo flexible y escudo */
     grid-template-columns: 90px 1fr 90px;
-    /* align-items center centra los elementos verticalmente */
     align-items: center;
-    /* gap separa las columnas sin usar margin en cada elemento */
     gap: 20px;
     background: #9b334af7;
     border: 2px solid #ff5563;
     border-radius: 20px;
 }
 
+/* .foto-usuario y .escudo-home: imagenes laterales del encabezado interno */
 .foto-usuario,
 .escudo-home {
     width: 110px;
     height: 110px;
-    /* object-fit controla como se acomoda una imagen dentro de su caja */
-    /* contain hace que la imagen se vea completa sin recortarse */
     object-fit: contain;
-    /* justify-self center centra solo este elemento dentro de su columna del grid */
     justify-self: center;
 }
 
+/* .inicio: texto grande IPB dentro del encabezado interno */
 .inicio {
-    /* clamp pone un minimo, un tamano adaptable y un maximo para la letra */
     font-size: clamp(48px, 8vw, 72px);
     font-weight: 900;
-    /* line-height controla la altura de la linea de texto */
     line-height: 1;
 }
 
+/* .datos-home: fila para bienvenida y fecha */
 .datos-home {
     width: min(100%, 640px);
     margin: 0 auto;
-    /* display flex acomoda los datos en una fila */
     display: flex;
-    /* space-between manda un texto a la izquierda y otro a la derecha */
     justify-content: space-between;
     gap: 24px;
     font-weight: 800;
     text-align: left;
 }
 
+/* .linea-home: separador blanco debajo de los datos del usuario */
 .linea-home {
     width: min(100%, 650px);
     height: 3px;
     margin: 12px auto 24px;
     background-color: white;
-    /* 999px deja las puntas totalmente redondeadas */
     border-radius: 999px;
 }
 
+/* .menu-home: grilla donde van los botones principales */
 .menu-home {
     width: min(100%, 560px);
     margin: 0 auto;
     display: grid;
-    /* 1fr 1fr crea dos columnas del mismo tamano */
     grid-template-columns: 1fr 1fr;
     gap: 28px 72px;
     align-items: center;
 }
 
+/* .menu-home button: estilo comun para todos los botones del menu */
 .menu-home button {
     width: 100%;
     min-height: 120px;
@@ -334,124 +438,164 @@ button.entrar:hover {
     font-size: clamp(28px, 4vw, 36px);
     font-weight: 900;
     text-align: left;
-    /* cursor pointer hace que el mouse se vea como mano al pasar por el boton */
     cursor: pointer;
-    /* box-shadow crea una sombra para dar profundidad */
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.28);
 }
 
+/* .noticias: color del boton Noticias */
 .noticias {
     background: #6f672fe4;
     border: 2px solid #f0d500;
 }
+/* button.noticias:hover: efecto del boton Noticias al pasar el mouse */
 button.noticias:hover {
     background: #7e7534;
 }
 
+/* .registros: color del boton Registros */
 .registros {
     background: #234e36ef;
     border: 2px solid #3da451;
 }
+/* button.registros:hover: efecto del boton Registros al pasar el mouse */
 button.registros:hover {
     background: #285e41;
 }
 
+/* .reportes: color del boton Reportes */
 .reportes {
     background: #8f0616c5;
     border: 2px solid #d42028;
 }
+/* button.reportes:hover: efecto del boton Reportes al pasar el mouse */
 button.reportes:hover {
     background: #8f0616e8;
 }
 
+/* .Docentes: color del boton Docentes */
 .Docentes {
     background: #5b1b72c3;
     border: 2px solid #9237c9;
 }
+/* button.Docentes:hover: efecto del boton Docentes al pasar el mouse */
 button.Docentes:hover {
     background: #5e1b77fc;
 }
 
+/* .Calendario: boton centrado que ocupa toda la fila */
 .Calendario {
-    /* grid-column 1 / -1 hace que ocupe desde la primera hasta la ultima columna */
+    /* grid-column: hace que Calendario ocupe todo el ancho del menu */
     grid-column: 1 / -1;
     width: min(62%, 320px);
-    /* justify-self center centra el boton calendario dentro de la fila completa */
     justify-self: center;
     background: #111e73e2;
     border: 2px solid #003cff;
 }
+/* button.Calendario:hover: efecto del boton Calendario al pasar el mouse */
 button.Calendario:hover {
     background: #122184;
 }
 
+/* .menu-docentes: ancho especial para el menu de docentes */
 .menu-docentes {
-    /* max-width limita el ancho maximo del menu de docentes */
     max-width: 560px;
 }
 
-/* modo celular */
+/* @media max-width 600px: ajustes para que la pagina se adapte a celular */
 @media (max-width: 600px) {
+    /* .landing en celular: pasa la portada a una sola columna */
     .landing {
         width: 100%;
-        padding: 26px 28px 95px;
+        padding: 112px 28px 95px;
         grid-template-columns: 1fr;
-        row-gap: 18px;
+        row-gap: 20px;
     }
 
+    /* .btn-ingresar en celular: centra el boton debajo de la barra superior */
     .btn-ingresar {
-        top: auto;
-        bottom: 24px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 170px;
+        top: 62px;
+        right: 50%;
+        transform: translateX(50%);
+        width: 160px;
         height: 36px;
         font-size: 18px;
     }
 
+    /* body en celular: reduce un poco el tamano base del texto */
     body {
         font-size: 14px;
     }
 
+    /* .titulo en celular: baja la altura de la barra superior */
     .titulo {
-        width: 86%;
-        max-width: 430px;
-        min-height: 68px;
-        margin-top: 28px;
+        width: 100%;
+        min-height: 56px;
         padding: 10px 24px;
     }
 
+    /* .titulo h1 en celular: reduce el tamano de GEA */
     .titulo h1 {
-        font-size: 42px;
+        font-size: 34px;
     }
 
+    /* .titulo p en celular: ajusta el subtitulo para que no se salga */
     .titulo p {
         font-size: 13px;
         text-align: center;
     }
 
-    .linea {
-        width: 90%;
-    }
-
+    /* .img-logo en celular: reduce el logo */
     .img-logo {
         width: 105px;
     }
 
+    /* imagenes secundarias en celular: evitan que se salgan de la pantalla */
     .img-funcion,
     .img-mision-vision {
         width: min(100%, 290px);
     }
 
+    /* elementos posicionados en celular: vuelven al orden normal */
+    .info-somos,
+    .info-funcion,
+    .info-mision,
+    .info-vision,
+    .info-chamba,
+    .info-creditos,
+    .mapa,
+    .img-directivos,
+    .img-logo,
+    .img-funcion,
+    .img-mision-vision {
+        /* grid-column: auto deja que el celular ordene los elementos naturalmente */
+        grid-column: auto;
+        /* grid-row: auto quita las filas fijas del diseno de escritorio */
+        grid-row: auto;
+    }
+
+    /* .info-creditos en celular: deja el contenido en una sola columna */
     .info-creditos {
         grid-template-columns: 1fr;
     }
 
+    /* .mapa iframe en celular: baja la altura del mapa */
+    .mapa iframe {
+        height: 280px;
+    }
+
+    /* .img-directivos en celular: se ajusta al ancho de la pantalla */
+    .img-directivos {
+        height: auto;
+        min-height: 220px;
+    }
+
+    /* .home-contenido en celular: limita el ancho de las pantallas internas */
     .home-contenido {
         width: min(92%, 360px);
         padding-top: 28px;
     }
 
+    /* .barra-inicio en celular: hace mas pequeno el encabezado interno */
     .barra-inicio {
         min-height: 70px;
         padding: 10px 16px;
@@ -460,31 +604,37 @@ button.Calendario:hover {
         border-radius: 18px;
     }
 
+    /* imagenes del encabezado en celular: reducen su tamano */
     .foto-usuario,
     .escudo-home {
         width: 46px;
         height: 46px;
     }
 
+    /* .inicio en celular: reduce el texto IPB */
     .inicio {
         font-size: 40px;
     }
 
+    /* .datos-home en celular: ajusta bienvenida y fecha */
     .datos-home {
         font-size: 12px;
         gap: 12px;
     }
 
+    /* .menu-home en celular: cambia los botones a una sola columna */
     .menu-home {
         grid-template-columns: 1fr;
         gap: 20px;
     }
 
+    /* botones del menu en celular: ocupan todo el ancho disponible */
     .menu-home button,
     .Calendario {
         width: 100%;
         min-height: 106px;
         font-size: 42px;
+        /* grid-column: auto evita que Calendario ocupe una fila especial en celular */
         grid-column: auto;
     }
 }
