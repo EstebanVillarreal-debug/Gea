@@ -7,6 +7,7 @@ const inputContrasena = document.querySelector(".contrasena");
 const erorcontrasena = document.querySelector(".erorcontrasena");
 const homeadmin = document.querySelector(".homeadmin");
 const homedocentes = document.querySelector(".homedocentes")
+const btnvolverprincipio = document.querySelector(".volver")
 
 btnIngresar.addEventListener("click", () => {
     landing.style.display = "none";
@@ -30,6 +31,12 @@ btnEntrar.addEventListener("click", () => {
         erorcontrasena.style.display = "block"
     }
 });
+
+btnvolverprincipio.addEventListener("click", () => {
+    // Se le pone grid ya que el display del landing es una cuadricula al poner block se cambia todo, siempre que el displey sea diferente toca ponerlo como está originalmente
+    landing.style.display = "grid";
+    login.style.display = "none";
+})
 
 document.addEventListener("keydown", (enter) => {
     if (enter.key === "Enter") {
