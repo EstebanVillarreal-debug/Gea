@@ -1,4 +1,4 @@
-/* *: reinicia espacios y hace mas facil calcular tamanos */
+/* *: reinicia espacios y hace mas facil calcular tamaños */
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +24,7 @@ body {
 .landing {
     width: min(100%, 10000px);
     min-height: 100vh;
-    padding: 130px 64px 0;
+    padding: 110px 64px 0;
     position: relative;
     display: grid;
     grid-template-columns: minmax(280px, 1fr) minmax(160px, 320px) minmax(280px, 1fr);
@@ -36,10 +36,10 @@ body {
 /* .titulo: barra superior fija con el nombre GEA y su subtitulo */
 .titulo {
     width: 100%;
-    min-height: 68px;
+    min-height: 45px;
     top: 0px;
     left: 0;
-    padding: 12px 34px;
+    padding: 6px 34px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,7 +49,7 @@ body {
     border-radius: 0 0 25px 25px;
     box-shadow: 0 7px 8px rgba(0, 0, 0, 0.22);
     border-bottom: 2px solid black;
-    position: fixed;
+    position: absolute;
     z-index: 10;
     border: 2px solid black;
 }
@@ -59,6 +59,7 @@ body {
     margin: 0;
     font-family: Georgia, 'Times New Roman', serif;
     font-size: clamp(42px, 7vw, 46px);
+    /* font-weight: controla que tan gruesa se ve la letra */
     font-weight: 900;
     color: #000;
     line-height: 0.9;
@@ -69,6 +70,7 @@ body {
     margin: 4px 0 0;
     font-family: Georgia, 'Times New Roman', serif;
     font-size: clamp(13px, 2vw, 16px);
+    /* font-weight: controla que tan gruesa se ve la letra */
     font-weight: 800;
     color: #000;
 }
@@ -88,27 +90,133 @@ body {
     text-align: left;
 }
 
-/* titulos de tarjetas: tamano de los encabezados internos */
+/* titulos de tarjetas: tamaño de los encabezados internos */
 .info-somos h2,
 .info-funcion h2,
 .info-mision h2,
 .info-vision h2,
-.info-creditos h2,
 .info-chamba h2 {
+    /* margin-bottom: deja espacio debajo del titulo antes del parrafo */
     margin-bottom: 10px;
     font-size: 25px;
     line-height: 1.1;
 }
 
-/* parrafos de tarjetas: tamano y espacio entre lineas del texto */
+/* parrafos de tarjetas: tamaño y espacio entre lineas del texto */
 .info-somos p,
 .info-funcion p,
 .info-mision p,
 .info-vision p,
-.info-creditos p,
 .info-chamba p {
     font-size: 18px;
     line-height: 1.45;
+}
+
+.info-creditos p {
+    font-size: 18px;
+    line-height: 1.45;
+}
+
+/* .creditos-lista: organiza los creditos en varias columnas */
+.creditos-lista {
+    /* display grid permite separar cada grupo como si fuera una caja dentro del contenedor */
+    display: grid;
+    /* grid-template-columns crea cuatro columnas para que las secciones de abajo queden juntas */
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    /* gap deja un espacio pequeno entre secciones sin separarlas demasiado */
+    gap: 16px 18px;
+    width: 100%;
+}
+
+/* .credito-grupo: separa cada categoria de los creditos */
+.credito-grupo {
+    /* cada credito-grupo es una seccion diferente, por eso cada tema queda aparte */
+    /* padding-left: separa el texto de la raya vertical */
+    padding-left: 16px;
+    /* border-left: crea la raya vertical gris al lado izquierdo */
+    border-left: 3px solid rgba(0, 0, 0, 0.35);
+}
+
+/* .credito-grupo h3: titulo pequeno de cada categoria */
+.credito-grupo h3 {
+    /* el h3 funciona como nombre de la seccion, por ejemplo Desarrolladores */
+    margin-bottom: 8px;
+    font-size: 19px;
+    line-height: 1.1;
+}
+
+/* .credito-desarrolladores: hace que la seccion principal ocupe toda la fila */
+.credito-desarrolladores {
+    grid-column: 1 / -1;
+}
+
+/* .personas-creditos: ordena las personas con icono y nombre */
+.personas-creditos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 18px;
+    max-width: 275px;
+    margin-bottom: 12px;
+}
+
+/* .persona-credito: mantiene unido el icono con el nombre */
+.persona-credito {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* sin min-width el link solo ocupa el icono y el nombre, no toda la fila */
+    /* color negro evita que el enlace salga azul por defecto */
+    color: #000;
+    font-size: 17px;
+    line-height: 1.3;
+    /* text-decoration none quita la linea debajo del enlace */
+    text-decoration: none;
+}
+
+/* .persona-credito i: tamaño y color de los iconos de creditos */
+.persona-credito i,
+.credito-grupo p i {
+    width: 22px;
+    color: #0b6b45;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* .credito-link: deja los enlaces de creditos con el mismo estilo del texto */
+.credito-link {
+    /* color negro mantiene el enlace igual que el resto del texto */
+    color: #000;
+    /* text-decoration none quita el subrayado automatico del link */
+    text-decoration: none;
+}
+
+/* enlaces de creditos hover: marca el enlace cuando el mouse pasa encima */
+.persona-credito:hover,
+.credito-link:hover {
+    /* underline muestra una linea solo cuando el mouse esta encima */
+    text-decoration: underline;
+}
+
+/* .credito-grupo h4: subtitulo para el acompanamiento */
+.credito-grupo h4 {
+    margin: 10px 0 8px;
+    font-size: 17px;
+    line-height: 1.1;
+}
+
+/* .credito-grupo ul: acomoda las listas de nombres */
+.credito-grupo ul {
+    /* el ul agrupa varios elementos relacionados dentro de la misma seccion */
+    padding-left: 20px;
+}
+
+/* .credito-grupo li y p: texto interno de cada categoria */
+.credito-grupo li,
+.credito-grupo p {
+    /* li y p son el contenido de cada grupo, como nombres o descripcion del proyecto */
+    font-size: 17px;
+    line-height: 1.45;
+    margin-bottom: 4px;
 }
 
 /* .info-somos y .info-funcion: tarjetas con el color azul claro */
@@ -165,7 +273,7 @@ body {
     justify-self: center;
     background: #d9eafa;
     border: 2px solid black;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 /* .info-creditos: tarjeta que ocupa toda la fila de la portada */
@@ -174,12 +282,14 @@ body {
     grid-column: 1 / -1;
     /* grid-row: pone Creditos debajo del mapa */
     grid-row: 5;
+    width: 100%;
+    justify-self: stretch;
     background-color: rgb(194, 221, 211);
     border: 2px solid black;
     display: grid;
-    grid-template-columns: 1fr 140px;
-    gap: 22px;
-    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    align-items: start;
     min-height: 155px;
 }
 
@@ -187,7 +297,7 @@ body {
 .mapa {
     /* grid-column: pone el mapa al lado derecho de la imagen de directivos */
     grid-column: 2 / 4;
-    /* grid-row: pone el mapa despues de info-chamba */
+    /* grid-row: pone el mapa antes de info-chamba */
     grid-row: 4;
     width: 100%;
     justify-self: stretch;
@@ -209,12 +319,13 @@ body {
     grid-row: 4;
     width: 100%;
     height: 360px;
+    /* object-fit: hace que la imagen llene el espacio sin deformarse */
     object-fit: cover;
     border: 2px solid black;
     border-radius: 14px;
 }
 
-/* .img-logo: tamano del logo GEA en la portada */
+/* .img-logo: tamaño del logo GEA en la portada */
 .img-logo {
     /* grid-column: ubica el logo en la columna central */
     grid-column: 2;
@@ -225,26 +336,6 @@ body {
     align-self: center;
 }
 
-/* .img-funcion: imagen secundaria debajo de los cuadros */
-.img-funcion {
-    /* grid-column: pone esta imagen debajo del lado izquierdo */
-    grid-column: 1 / 2;
-    /* grid-row: pone esta imagen en la tercera fila */
-    grid-row: 3;
-    width: 240px;
-    justify-self: center;
-}
-
-/* .img-mision-vision: imagen secundaria debajo de los cuadros */
-.img-mision-vision {
-    /* grid-column: pone esta imagen debajo del lado derecho */
-    grid-column: 3 / 4;
-    /* grid-row: pone esta imagen en la tercera fila */
-    grid-row: 3;
-    width: 280px;
-    justify-self: center;
-}
-
 /* .btn-ingresar: boton fijo de arriba para abrir el formulario de login */
 .btn-ingresar {
     background-color: #000000;
@@ -253,8 +344,8 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 25px;
     color: white;
-    position: fixed;
-    top: 25.5px;
+    position: absolute;
+    top: 20.5px;
     right: 42px;
     border-radius: 15px;
     z-index: 11;
@@ -291,8 +382,10 @@ button.btn-ingresar:hover {
 /* .login label: nombres de los campos del formulario */
 .login label {
     display: block;
+    /* margin-bottom: separa el texto del label del campo de escritura */
     margin-bottom: 8px;
     font-size: 14px;
+    /* font-weight: pone el texto en negrita */
     font-weight: bold;
 }
 
@@ -318,6 +411,7 @@ button.btn-ingresar:hover {
     color: white;
     border-radius: 12px;
     font-size: 22px;
+    /* font-weight: pone el texto en negrita */
     font-weight: bold;
 }
 
@@ -387,6 +481,7 @@ button.entrar:hover {
 .escudo-home {
     width: 110px;
     height: 110px;
+    /* object-fit: muestra la imagen completa dentro del espacio */
     object-fit: contain;
     justify-self: center;
 }
@@ -394,6 +489,7 @@ button.entrar:hover {
 /* .inicio: texto grande IPB dentro del encabezado interno */
 .inicio {
     font-size: clamp(48px, 8vw, 72px);
+    /* font-weight: controla que tan gruesa se ve la letra */
     font-weight: 900;
     line-height: 1;
 }
@@ -405,6 +501,7 @@ button.entrar:hover {
     display: flex;
     justify-content: space-between;
     gap: 24px;
+    /* font-weight: controla que tan gruesa se ve la letra */
     font-weight: 800;
     text-align: left;
 }
@@ -436,6 +533,7 @@ button.entrar:hover {
     border-radius: 10px;
     color: white;
     font-size: clamp(28px, 4vw, 36px);
+    /* font-weight: controla que tan gruesa se ve la letra */
     font-weight: 900;
     text-align: left;
     cursor: pointer;
@@ -513,7 +611,7 @@ button.Calendario:hover {
 
     /* .btn-ingresar en celular: centra el boton debajo de la barra superior */
     .btn-ingresar {
-        top: 62px;
+        top: 810px;
         right: 50%;
         transform: translateX(50%);
         width: 160px;
@@ -521,7 +619,7 @@ button.Calendario:hover {
         font-size: 18px;
     }
 
-    /* body en celular: reduce un poco el tamano base del texto */
+    /* body en celular: reduce un poco el tamaño base del texto */
     body {
         font-size: 14px;
     }
@@ -533,7 +631,7 @@ button.Calendario:hover {
         padding: 10px 24px;
     }
 
-    /* .titulo h1 en celular: reduce el tamano de GEA */
+    /* .titulo h1 en celular: reduce el tamaño de GEA */
     .titulo h1 {
         font-size: 34px;
     }
@@ -546,7 +644,7 @@ button.Calendario:hover {
 
     /* .img-logo en celular: reduce el logo */
     .img-logo {
-        width: 105px;
+        width: 200px;
     }
 
     /* imagenes secundarias en celular: evitan que se salgan de la pantalla */
@@ -578,6 +676,11 @@ button.Calendario:hover {
         grid-template-columns: 1fr;
     }
 
+    /* .creditos-lista en celular: apila las categorias de creditos */
+    .creditos-lista {
+        grid-template-columns: 1fr;
+    }
+
     /* .mapa iframe en celular: baja la altura del mapa */
     .mapa iframe {
         height: 280px;
@@ -604,7 +707,7 @@ button.Calendario:hover {
         border-radius: 18px;
     }
 
-    /* imagenes del encabezado en celular: reducen su tamano */
+    /* imagenes del encabezado en celular: reducen su tamaño */
     .foto-usuario,
     .escudo-home {
         width: 46px;
