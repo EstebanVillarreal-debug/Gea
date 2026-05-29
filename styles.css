@@ -531,6 +531,28 @@ button.entrar:hover {
     text-align: left;
 }
 
+/* .cerrar-sesion: boton para salir de la cuenta y regresar al landing */
+.cerrar-sesion {
+    display: block;
+    position: relative;
+    width: 150px;
+    min-height: 38px;
+    margin: 18px auto 0;
+    background: #f5f5f5;
+    color: #111111;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+button.cerrar-sesion:hover {
+    background: #111111;
+    color: #ffffff;
+}
+
 /* .linea-home: separador blanco debajo de los datos del usuario */
 .linea-home {
     width: min(100%, 650px);
