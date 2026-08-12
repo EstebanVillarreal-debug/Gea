@@ -293,6 +293,24 @@ body {
     min-height: 155px;
 }
 
+/* .info-desarrollo: tarjeta que ocupa toda la fila de la portada */
+.info-desarrollo {
+    /* grid-column: hace que Creditos ocupe desde la primera hasta la ultima columna */
+    grid-column: 1 / -1;
+    /* grid-row: pone Creditos debajo del mapa */
+    grid-row: 6;
+    width: 100%;
+    justify-self: stretch;
+    background-color: #d9eafa;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    gap: 16px 18px;
+    align-items: start;
+    min-height: 180px;
+    border-radius: 15px;
+}
+
 /* .mapa: ubica el mapa debajo del cuadro de asociaciones */
 .mapa {
     /* grid-column: pone el mapa al lado derecho de la imagen de directivos */
@@ -359,289 +377,134 @@ button.btn-ingresar:hover {
     border: 2px solid black;
 }
 
-/* .login: formulario de inicio de sesion, oculto al cargar la pagina */
-.login {
-    display: none;
-    width: 460px;
-    min-height: 620px;
-    margin: 160px auto 0;
-    padding: 90px 45px 40px;
-    text-align: left;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 50px;
+@media (max-width: 768px) {
+    .landing {
+        display:grid;
+        grid-template-columns:1fr;
+        gap: 20px;
+        justify-items:center;
+        padding: 100px 20px 20px ;
+        padding-bottom: 80px;
+    }
+
+    .titulo {
+        padding: 10px 20px;
+    }
+
+    .info-somos,
+    .info-funcion,
+    .info-mision,
+    .info-vision,
+    .info-creditos,
+    .info-chamba {
+        min-height: 10px;
+        padding: 20px 20px;
+        border-radius: 14px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.14);
+        position: relative;
+        text-align: left;
+        max-width: 300px;
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .info-somos h2,
+    .info-funcion h2,
+    .info-mision h2,
+    .info-vision h2,
+    .info-chamba h2 {
+        /* margin-bottom: deja espacio debajo del titulo antes del parrafo */
+        margin-bottom: 10px;
+        font-size: 20px;
+        line-height: 1.1;
+    }
+
+    .info-somos p,
+    .info-funcion p,
+    .info-mision p,
+    .info-vision p,
+    .info-chamba p {
+        font-size: 15px;
+        line-height: 1.45;
+    }
+
+    .info-creditos,
+    .info-desarrollo{
+        grid-column:1;
+        grid-row:auto;
+        width:100%;
+        max-width:300px;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .creditos-lista{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .info-desarrollo{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 20px 20px;
+    }
+
+    .info-desarrollo .credito-grupo{
+        border-left: none;
+        padding-left: 0;
+    }
+
+
+    .img-logo {
+        grid-column:1;
+        grid-row:auto;
+        width:170px;
+        margin:20px auto;
+    }
+
+    .img-directivos{
+        grid-column:1;
+        grid-row:auto;
+        width:100%;
+        max-width:300px;
+        height:auto;
 }
 
-/* .login img: escudo centrado dentro del formulario */
-.login img {
-    width: 190px;
-    display: block;
-    margin: 0 auto 45px;
-}
+    .btn-ingresar {
+        position: fixed;
+        left: 50%;
+        bottom: 15px;
+        transform: translateX(-50%);
+        width: 280px;
+        height: 45px;
+        top: auto;
+        right: auto;
+        margin: 0;
+        z-index: 21;
+    }
 
-/* .login label: nombres de los campos del formulario */
-.login label {
-    display: block;
-    /* margin-bottom: separa el texto del label del campo de escritura */
-    margin-bottom: 8px;
-    font-size: 14px;
-    /* font-weight: pone el texto en negrita */
-    font-weight: bold;
-}
+    .login {
+        width: min(92%, 400px);
+        margin-top: 120px;
+        padding: 80px 30px 30px;
+    }
 
-/* .login input: campos para escribir correo y contraseña */
-.login input {
-    width: 100%;
-    height: 34px;
-    padding: 0 12px;
-    margin-bottom: 22px;
-    border: none;
-    border-radius: 12px;
-    background-color: #d9d9d9;
-    flex-direction: column;
-}
+    .mapa {
+        grid-column:1;
+        grid-row:auto;
+        width:100%;
+        max-width:300px;
+        margin: 0 auto;
+        justify-content: center;
+    }
 
-/* .login button: boton para intentar entrar al sistema */
-.login button {
-    display: block;
-    margin: 10px auto 0;
-    width: 130px;
-    height: 42px;
-    background-color: black;
-    color: white;
-    border-radius: 12px;
-    font-size: 22px;
-    /* font-weight: pone el texto en negrita */
-    font-weight: bold;
-}
+    .mapa iframe {
+        width:100%;
+        height:220px;
+    }
 
-/* button.entrar:hover: efecto cuando el mouse pasa sobre Ingresar */
-button.entrar:hover {
-    background-color: aliceblue;
-    color: black;
-}
-
-/* .volver: boton con estilo de enlace */
-/* se le pone espacio porque sin espacio significa que el mismo elemento tiene las dos clases al mismo tiempo, entonces solo afecta al botón Volver al Inicio dentro del login, no a cualquier otro .volver que pueda crear en otra parte. */
-.login .volver {
-    /* width auto evita que el texto se parta dentro de un boton pequeño */
-    width: auto;
-    height: auto;
-    padding: 0;
-    margin: 12px auto 0;
-    /* se le pone transparente porque está tomando lo negro dle boton ingresar */
-    background: transparent;
-    border: none;
-    color: #000000;
-    border-radius: 0;
-    font-size: 15px;
-    /* el bold hace que el texto se pone en negrita. y tambien se le pueden poner numeros */
-    font-weight: bold;
-    line-height: 1.2;
-    cursor: pointer;
-}
-
-/* .volver:hover: subraya el enlace cuando el mouse pasa encima */
-.login .volver:hover {
-    text-decoration: underline;
-}
-
-/* .erorcontrasena: mensaje que aparece cuando los datos estan mal */
-.erorcontrasena {
-    display: none;
-    background-color: #cc7c7c;
-    border: 1px solid black;
-    border-radius: 20px;
-    margin-top: 30px;
-}
-
-/* .erorcontrasena h1, h3: espacio interno del mensaje de error */
-.erorcontrasena h1, h3 {
-    flex-direction: column;
-    padding: 5px;
-}
-
-/* .homeadmin: pantalla principal del administrador, oculta al inicio */
-.homeadmin {
-    display: none;
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(rgb(18, 25, 44), rgb(32, 3, 15));
-    color: white;
-}
-
-/* .homedocentes: pantalla principal del docente, oculta al inicio */
-.homedocentes {
-    display: none;
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(rgb(18, 25, 44), rgb(8, 26, 11));
-    color: white;
-}
-
-/* .home-contenido: centra y limita el ancho de las pantallas internas */
-.home-contenido {
-    width: min(92%, 940px);
-    margin: 0 auto;
-    padding: 36px 0 48px;
-}
-
-/* .barra-inicio: encabezado interno con imagen, titulo IPB y escudo */
-.barra-inicio {
-    width: min(100%, 640px);
-    min-height: 116px;
-    margin: 0 auto 14px;
-    padding: 14px 28px;
-    display: grid;
-    grid-template-columns: 90px 1fr 90px;
-    align-items: center;
-    gap: 20px;
-    background: #9b334af7;
-    border: 2px solid #ff5563;
-    border-radius: 20px;
-}
-
-/* .foto-usuario y .escudo-home: imagenes laterales del encabezado interno */
-.foto-usuario,
-.escudo-home {
-    width: 110px;
-    height: 110px;
-    /* object-fit: muestra la imagen completa dentro del espacio */
-    object-fit: contain;
-    justify-self: center;
-}
-
-/* .inicio: texto grande IPB dentro del encabezado interno */
-.inicio {
-    font-size: clamp(48px, 8vw, 72px);
-    /* font-weight: controla que tan gruesa se ve la letra */
-    font-weight: 900;
-    line-height: 1;
-}
-
-/* .datos-home: fila para bienvenida y fecha */
-.datos-home {
-    width: min(100%, 640px);
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 24px;
-    /* font-weight: controla que tan gruesa se ve la letra */
-    font-weight: 800;
-    text-align: left;
-}
-
-/* .cerrar-sesion: boton para salir de la cuenta y regresar al landing */
-.cerrar-sesion {
-    display: block;
-    position: relative;
-    width: 150px;
-    min-height: 38px;
-    margin: 18px auto 0;
-    background: #f5f5f5;
-    color: #111111;
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 800;
-    cursor: pointer;
-    margin-top: 50px;
-}
-
-button.cerrar-sesion:hover {
-    background: #111111;
-    color: #ffffff;
-}
-
-/* .linea-home: separador blanco debajo de los datos del usuario */
-.linea-home {
-    width: min(100%, 650px);
-    height: 3px;
-    margin: 12px auto 24px;
-    background-color: white;
-    border-radius: 999px;
-}
-
-/* .menu-home: grilla donde van los botones principales */
-.menu-home {
-    width: min(100%, 560px);
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px 72px;
-    align-items: center;
-}
-
-/* .menu-home button: estilo comun para todos los botones del menu */
-.menu-home button {
-    width: 100%;
-    min-height: 120px;
-    padding: 20px 28px;
-    border-radius: 10px;
-    color: white;
-    font-size: clamp(28px, 4vw, 36px);
-    /* font-weight: controla que tan gruesa se ve la letra */
-    font-weight: 900;
-    text-align: left;
-    cursor: pointer;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.28);
-}
-
-/* .noticias: color del boton Noticias */
-.noticias {
-    background: #6f672fe4;
-    border: 2px solid #f0d500;
-}
-/* button.noticias:hover: efecto del boton Noticias al pasar el mouse */
-button.noticias:hover {
-    background: #7e7534;
-}
-
-/* .registros: color del boton Registros */
-.registros {
-    background: #234e36ef;
-    border: 2px solid #3da451;
-}
-/* button.registros:hover: efecto del boton Registros al pasar el mouse */
-button.registros:hover {
-    background: #285e41;
-}
-
-/* .reportes: color del boton Reportes */
-.reportes {
-    background: #8f0616c5;
-    border: 2px solid #d42028;
-}
-/* button.reportes:hover: efecto del boton Reportes al pasar el mouse */
-button.reportes:hover {
-    background: #8f0616e8;
-}
-
-/* .Docentes: color del boton Docentes */
-.Docentes {
-    background: #5b1b72c3;
-    border: 2px solid #9237c9;
-}
-/* button.Docentes:hover: efecto del boton Docentes al pasar el mouse */
-button.Docentes:hover {
-    background: #5e1b77fc;
-}
-
-/* .Calendario: boton centrado que ocupa toda la fila */
-.Calendario {
-    /* grid-column: hace que Calendario ocupe todo el ancho del menu */
-    grid-column: 1 / -1;
-    width: min(62%, 320px);
-    justify-self: center;
-    background: #111e73e2;
-    border: 2px solid #003cff;
-}
-/* button.Calendario:hover: efecto del boton Calendario al pasar el mouse */
-button.Calendario:hover {
-    background: #122184;
-}
-
-/* .menu-docentes: ancho especial para el menu de docentes */
-.menu-docentes {
-    max-width: 560px;
+    .home-contenido {
+        width: min(92%, 640px);
+    }
 }
