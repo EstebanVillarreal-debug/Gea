@@ -652,7 +652,7 @@ button.btn-ingresar:hover {
 
     .fila-carac {
         grid-template-columns: 1fr;
-        width: 85%;
+        width: 90%;
     }
 
     .modulos-grid {
@@ -661,7 +661,7 @@ button.btn-ingresar:hover {
 
     .chamba {
         flex-direction: column;
-        width: 85%;
+        width: 90%;
     }
 
     .carrusel-mover {
