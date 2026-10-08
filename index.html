@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Gea</title>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        azuoscuro: '#16324f',
+                        azu: '#1f6fb2',
+                        aguama: '#2ca58d',
+                        orro: '#c98b2f',
+                        hue: '#f4f8fb',
+                        blan: '#ffffff',
+                        text: '#16232f',
+                        sua: '#55677a',
+                        borde: '#e1e9f0',
+                    },
+                    font: {
+
+                        display: ['Poppins', 'Segoe UI', 'sans-serif'],
+                        texto: ['Inter', 'Segoe UI', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="bg-hue m-0 p-0 font-texto text-text flex flex-col items-center justify-start text-center min-h-screen overflow-x-hidden">
+
+    <header>
+        <!-- Zona de Landing -->
+        <!--class="landing"-->
+        <div class=" w-full min-h-screen pt-[118px] px-6 pb-[70px] relative flex flex-col items-center gap-[26px]">
+            <!--class="titulo"-->
+            <div class="w-full min-h-[45px] top-0 left-0 px-[34px] py-[14px] flex flex-col justify-center items-center bg-gradient-to-r from-azuoscuro via-azu to-aguama rounded-b-[22px] shadow-[0_8px_20px_rgba(22,50,79,0.25)] fixed z-10" >
+                <!--class="h1"-->
+                <h1 class="m-0 font-serif text-[clamp(50px,6vw,44px)] font-extrabold tracking-[1px] text-white landing-none">
+                    GEA</h1>
+                    <!--class="p"-->
+                <p class="mt-[6px] mb-0 mx-0 font-serif text-[clamp(12px,2vw,15px)] font-medium tracking-[0.5px] text-white/90"
+                >Gestion Estudiantil Avanzada</p>
+            </div>
+
+            <!--class="insignia"-->
+            <div class="w-full flex flex-wrap justify-center gap-[12px]">
+                <!--class="pila"-->
+                <span class="inline-flex items-center gap-2 px-[18px] py-2 rounded-full bg-blan border border-borde shadow-[0_3px_10px_rgba(22,50,79,0.08)] text-sm font-semibold text-azuoscuro">
+                    <!--class="i"-->
+                    <i class="fa-solid fa-bolt text-aguama text-sm"></i> 
+                    Eficiente</span>
+                <!--class="pila"-->
+                <span class="inline-flex items-center gap-2 px-[18px] py-2 rounded-full bg-blan border border-borde shadow-[0_3px_10px_rgba(22,50,79,0.08)] text-sm font-semibold text-azuoscuro">
+                    <!--class="i"-->
+                    <i class="fa-solid fa-shield-halved text-aguama text-sm"></i> 
+                    Segura</span>
+                <!--class="pila"-->
+                <span class="inline-flex items-center gap-2 px-[18px] py-2 rounded-full bg-blan border border-borde shadow-[0_3px_10px_rgba(22,50,79,0.08)] text-sm font-semibold text-azuoscuro">
+                    <!--class="i"-->
+                    <i class="fa-solid fa-lightbulb text-aguama text-sm"></i> 
+                    Innovadora</span>
+            </div>
+
+            <!-- logo junto a la presentacion -->
+            <!--class="intro"-->
+            <div class="w-[min(100%,1120px)] flex items-center gap-12">
+                <!--class="img-logo"-->
+                <img class="flex-none w-[min(100%,240px)] drop-shadow-[0_10px_18px_rgba(22,50,79,0.18)]" src="img/logo.png" alt="Logo GEA">
+
+                <!--class="info-somos"-->
+                <div class="flex-1 min-h-auto min-h-[150px] py-[26px] px-[28px] rounded-[18px] bg-blan border border-borde shadow-[0_6px_18px_rgba(22,50,79,0.08)] relative text-left transition-[transform,box-shadow] duration-200 ease-in-out -translate-y-[3px] shadow-[0_12px_24px_rgba(22,50,79,0.12)] border-t-4 border-t-azu">
+                    <!--class="h2"-->
+                    <h2 class="mb-[10px] font-display text-[22px] font-bold leading-[1.2] text-azuoscuro flex items-center gap-[10px]">
+                        <!--class="i"-->
+                        <i class="fa-solid fa-circle-question text-azu text-[19px]">
+                    </i>¿Que somos?</h2>
+                    <!--class="p"-->
+                    <p class="text-base leading-[1.55] text-sua">
+                        Es un aplicativo web disenado para la gestion academica de las escuelas, colegios y
+                        universidades.
+                    </p>
+                </div>
+            </div>
+
+            <!-- fila de tarjetas -->
+            <!--class="fila-carac"-->
+            <div class="w-[min(100%,1120px)] grid grid-cols-3 gap-6 min-h-[190px]">
+                <!--class="info-funcion"-->
+                <div class="min-h-[150px] py-[26px] px-[28px] rounded-[18px] bg-blan border border-borde shadow-[0_6px_18px_rgba(22,50,79,0.08)] relative text-left transition-[transform,box-shadow] duration-200 ease-in-out -translate-y-[3px] shadow-[0_12px_24px_rgba(22,50,79,0.12)] border-t-4 border-t-aguama ">
+                    <!--class="h2"-->
+                    <h2 class="mb-[10px] font-display text-[22px] font-bold leading-[1.2] text-azuoscuro flex items-center gap-[10px]">
+                        <!--class="i"-->
+                        <i class="fa-solid fa-gears text-aguama text-[19px]"></i>Cual es nuestra funcion?</h2>
+                    <!--class="p"-->
+                    <p class="text-base leading-[1.55] text-sua">
+                        Nosotros gestionamos y centralizamos informacion sobre los estudiantes, docentes y directivos de
+                        una
+                        institucion de manera facil y segura.</p>
+                </div>
+
+                <!--class="info-mision"-->
+                <div class="min-h-[150px] py-[26px] px-[28px] rounded-[18px] bg-blan border border-borde shadow-[0_6px_18px_rgba(22,50,79,0.08)] relative text-left transition-[transform,box-shadow] duration-200 ease-in-out -translate-y-[3px] shadow-[0_12px_24px_rgba(22,50,79,0.12)] border-t-4 border-t-azu">
+                    <!--class="h2"-->
+                    <h2 class="mb-[10px] font-display text-[22px] font-bold leading-[1.2] text-azuoscuro flex items-center gap-[10px]">
+                        <!--class="i"-->
+                        <i class="fa-solid fa-bullseye text-azu text-[19px]"></i>Mision</h2>
+                    <!--class="p"-->
+                    <p class="text-base leading-[1.55] text-sua">
+                        Brindar una plataforma eficiente que facilita la gestion academica y administrativa, mejorando la
+                        organizacion y el acceso a la informacion.</p>
+                </div>
+
+                <!--class="info-vision"-->
+                <div class="min-h-[150px] py-[26px] px-[28px] rounded-[18px] bg-blan border border-borde shadow-[0_6px_18px_rgba(22,50,79,0.08)] relative text-left transition-[transform,box-shadow] duration-200 ease-in-out -translate-y-[3px] shadow-[0_12px_24px_rgba(22,50,79,0.12)] border-t-4 border-t-orro">
+                    <!--class="h2"-->
+                    <h2 class="mb-[10px] font-display text-[22px] font-bold leading-[1.2] text-azuoscuro flex items-center gap-[10px]">
+                        <!--class="i"-->
+                        <i class="fa-solid fa-eye text-orro text-[19px]"></i>Vision</h2>
+                    <!--class="p"-->
+                    <p class="text-base leading-[1.55] text-sua">
+                        Ser el sistema lider en gestion educativa reconocida por su innovacion, seguridad y facilidad de
+                        uso
+                        en instituciones economicas.</p>
+                </div>
+            </div>
+
+            <!-- alianza -->
+            <!--class="chamba"-->
+            <div class="w-[min(100%,1120px)] flex items-stretch gap-6">
+                <!--class="info-chamba"-->
+                <div class="flex-1 mt-0 min-h-[150px] py-[26px] px-[28px] rounded-[18px] bg-blan border border-borde shadow-[0_6px_18px_rgba(22,50,79,0.08)] relative text-left transition-[transform,box-shadow] duration-200 ease-in-out -translate-y-[3px] shadow-[0_12px_24px_rgba(22,50,79,0.12)] border-t-4 border-t-aguama">
+                    <!--class="h2"-->
+                    <h2 class="mb-[10px] font-display text-[22px] font-bold leading-[1.2] text-azuoscuro flex items-center gap-[10px]">
+                        <!--class="i"-->
+                        <i class="fa-solid fa-handshake text-aguama text-[19px]"></i> ¿Con quien nos asociamos?</h2>
+                    <!--class="p"-->
+                    <p class="text-base leading-[1.55] text-sua">
+                        Nos asociamos con el colegio Isamel Perdomo Borrero de Gigante-Huila aún así, van a ver más
+                        escuelas,
+                        colegios y universidades que se agreguen a este espacio de trabajo.</p>
+                </div>
+
+                <!--class="alianza-carrusel"-->
+                <div class="flex-[2] min-w-0 rounded-[18px] border border-[var(--borde)] border-t-4 border-t-[var(--aguama)] shadow-[0_6px_18px_rgba(22,50,79,0.08)] bg-[var(--blan)] overflow-hidden relative" id="carrusel">
+                    <!--class="carrusel-via"-->
+                    <div class="flex h-full transition-transform duration-600 ease-in-out">
+
+                        <!--class="carrusel-mover"-->
+                        <div class="min-w-full flex gap-4 p-4 min-h-[280px]">
+                            <!--class="img-directivos"-->
+                            <img class="w-[38%] flex-[0_0_38%] h-auto object-cover rounded-xl border border-[var(--borde)] shadow-none" src="img/escudo.png"
+                                alt="Escudo Colegio Nacional Ismael Perdomo Borrero">
+                                <!--class="iframe"-->
+                            <iframe class="flex-1 w-full h-full min-h-[260px] rounded-xl border border-[var(--borde)]"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1236.6505624504832!2d-75.54376479540512!3d2.3895674219398995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3b2d4ec43a0551%3A0x6d17875512a29c7a!2sColegio%20Nacional%20Ismael%20Perdomo%20Borrero!5e1!3m2!1ses!2sco!4v1779912730169!5m2!1ses!2sco"
+                                style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+
+                        <!-- otra sede -->
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- modulos gea -->
+            <!--class="modulos-section"-->
+            <div class="w-[min(100%,1120px)] flex flex-col items-center gap-2 mt-6">
+                <!--class="modulos-header"-->
+                <div class="text-center max-w-[720px] mb-[10px]">
+                    <h2 class="font-[var(--fuente-display)] text-[clamp(24px,3.4vw,32px)] font-extrabold leading-[1.25] text-[var(--azuoscuro)]">
+                        Modulos principales de GEA</h2>
+                </div>
+
+                <!--class="modulos-grid"-->
+                <div class="w-full grid grid-cols-3 gap-[22px]">
+                    <!--class="modulo-card"-->
+                    <div class="bg-blan border border-borde rounded-[18px] py-[24px] px-[22px] text-left shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] [&:nth-child(3n+1)]:border-t-4 [&:nth-child(3n+1)]:border-t-aguama [&:nth-child(3n+2)]:border-t-4 [&:nth-child(3n+2)]:border-t-azu [&:nth-child(3n+3)]:border-t-4 [&:nth-child(3n+3)]:border-t-orro">
+                        <!--class="modulo-icono-->
+                        <span class="[&:nth-child(3n+1)_.modulo-icono_i]:text-aguama [&:nth-child(3n+2)_.modulo-icono_i]:text-azu [&:nth-child(3n+3)_.modulo-icono_i]:text-orro"><i class="fa-solid fa-graduation-cap"></i></span>
+                        <h3>Gestion estudiantil</h3>
+                        <ul>
+                            <li>Perfil del estudiante</li>
+                            <li>Datos personales</li>
+                            <li>Curso y grupo</li>
+                            <li>Historial academico</li>
+                            <li>Estado del estudiante</li>
+                        </ul>
+                    </div>
+
+                    <!--class="modulo-card"-->
+                    <div class="bg-blan border border-borde rounded-[18px] py-[24px] px-[22px] text-left shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] [&:nth-child(3n+1)]:border-t-4 [&:nth-child(3n+1)]:border-t-aguama [&:nth-child(3n+2)]:border-t-4 [&:nth-child(3n+2)]:border-t-azu [&:nth-child(3n+3)]:border-t-4 [&:nth-child(3n+3)]:border-t-orro">
+                        <!--class="modulo-icono-->
+                        <span class="[&:nth-child(3n+1)_.modulo-icono_i]:text-aguama [&:nth-child(3n+2)_.modulo-icono_i]:text-azu [&:nth-child(3n+3)_.modulo-icono_i]:text-orro"><i class="fa-solid fa-book"></i></span>
+                        <h3>Gestion academica</h3>
+                        <ul>
+                            <li>Materias</li>
+                            <li>Asistencia</li>
+                            <li>Horarios</li>
+                            <li>Observaciones academicas</li>
+                        </ul>
+                    </div>
+
+                    <!--class="modulo-card"-->
+                    <div class="bg-blan border border-borde rounded-[18px] py-[24px] px-[22px] text-left shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] [&:nth-child(3n+1)]:border-t-4 [&:nth-child(3n+1)]:border-t-aguama [&:nth-child(3n+2)]:border-t-4 [&:nth-child(3n+2)]:border-t-azu [&:nth-child(3n+3)]:border-t-4 [&:nth-child(3n+3)]:border-t-orro">
+                        <!--class="modulo-icono-->
+                        <span class="[&:nth-child(3n+1)_.modulo-icono_i]:text-aguama [&:nth-child(3n+2)_.modulo-icono_i]:text-azu [&:nth-child(3n+3)_.modulo-icono_i]:text-orro"><i class="fa-solid fa-user-tie"></i></span>
+                        <h3>Gestion docente</h3>
+                        <ul>
+                            <li>Perfil de profesores</li>
+                            <li>Materias asignadas</li>
+                            <li>Cursos a cargo</li>
+                            <li>Registro de notas</li>
+                            <li>Registro de asistencia</li>
+                            <li>Observaciones de estudiantes</li>
+                        </ul>
+                    </div>
+
+                    <!--class="modulo-card"-->
+                    <div class="bg-blan border border-borde rounded-[18px] py-[24px] px-[22px] text-left shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] [&:nth-child(3n+1)]:border-t-4 [&:nth-child(3n+1)]:border-t-aguama [&:nth-child(3n+2)]:border-t-4 [&:nth-child(3n+2)]:border-t-azu [&:nth-child(3n+3)]:border-t-4 [&:nth-child(3n+3)]:border-t-orro">
+                        <!--class="modulo-icono-->
+                        <span class="[&:nth-child(3n+1)_.modulo-icono_i]:text-aguama [&:nth-child(3n+2)_.modulo-icono_i]:text-azu [&:nth-child(3n+3)_.modulo-icono_i]:text-orro"><i class="fa-solid fa-people-roof"></i></span>
+                        <h3>Gestion de acudientes</h3>
+                        <ul>
+                            <li>Informacion del acudiente</li>
+                            <li>Estudiantes asociados</li>
+                            <li>Seguimiento academico</li>
+                        </ul>
+                    </div>
+
+                    <!--class="modulo-card"-->
+                    <div class="bg-blan border border-borde rounded-[18px] py-[24px] px-[22px] text-left shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] [&:nth-child(3n+1)]:border-t-4 [&:nth-child(3n+1)]:border-t-aguama [&:nth-child(3n+2)]:border-t-4 [&:nth-child(3n+2)]:border-t-azu [&:nth-child(3n+3)]:border-t-4 [&:nth-child(3n+3)]:border-t-orro">
+                        <!--class="modulo-icono-->
+                        <span class="[&:nth-child(3n+1)_.modulo-icono_i]:text-aguama [&:nth-child(3n+2)_.modulo-icono_i]:text-azu [&:nth-child(3n+3)_.modulo-icono_i]:text-orro"><i class="fa-solid fa-bullhorn"></i></span>
+                        <h3>Noticias y comunicados</h3>
+                        <ul>
+                            <li>Noticias institucionales</li>
+                            <li>Anuncios</li>
+                            <li>Comunicados</li>
+                            <li>Eventos</li>
+                            <li>Avisos importantes</li>
+                        </ul>
+                    </div>
+
+                    <!--class="modulo-card"-->
+                    <div class="bg-blan border border-borde rounded-[18px] py-[24px] px-[22px] text-left shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] [&:nth-child(3n+1)]:border-t-4 [&:nth-child(3n+1)]:border-t-aguama [&:nth-child(3n+2)]:border-t-4 [&:nth-child(3n+2)]:border-t-azu [&:nth-child(3n+3)]:border-t-4 [&:nth-child(3n+3)]:border-t-orro">
+                        <!--class="modulo-icono-->
+                        <span class="[&:nth-child(3n+1)_.modulo-icono_i]:text-aguama [&:nth-child(3n+2)_.modulo-icono_i]:text-azu [&:nth-child(3n+3)_.modulo-icono_i]:text-orro"><i class="fa-regular fa-calendar-days"></i></span>
+                        <h3>Calendario</h3>
+                        <ul>
+                            <li>Fechas de evaluaciones</li>
+                            <li>Reuniones</li>
+                            <li>Eventos</li>
+                            <li>Actividades escolares</li>
+                            <li>Fechas de entrega</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--class="ingresar"-->
+            <div class="ingresar">
+                <!--class="btn-ingresar"-->
+                <button class="bg-gradient-to-r from-aguama to-azu border-none w-[190px] h-[42px] font-display text-base font-semibold text-white fixed top-[26px] right-[42px] rounded-full shadow-[0_6px_16px_rgba(31,111,178,0.35)] z-[11] cursor-pointer transition-[transform,box-shadow] duration-150 ease-in-out hover:-translate-y-[2px] hover:shadow-[0_10px_22px_rgba(31,111,178,0.45)]">Ingresa ahora</button>
+            </div>
+        </div>
+
+        <!-- Footer  -->
+        <footer class="footer-gea">
+            <div class="footer-inner">
+                <div class="footer-marca">
+                    <h2>GEA</h2>
+                    <p>GEA - Gestion Estudiantil Avanzada</p>
+                    <p>Plataforma digital enfocada en la gestion academica y administrativa.</p>
+                    <a href="mailto:gea@gmail.com" target="_blank" class="credito-link"><i
+                            class="fa-solid fa-envelope"></i>
+                        Correo oficial de GEA</a>
+                </div>
+
+                <div class="footer-columnas">
+                    <div class="credito-grupo">
+                        <h3>Institucion Aliada</h3>
+                        <ul>
+                            <li>Colegio Nacional Ismael Perdomo Borrero</li>
+                            <li>Gigante, Huila</li>
+                        </ul>
+                    </div>
+
+                    <div class="credito-grupo">
+                        <h3>Tecnologias Utilizadas</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>MySQL</li>
+                        </ul>
+                    </div>
+
+                    <div class="credito-grupo">
+                        <h3>Version y Año</h3>
+                        <ul>
+                            <li>Version Beta</li>
+                            <li>2026</li>
+                        </ul>
+                    </div>
+
+                    <div class="credito-grupo">
+                        <h3>Desarrollado por</h3>
+                        <div class="personas-creditos">
+                            <a href="https://github.com/EstebanVillarreal-debug" class="persona-credito"
+                                target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                                <span>Juan Esteban Villarreal Ramirez</span>
+                            </a>
+
+                            <a href="https://github.com/sgchavarro" class="persona-credito" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                                <span>Samuel Gerardo Chavarro</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="credito-grupo">
+                        <h3>Acompañamiento</h3>
+                        <div class="personas-creditos">
+                            <a href="https://github.com/hdtoledo" class="persona-credito" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                                <span>Hector David Toledo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </header>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
