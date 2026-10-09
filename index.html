@@ -83,7 +83,7 @@
                 <img class="flex-none w-[min(100%,240px)] drop-shadow-[0_10px_18px_rgba(22,50,79,0.18)]" src="img/logo.png" alt="Logo GEA">
 
                 <!--class="info-somos"-->
-                <div class="flex-1 min-h-auto min-h-[150px] py-[26px] px-[28px] rounded-[18px] bg-blan border border-borde shadow-[0_6px_18px_rgba(22,50,79,0.08)] relative text-left transition-[transform,box-shadow] duration-200 ease-in-out -translate-y-[3px] shadow-[0_12px_24px_rgba(22,50,79,0.12)] border-t-4 border-t-azu">
+                <div class="flex-1 min-h-auto min-h-[auto] py-[26px] px-[28px] rounded-[18px] bg-blan border border-borde shadow-[0_6px_18px_rgba(22,50,79,0.08)] relative text-left transition-[transform,box-shadow] duration-200 ease-in-out -translate-y-[3px] shadow-[0_12px_24px_rgba(22,50,79,0.12)] border-t-4 border-t-azu">
                     <!--class="h2"-->
                     <h2 class="mb-[10px] font-display text-[22px] font-bold leading-[1.2] text-azuoscuro flex items-center gap-[10px]">
                         <!--class="i"-->
@@ -156,17 +156,17 @@
                 </div>
 
                 <!--class="alianza-carrusel"-->
-                <div class="flex-[2] min-w-0 rounded-[18px] border border-[var(--borde)] border-t-4 border-t-[var(--aguama)] shadow-[0_6px_18px_rgba(22,50,79,0.08)] bg-[var(--blan)] overflow-hidden relative" id="carrusel">
+                <div class="flex-[2] min-w-0 rounded-[18px] border border-borde border-t-4 border-t-aguama shadow-[0_6px_18px_rgba(22,50,79,0.08)] bg-blan overflow-hidden relative" id="carrusel">
                     <!--class="carrusel-via"-->
                     <div class="flex h-full transition-transform duration-600 ease-in-out">
 
                         <!--class="carrusel-mover"-->
                         <div class="min-w-full flex gap-4 p-4 min-h-[280px]">
                             <!--class="img-directivos"-->
-                            <img class="w-[38%] flex-[0_0_38%] h-auto object-cover rounded-xl border border-[var(--borde)] shadow-none" src="img/escudo.png"
+                            <img class="w-[38%] flex-[0_0_38%] h-auto object-cover rounded-xl border border-borde shadow-none" src="img/escudo.png"
                                 alt="Escudo Colegio Nacional Ismael Perdomo Borrero">
                                 <!--class="iframe"-->
-                            <iframe class="flex-1 w-full h-full min-h-[260px] rounded-xl border border-[var(--borde)]"
+                            <iframe class="flex-1 w-full h-full min-h-[260px] rounded-xl border border-borde"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1236.6505624504832!2d-75.54376479540512!3d2.3895674219398995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3b2d4ec43a0551%3A0x6d17875512a29c7a!2sColegio%20Nacional%20Ismael%20Perdomo%20Borrero!5e1!3m2!1ses!2sco!4v1779912730169!5m2!1ses!2sco"
                                 style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade">
@@ -184,91 +184,125 @@
             <div class="w-[min(100%,1120px)] flex flex-col items-center gap-2 mt-6">
                 <!--class="modulos-header"-->
                 <div class="text-center max-w-[720px] mb-[10px]">
-                    <h2 class="font-[var(--fuente-display)] text-[clamp(24px,3.4vw,32px)] font-extrabold leading-[1.25] text-[var(--azuoscuro)]">
+                    <h2 class="font-display text-[clamp(24px,3.4vw,32px)] font-extrabold leading-[1.25] text-azuoscuro">
                         Modulos principales de GEA</h2>
                 </div>
 
                 <!--class="modulos-grid"-->
                 <div class="w-full grid grid-cols-3 gap-[22px]">
                     <!--class="modulo-card"-->
-                    <div class="bg-blan border border-borde rounded-[18px] py-[24px] px-[22px] text-left shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] [&:nth-child(3n+1)]:border-t-4 [&:nth-child(3n+1)]:border-t-aguama [&:nth-child(3n+2)]:border-t-4 [&:nth-child(3n+2)]:border-t-azu [&:nth-child(3n+3)]:border-t-4 [&:nth-child(3n+3)]:border-t-orro">
+                    <div class="bg-blan border border-borde rounded-[18px] py-[24px] px-[22px] text-left shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] border-t-4 border-t-aguama">
                         <!--class="modulo-icono-->
-                        <span class="[&:nth-child(3n+1)_.modulo-icono_i]:text-aguama [&:nth-child(3n+2)_.modulo-icono_i]:text-azu [&:nth-child(3n+3)_.modulo-icono_i]:text-orro"><i class="fa-solid fa-graduation-cap"></i></span>
-                        <h3>Gestion estudiantil</h3>
-                        <ul>
-                            <li>Perfil del estudiante</li>
-                            <li>Datos personales</li>
-                            <li>Curso y grupo</li>
-                            <li>Historial academico</li>
-                            <li>Estado del estudiante</li>
+                        <span class="flex items-center justify-center w-[46px] h-[46px] rounded-[12px] bg-hue text-[22px] mb-[14px]"><i class="fa-solid fa-graduation-cap font-[20px] text-aguama"></i></span>
+                        <h3 class="font-display text-[18px] font-bold text-azuoscuro mb-[10px]">
+                            Gestion estudiantil</h3>
+                        <ul class="list-none p-0">
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-aguama">
+                                Perfil del estudiante</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-aguama">
+                                Datos personales</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-aguama">
+                                Curso y grupo</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-aguama">
+                                Historial academico</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-aguama">
+                                Estado del estudiante</li>
                         </ul>
                     </div>
 
                     <!--class="modulo-card"-->
-                    <div class="bg-blan border border-borde rounded-[18px] py-[24px] px-[22px] text-left shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] [&:nth-child(3n+1)]:border-t-4 [&:nth-child(3n+1)]:border-t-aguama [&:nth-child(3n+2)]:border-t-4 [&:nth-child(3n+2)]:border-t-azu [&:nth-child(3n+3)]:border-t-4 [&:nth-child(3n+3)]:border-t-orro">
+                    <div class="bg-blan border border-borde rounded-[18px] py-[24px] px-[22px] text-left shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] border-t-4 border-t-azu">
                         <!--class="modulo-icono-->
-                        <span class="[&:nth-child(3n+1)_.modulo-icono_i]:text-aguama [&:nth-child(3n+2)_.modulo-icono_i]:text-azu [&:nth-child(3n+3)_.modulo-icono_i]:text-orro"><i class="fa-solid fa-book"></i></span>
-                        <h3>Gestion academica</h3>
-                        <ul>
-                            <li>Materias</li>
-                            <li>Asistencia</li>
-                            <li>Horarios</li>
-                            <li>Observaciones academicas</li>
+                        <span class="flex items-center justify-center w-[46px] h-[46px] rounded-[12px] bg-hue text-[22px] mb-[14px]"><i class="fa-solid fa-book font-[20px] text-azu"></i></span>
+                        <h3 class="font-display text-[18px] font-bold text-azuoscuro mb-[10px]">
+                            Gestion academica</h3>
+                        <ul class="list-none p-0">
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-azu">
+                                Materias</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-azu">
+                                Asistencia</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-azu">
+                                Horarios</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-azu">
+                                Observaciones academicas</li>
                         </ul>
                     </div>
 
                     <!--class="modulo-card"-->
-                    <div class="bg-blan border border-borde rounded-[18px] py-[24px] px-[22px] text-left shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] [&:nth-child(3n+1)]:border-t-4 [&:nth-child(3n+1)]:border-t-aguama [&:nth-child(3n+2)]:border-t-4 [&:nth-child(3n+2)]:border-t-azu [&:nth-child(3n+3)]:border-t-4 [&:nth-child(3n+3)]:border-t-orro">
+                    <div class="bg-blan border border-borde rounded-[18px] py-[24px] px-[22px] text-left shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] border-t-4 border-t-orro">
                         <!--class="modulo-icono-->
-                        <span class="[&:nth-child(3n+1)_.modulo-icono_i]:text-aguama [&:nth-child(3n+2)_.modulo-icono_i]:text-azu [&:nth-child(3n+3)_.modulo-icono_i]:text-orro"><i class="fa-solid fa-user-tie"></i></span>
-                        <h3>Gestion docente</h3>
-                        <ul>
-                            <li>Perfil de profesores</li>
-                            <li>Materias asignadas</li>
-                            <li>Cursos a cargo</li>
-                            <li>Registro de notas</li>
-                            <li>Registro de asistencia</li>
-                            <li>Observaciones de estudiantes</li>
+                        <span class="flex items-center justify-center w-[46px] h-[46px] rounded-[12px] bg-hue text-[22px] mb-[14px]"><i class="fa-solid fa-user-tie font-[20px] text-orro"></i></span>
+                        <h3 class="font-display text-[18px] font-bold text-azuoscuro mb-[10px]">
+                            Gestion docente</h3>
+                        <ul class="list-none p-0">
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-orro">
+                                Perfil de profesores</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-orro">
+                                Materias asignadas</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-orro">
+                                Cursos a cargo</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-orro">
+                                Registro de notas</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-orro">
+                                Registro de asistencia</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-orro">
+                                Observaciones de estudiantes</li>
                         </ul>
                     </div>
 
                     <!--class="modulo-card"-->
-                    <div class="bg-blan border border-borde rounded-[18px] py-[24px] px-[22px] text-left shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] [&:nth-child(3n+1)]:border-t-4 [&:nth-child(3n+1)]:border-t-aguama [&:nth-child(3n+2)]:border-t-4 [&:nth-child(3n+2)]:border-t-azu [&:nth-child(3n+3)]:border-t-4 [&:nth-child(3n+3)]:border-t-orro">
+                    <div class="bg-blan border border-borde rounded-[18px] py-[24px] px-[22px] text-left shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] border-t-4 border-t-aguama">
                         <!--class="modulo-icono-->
-                        <span class="[&:nth-child(3n+1)_.modulo-icono_i]:text-aguama [&:nth-child(3n+2)_.modulo-icono_i]:text-azu [&:nth-child(3n+3)_.modulo-icono_i]:text-orro"><i class="fa-solid fa-people-roof"></i></span>
-                        <h3>Gestion de acudientes</h3>
-                        <ul>
-                            <li>Informacion del acudiente</li>
-                            <li>Estudiantes asociados</li>
-                            <li>Seguimiento academico</li>
+                        <span class="flex items-center justify-center w-[46px] h-[46px] rounded-[12px] bg-hue text-[22px] mb-[14px]"><i class="fa-solid fa-people-roof font-[20px] text-aguama"></i></span>
+                        <h3 class="font-display text-[18px] font-bold text-azuoscuro mb-[10px]">
+                            Gestion de acudientes</h3>
+                        <ul class="list-none p-0">
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-aguama">
+                                Informacion del acudiente</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-aguama">
+                                Estudiantes asociados</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-aguama">
+                                Seguimiento academico</li>
                         </ul>
                     </div>
 
                     <!--class="modulo-card"-->
-                    <div class="bg-blan border border-borde rounded-[18px] py-[24px] px-[22px] text-left shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] [&:nth-child(3n+1)]:border-t-4 [&:nth-child(3n+1)]:border-t-aguama [&:nth-child(3n+2)]:border-t-4 [&:nth-child(3n+2)]:border-t-azu [&:nth-child(3n+3)]:border-t-4 [&:nth-child(3n+3)]:border-t-orro">
+                    <div class="bg-blan border border-borde rounded-[18px] py-[24px] px-[22px] text-left shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] border-t-4 border-t-azu">
                         <!--class="modulo-icono-->
-                        <span class="[&:nth-child(3n+1)_.modulo-icono_i]:text-aguama [&:nth-child(3n+2)_.modulo-icono_i]:text-azu [&:nth-child(3n+3)_.modulo-icono_i]:text-orro"><i class="fa-solid fa-bullhorn"></i></span>
-                        <h3>Noticias y comunicados</h3>
-                        <ul>
-                            <li>Noticias institucionales</li>
-                            <li>Anuncios</li>
-                            <li>Comunicados</li>
-                            <li>Eventos</li>
-                            <li>Avisos importantes</li>
+                        <span class="flex items-center justify-center w-[46px] h-[46px] rounded-[12px] bg-hue text-[22px] mb-[14px]"><i class="fa-solid fa-bullhorn font-[20px] text-azu"></i></span>
+                        <h3 class="font-display text-[18px] font-bold text-azuoscuro mb-[10px]">
+                            Noticias y comunicados</h3>
+                        <ul class="list-none p-0">
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-azu">
+                                Noticias institucionales</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-azu">
+                                Anuncios</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-azu">
+                                Comunicados</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-azu">
+                                Eventos</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-azu">
+                                Avisos importantes</li>
                         </ul>
                     </div>
 
                     <!--class="modulo-card"-->
-                    <div class="bg-blan border border-borde rounded-[18px] py-[24px] px-[22px] text-left shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] [&:nth-child(3n+1)]:border-t-4 [&:nth-child(3n+1)]:border-t-aguama [&:nth-child(3n+2)]:border-t-4 [&:nth-child(3n+2)]:border-t-azu [&:nth-child(3n+3)]:border-t-4 [&:nth-child(3n+3)]:border-t-orro">
+                    <div class="bg-blan border border-borde rounded-[18px] py-[24px] px-[22px] text-left shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] border-t-4 border-t-orro">
                         <!--class="modulo-icono-->
-                        <span class="[&:nth-child(3n+1)_.modulo-icono_i]:text-aguama [&:nth-child(3n+2)_.modulo-icono_i]:text-azu [&:nth-child(3n+3)_.modulo-icono_i]:text-orro"><i class="fa-regular fa-calendar-days"></i></span>
-                        <h3>Calendario</h3>
-                        <ul>
-                            <li>Fechas de evaluaciones</li>
-                            <li>Reuniones</li>
-                            <li>Eventos</li>
-                            <li>Actividades escolares</li>
-                            <li>Fechas de entrega</li>
+                        <span class="flex items-center justify-center w-[46px] h-[46px] rounded-[12px] bg-hue text-[22px] mb-[14px]"><i class="fa-regular fa-calendar-days font-[20px] text-orro"></i></span>
+                        <h3 class="font-display text-[18px] font-bold text-azuoscuro mb-[10px]">
+                            Calendario</h3>
+                        <ul class="list-none p-0">
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-orro">
+                                Fechas de evaluaciones</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-orro">
+                                Reuniones</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-orro">
+                                Eventos</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-orro">
+                                Actividades escolares</li>
+                            <li class="relative pl-[16px] text-[14.5px] leading-[1.6] text-sua before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-orro">
+                                Fechas de entrega</li>
                         </ul>
                     </div>
                 </div>
@@ -282,65 +316,93 @@
         </div>
 
         <!-- Footer  -->
-        <footer class="footer-gea">
-            <div class="footer-inner">
-                <div class="footer-marca">
-                    <h2>GEA</h2>
-                    <p>GEA - Gestion Estudiantil Avanzada</p>
-                    <p>Plataforma digital enfocada en la gestion academica y administrativa.</p>
-                    <a href="mailto:gea@gmail.com" target="_blank" class="credito-link"><i
-                            class="fa-solid fa-envelope"></i>
+        <!--class="footer-gea"-->
+        <footer class="w-full mt-5 bg-gradient-to-b from-azuoscuro to-[#0e2036] border-t-[3px] border-t-aguama pt-[48px] px-[24px] pb-[36px] text-left text-white">
+            <!--class="footer-inner"-->
+            <div class="w-[min(100%, 1120px)] my-0 mx-auto flex flex-wrap gap-[40px]">
+                <!--class="footer-marca"-->
+                <div class="flex-[1_1_240px] max-w-[280px]">
+                    <h2 class="font-display text-2xl font-extrabold mb-[10px] tracking-wider">
+                        GEA</h2>
+                    <p class="text-[14px] leading-[1.5] text-white/70 mb-[8px]">
+                        GEA - Gestion Estudiantil Avanzada</p>
+                    <p class="text-white/70">
+                        Plataforma digital enfocada en la gestion academica y administrativa.</p>
+                    <!--class="credito-link"-->
+                    <a href="mailto:gea@gmail.com" target="_blank" 
+                    class="no-underline font-semibold text-aguama text-[14px] hover:underline">
+                        <i class="fa-solid fa-envelope"></i>
                         Correo oficial de GEA</a>
                 </div>
 
-                <div class="footer-columnas">
-                    <div class="credito-grupo">
+                <!--class="footer-columnas"-->
+                <div class="flex-[2_1_500px] grid grid-cols-[repeat(3,minmax(140px,1fr))] gap-x-[24px] gap-y-[28px]">
+                    <!--class="credito-grupo"-->
+                    <div class="pt-[4px] pr-0 pb-[4px] pl-[18px] border-l-2 border-l-aguama">
                         <h3>Institucion Aliada</h3>
                         <ul>
-                            <li>Colegio Nacional Ismael Perdomo Borrero</li>
-                            <li>Gigante, Huila</li>
+                            <li class="text-white/70 before:bg-aguama">
+                                Colegio Nacional Ismael Perdomo Borrero</li>
+                            <li class="text-white/70 before:bg-aguama">
+                                Gigante, Huila</li>
                         </ul>
                     </div>
 
-                    <div class="credito-grupo">
+                    <!--class="credito-grupo"-->
+                    <div class="pt-[4px] pr-0 pb-[4px] pl-[18px] border-l-2 border-l-aguama">
                         <h3>Tecnologias Utilizadas</h3>
                         <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>MySQL</li>
+                            <li class="text-white/70 before:bg-aguama">
+                                HTML</li>
+                            <li class="text-white/70 before:bg-aguama">
+                                CSS</li>
+                            <li class="text-white/70 before:bg-aguama">
+                                JavaScript</li>
+                            <li class="text-white/70 before:bg-aguama">
+                                MySQL</li>
                         </ul>
                     </div>
 
-                    <div class="credito-grupo">
+                    <!--class="credito-grupo"-->
+                    <div class="pt-[4px] pr-0 pb-[4px] pl-[18px] border-l-2 border-l-aguama">
                         <h3>Version y Año</h3>
                         <ul>
-                            <li>Version Beta</li>
-                            <li>2026</li>
+                            <li class="text-white/70 before:bg-aguama">
+                                Version Beta</li>
+                            <li class="text-white/70 before:bg-aguama">
+                                2026</li>
                         </ul>
                     </div>
 
-                    <div class="credito-grupo">
+                    <!--class="credito-grupo"-->
+                    <div class="pt-[4px] pr-0 pb-[4px] pl-[18px] border-l-2 border-l-aguama">
                         <h3>Desarrollado por</h3>
-                        <div class="personas-creditos">
-                            <a href="https://github.com/EstebanVillarreal-debug" class="persona-credito"
+                        <!--class="personas-creditos"-->
+                        <div class="flex flex-col gap-x-[18px] gap-y-2.5 max-w-[275px] mb-3">
+                            <!--class="persona-credito"-->
+                            <a href="https://github.com/EstebanVillarreal-debug" class="flex items-center gap-[8px] text-texto text-[15px] font-medium leading-[1.3] no-underline hover:underline""
                                 target="_blank">
-                                <i class="fa-brands fa-github"></i>
+                                <i class="fa-brands fa-github w-[22px] text-aguama text-lg text-center"></i>
                                 <span>Juan Esteban Villarreal Ramirez</span>
                             </a>
 
-                            <a href="https://github.com/sgchavarro" class="persona-credito" target="_blank">
-                                <i class="fa-brands fa-github"></i>
+                            <a href="https://github.com/sgchavarro"
+                            class="flex items-center gap-[8px] text-texto text-[15px] font-medium leading-[1.3] no-underline hover:underline"" target="_blank">
+                                <i class="fa-brands fa-github w-[22px] text-aguama text-lg text-center"></i>
                                 <span>Samuel Gerardo Chavarro</span>
                             </a>
                         </div>
                     </div>
 
-                    <div class="credito-grupo">
+                    <!--class="credito-grupo"-->
+                    <div class="pt-[4px] pr-0 pb-[4px] pl-[18px] border-l-2 border-l-aguama">
                         <h3>Acompañamiento</h3>
-                        <div class="personas-creditos">
-                            <a href="https://github.com/hdtoledo" class="persona-credito" target="_blank">
-                                <i class="fa-brands fa-github"></i>
+                        <!--class="personas-creditos"-->
+                        <div class="flex flex-col gap-x-[18px] gap-y-2.5 max-w-[275px] mb-3">
+                            <!--class="persona-credito"-->
+                            <a href="https://github.com/hdtoledo" 
+                            class="flex items-center gap-[8px] text-texto text-[15px] font-medium leading-[1.3] no-underline text-white/85 hover:underline"" target="_blank">
+                                <i class="fa-brands fa-github w-[22px] text-aguama text-lg text-center"></i>
                                 <span>Hector David Toledo</span>
                             </a>
                         </div>
