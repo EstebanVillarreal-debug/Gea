@@ -33,6 +33,24 @@ if (btnVolver) {
     });
 }
 
+//ir a docentes
+const tarjetaDocentes = document.getElementById('abrir-docentes');
+if (tarjetaDocentes) {
+    tarjetaDocentes.addEventListener('click', (e) => {
+        e.preventDefault();
+        location.href = 'modulo-docentes.html';
+    });
+}
+
+//ir a home - principal
+const iconohome = document.getElementById('abrir-principal');
+if (iconohome) {
+    iconohome.addEventListener('click', (e) => {
+        e.preventDefault();
+        location.href = 'principal.html';
+    });
+}
+
 //ver contraseña
 const verp = document.getElementById('verpassword');
 const pass = document.getElementById('password');
