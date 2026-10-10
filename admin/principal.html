@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        azuoscuro: '#16324f',
+                        azu: '#1f6fb2',
+                        aguama: '#2ca58d',
+                        orro: '#c98b2f',
+                        hue: '#f4f8fb',
+                        blan: '#ffffff',
+                        text: '#16232f',
+                        sua: '#55677a',
+                        borde: '#e1e9f0'
+                    },
+                    fontFamily: {
+                        display: ['Poppins', 'Segoe UI', 'sans-serif'],
+                        texto: ['Inter', 'Segoe UI', 'sans-serif'],
+                        titulo: ['Georgia', 'Times New Roman', 'serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <title>Gea</title>
+</head>
+
+<body
+    class="bg-hue m-0 p-0 font-texto text-text flex flex-col items-center justify-start text-center min-h-screen overflow-x-hidden">
+
+    <header class="w-full">
+        <section class="pagina_gea flex min-h-screen w-full items-center justify-center bg-[#f4f8fb]"">
+            <div class="homeadmin flex min-h-screen w-full flex-col items-center px-4 py-8">
+                <!-- Header -->
+                <header
+                    class="header mb-[18px] flex w-[min(95vw,520px)] items-center justify-between rounded-[40px] bg-[#f5c6d0] px-5 py-3 shadow-[0_4px_12px_rgba(0,0,0,.08)] max-[480px]:rounded-[30px] max-[480px]:px-[14px] max-[480px]:py-[10px]">
+                    <div class="perfil">
+                        <div role="img" aria-label="Perfil de usuario"
+                            class="grid size-[70px] place-items-center rounded-full border-[3px] border-[#6b4c9a] bg-white text-3xl text-[#6b4c9a] max-[480px]:size-[55px]">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="escudo">
+                        <img src="img/escudo.png" alt="Escudo" class="h-auto w-[70px] max-[480px]:w-[55px]">
+                    </div>
+                </header>
+
+                <!-- Bienvenida y fecha -->
+                <div
+                    class="bienvenida mb-[6px] flex w-[min(95vw,520px)] justify-between px-2 text-[.95rem] text-[#333] max-[480px]:text-[.85rem]">
+                    <span>Bienvenido Jose Perez</span>
+                    <span id="fecha">Fecha: --/--/----</span>
+                </div>
+
+                <!-- Menú de opciones -->
+                <main class="menu flex w-[min(95vw,420px)] flex-col items-center justify-center gap-[18px]">
+
+                    <div class="fila flex justify-center gap-[18px] max-[480px]:gap-[10px]">
+                        <a href="#"
+                            class="tarjeta amarillo flex h-[90px] w-[150px] items-center justify-between rounded-2xl bg-[#f9e79f] px-[18px] text-[1.05rem] font-bold text-[#222] no-underline shadow-[0_4px_10px_rgba(0,0,0,.12)] transition hover:-translate-y-1 hover:shadow-[0_8px_18px_rgba(0,0,0,.15)] max-[480px]:h-20 max-[480px]:w-[135px] max-[480px]:px-[14px] max-[480px]:text-[.95rem]">
+                            <span>Noticias</span>
+                            <span class="icono text-[1.8rem] max-[480px]:text-2xl">📄</span>
+                        </a>
+                        <a href="#"
+                            class="tarjeta verde flex h-[90px] w-[150px] items-center justify-between rounded-2xl bg-[#a9dfbf] px-[18px] text-[1.05rem] font-bold text-[#222] no-underline shadow-[0_4px_10px_rgba(0,0,0,.12)] transition hover:-translate-y-1 hover:shadow-[0_8px_18px_rgba(0,0,0,.15)] max-[480px]:h-20 max-[480px]:w-[135px] max-[480px]:px-[14px] max-[480px]:text-[.95rem]">
+                            <span>Registro</span>
+                            <span class="icono text-[1.8rem] max-[480px]:text-2xl">📋</span>
+                        </a>
+                    </div>
+
+                    <div class="fila flex justify-center gap-[18px] max-[480px]:gap-[10px]">
+                        <a href="#"
+                            class="tarjeta rojo flex h-[90px] w-[150px] items-center justify-between rounded-2xl bg-[#f5b7b1] px-[18px] text-[1.05rem] font-bold text-[#222] no-underline shadow-[0_4px_10px_rgba(0,0,0,.12)] transition hover:-translate-y-1 hover:shadow-[0_8px_18px_rgba(0,0,0,.15)] max-[480px]:h-20 max-[480px]:w-[135px] max-[480px]:px-[14px] max-[480px]:text-[.95rem]">
+                            <span>Reportes</span>
+                            <span class="icono text-[1.8rem] max-[480px]:text-2xl">📝</span>
+                        </a>
+                        <a href="#" id="abrir-docentes"
+                            class="tarjeta morado flex h-[90px] w-[150px] items-center justify-between rounded-2xl bg-[#d2b4de] px-[18px] text-[1.05rem] font-bold text-[#222] no-underline shadow-[0_4px_10px_rgba(0,0,0,.12)] transition hover:-translate-y-1 hover:shadow-[0_8px_18px_rgba(0,0,0,.15)] max-[480px]:h-20 max-[480px]:w-[135px] max-[480px]:px-[14px] max-[480px]:text-[.95rem]">
+                            <span>Docentes</span>
+                            <span class="icono text-[1.8rem] max-[480px]:text-2xl">👥</span>
+                        </a>
+                    </div>
+
+                    <div class="fila centro flex justify-center gap-[18px] max-[480px]:gap-[10px]">
+                        <a href="#"
+                            class="tarjeta azul flex h-[90px] w-[170px] items-center justify-between rounded-2xl bg-[#aed6f1] px-[18px] text-[1.05rem] font-bold text-[#222] no-underline shadow-[0_4px_10px_rgba(0,0,0,.12)] transition hover:-translate-y-1 hover:shadow-[0_8px_18px_rgba(0,0,0,.15)] max-[480px]:h-20 max-[480px]:w-[150px] max-[480px]:px-[14px] max-[480px]:text-[.95rem]">
+                            <span>Calendario</span>
+                            <span class="icono text-[1.8rem] max-[480px]:text-2xl">📅</span>
+                        </a>
+                    </div>
+                </main>
+            </div>
+        </section>
+
+        <!-- Módulo de docentes -->
+        <section aria-labelledby="titulo-docentes"
+            class="pagina-docentes flex min-h-screen w-full flex-row bg-[#f4f8fb] text-center text-[#16232f] [background-image:...]">
+            <aside aria-label="Navegación principal"
+                class="barra-lateral flex min-h-screen w-[72px] shrink-0 flex-col items-center gap-[10px] border-r-0 bg-gradient-to-b from-[#16324f] to-[#0e2036] px-[10px] py-[22px] max-[560px]:w-12 max-[560px]:px-[3px] max-[560px]:py-2">
+                <button type="button" aria-label="Volver al panel principal"
+                    class="nav-icono volver-panel grid size-[46px] place-items-center rounded-xl border-0 bg-transparent p-0 text-[19px] text-white/55 shadow-none transition hover:bg-white/10 hover:text-white max-[560px]:size-10">
+                    <i class="fa-solid fa-house"></i>
+                </button>
+                <button type="button" aria-label="Registro"
+                    class="nav-icono grid size-[46px] place-items-center rounded-xl border-0 bg-transparent p-0 text-[19px] text-white/55 shadow-none transition hover:bg-white/10 hover:text-white max-[560px]:size-10">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                </button>
+                <button type="button" aria-label="Reportes"
+                    class="nav-icono grid size-[46px] place-items-center rounded-xl border-0 bg-transparent p-0 text-[19px] text-white/55 shadow-none transition hover:bg-white/10 hover:text-white max-[560px]:size-10">
+                    <i class="fa-solid fa-newspaper"></i>
+                </button>
+                <button type="button" aria-label="Docentes"
+                    class="nav-icono activo grid size-[46px] place-items-center rounded-xl border-0 bg-gradient-to-br from-[#2ca58d] to-[#1f6fb2] p-0 text-[19px] text-white shadow-[0_6px_16px_-6px_rgba(44,165,141,.55)] max-[560px]:size-10">
+                    <i class="fa-solid fa-users"></i>
+                </button>
+                <button type="button" aria-label="Calendario"
+                    class="nav-icono grid size-[46px] place-items-center rounded-xl border-0 bg-transparent p-0 text-[19px] text-white/55 shadow-none transition hover:bg-white/10 hover:text-white max-[560px]:size-10">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </button>
+                <button type="button" aria-label="Perfil"
+                    class="nav-icono grid size-[46px] place-items-center rounded-xl border-0 bg-transparent p-0 text-[19px] text-white/55 shadow-none transition hover:bg-white/10 hover:text-white max-[560px]:size-10">
+                    <i class="fa-solid fa-circle-user"></i>
+                </button>
+            </aside>
+
+            <main
+                class="contenido-docentes flex flex-1 flex-col items-center px-6 pb-[60px] pt-10 max-[560px]:px-[10px]">
+                <section aria-label="Opciones de docentes"
+                    class="inicio-docentes flex w-full flex-col items-center [&[hidden]]:hidden">
+                    <h1
+                        class="mb-0 w-[min(100%,380px)] rounded-full bg-gradient-to-r from-[#6b4c9a] to-[#8b318b] px-5 py-[14px] text-[clamp(30px,5vw,40px)] font-bold leading-[1.05] text-white shadow-[0_10px_26px_-12px_rgba(58,22,79,.45)] [font-family:Poppins,_Segoe_UI,_sans-serif]">
+                        Docentes</h1>
+                    <div
+                        class="acciones-docentes mt-[clamp(56px,12vh,120px)] flex w-full flex-wrap items-center justify-center gap-[22px] max-[560px]:flex-col">
+                        <button type="button"
+                            class="opcion-docente opcion-lista-docentes abrir-lista-docentes flex h-[84px] w-[235px] items-center justify-between rounded-[18px] border border-[#e1e9f0] border-t-4 border-t-[#8b318b] bg-white px-[22px] text-[19px] font-bold text-[#16324f] shadow-[0_8px_20px_rgba(22,50,79,.1)] transition hover:-translate-y-[3px] hover:shadow-[0_14px_26px_rgba(22,50,79,.16)] [font-family:Poppins,_Segoe_UI,_sans-serif]">
+                            <span>Docentes</span>
+                            <i aria-hidden="true" class="fa-solid fa-chalkboard-user text-[28px] text-[#8b318b]"></i>
+                        </button>
+                        <button type="button"
+                            class="opcion-docente opcion-horario flex h-[84px] w-[235px] items-center justify-between rounded-[18px] border border-[#e1e9f0] border-t-4 border-t-[#b91661] bg-white px-[22px] text-[19px] font-bold text-[#16324f] shadow-[0_8px_20px_rgba(22,50,79,.1)] transition hover:-translate-y-[3px] hover:shadow-[0_14px_26px_rgba(22,50,79,.16)] [font-family:Poppins,_Segoe_UI,_sans-serif]">
+                            <span>Horario</span>
+                            <i aria-hidden="true" class="fa-solid fa-user-clock text-[28px] text-[#b91661]"></i>
+                        </button>
+                    </div>
+                </section>
+
+                <section aria-labelledby="titulo-docentes" hidden
+                    class="detalle-docentes hidden w-full flex-col items-center [&:not([hidden])]:flex">
+                    <h1 id="titulo-docentes"
+                        class="mb-0 w-[min(100%,440px)] rounded-full bg-gradient-to-r from-[#6b4c9a] to-[#8b318b] px-5 py-[14px] text-[clamp(30px,4.4vw,38px)] font-bold leading-[1.05] text-white shadow-[0_10px_26px_-12px_rgba(58,22,79,.45)] [font-family:Poppins,_Segoe_UI,_sans-serif]">
+                        Docentes</h1>
+                    <div aria-hidden="true" hidden class="docentes-linea"></div>
+
+                    <nav aria-label="Opciones de docentes"
+                        class="pestanas-docentes flex h-[46px] w-[min(100%,560px)] gap-1 overflow-hidden rounded-full border border-[#e1e9f0] bg-white p-1 shadow-[0_6px_18px_rgba(22,50,79,.08)]">
+                        <button type="button" data-vista-docente="lista"
+                            class="pestana-docente activa h-auto flex-1 whitespace-nowrap rounded-full border-0 bg-transparent px-3 py-[6px] text-[14.5px] font-semibold text-[#55677a] transition hover:bg-[#f4f8fb] hover:text-[#16324f] [&.activa]:bg-gradient-to-br [&.activa]:from-[#6b4c9a] [&.activa]:to-[#8b318b] [&.activa]:text-white [&.activa]:shadow-[0_6px_14px_-6px_rgba(119,31,178,.5)]">Docentes</button>
+                        <button type="button" data-vista-docente="agregar"
+                            class="pestana-docente h-auto flex-1 whitespace-nowrap rounded-full border-0 bg-transparent px-3 py-[6px] text-[14.5px] font-semibold text-[#55677a] transition hover:bg-[#f4f8fb] hover:text-[#16324f] [&.activa]:bg-gradient-to-br [&.activa]:from-[#6b4c9a] [&.activa]:to-[#8b318b] [&.activa]:text-white [&.activa]:shadow-[0_6px_14px_-6px_rgba(119,31,178,.5)]">Agregar
+                            Docente</button>
+                        <button type="button" data-vista-docente="rango"
+                            class="pestana-docente h-auto flex-1 whitespace-nowrap rounded-full border-0 bg-transparent px-3 py-[6px] text-[14.5px] font-semibold text-[#55677a] transition hover:bg-[#f4f8fb] hover:text-[#16324f] [&.activa]:bg-gradient-to-br [&.activa]:from-[#6b4c9a] [&.activa]:to-[#8b318b] [&.activa]:text-white [&.activa]:shadow-[0_6px_14px_-6px_rgba(119,31,178,.5)]">Cambiar
+                            Rango</button>
+                    </nav>
+
+                    <section data-vista="lista"
+                        class="vista-docentes vista-lista mt-5 block w-[min(100%,980px)] [&[hidden]]:hidden">
+                        <div
+                            class="barra-herramientas-docentes relative mx-auto mb-5 flex w-full items-center justify-between">
+                            <label for="buscar-docente"
+                                class="buscador-docentes flex h-[42px] w-[260px] items-center gap-2 rounded-full border border-[#e1e9f0] bg-white px-4 text-[#55677a] shadow-[0_4px_12px_rgba(22,50,79,.06)] max-[560px]:w-full">
+                                <i aria-hidden="true" class="fa-solid fa-magnifying-glass text-sm text-[#1f6fb2]"></i>
+                                <span class="sr-only absolute size-px overflow-hidden whitespace-nowrap">Buscar
+                                    docente</span>
+                                <input id="buscar-docente" type="search" placeholder="Búsqueda:"
+                                    class="h-full w-full border-0 bg-transparent p-0 text-sm text-[#16232f] outline-none focus:shadow-none">
+                            </label>
+
+                            <div class="filtro-docentes relative flex items-center">
+                                <button type="button" id="abrir-filtro-docentes" aria-label="Abrir filtros"
+                                    class="boton-filtro grid h-[42px] w-12 place-items-center rounded-xl border border-[#e1e9f0] bg-white p-0 text-[#16324f] shadow-[0_4px_12px_rgba(22,50,79,.06)] transition hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(22,50,79,.12)]">
+                                    <i class="fa-solid fa-filter"></i>
+                                </button>
+                                <div id="menu-filtros-docentes"
+                                    class="menu-filtros absolute right-0 top-[52px] z-20 hidden w-[170px] flex-col gap-2 rounded-[18px] border-2 border-[#222] bg-[#8163ad] p-3 shadow-[0_8px_20px_rgba(0,0,0,.15)] [&.visible]:flex">
+                                    <button type="button" data-filtro="todos"
+                                        class="opcion-filtro seleccionado h-[42px] w-full rounded-[13px] border-2 border-black bg-[#a846a8] px-3 text-base font-bold text-white transition hover:bg-[#a846a8] hover:text-white">
+                                        Todos
+                                    </button>
+
+                                    <!-- filtros apartes -->
+                                    <div class="filtro-con-submenu relative">
+                                        <button type="button" data-filtro="grado" aria-expanded="false"
+                                            aria-controls="submenu-grados-docentes"
+                                            class="opcion-filtro opcion-grado relative flex h-[42px] w-full items-center justify-center gap-2 rounded-[13px] border-2 border-black bg-[#f5f5f5] px-3 text-base font-bold text-[#222] transition hover:bg-[#a846a8] hover:text-white">
+                                            Grado <i aria-hidden="true"
+                                                class="fa-solid fa-chevron-right absolute right-3 text-xs transition group-aria-expanded:rotate-90"></i>
+                                        </button>
+                                        <div id="submenu-grados-docentes" aria-label="Filtrar por grado"
+                                            class="submenu-grados absolute left-1/2 top-[calc(100%+8px)] z-[110] hidden max-h-[260px] w-[170px] -translate-x-1/2 flex-col gap-[6px] overflow-y-auto rounded-xl border-2 border-[#222] bg-[#8163ad] p-[10px] [&.visible]:flex">
+                                            <button type="button" data-grado="601"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">601</button>
+                                            <button type="button" data-grado="602"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">602</button>
+                                            <button type="button" data-grado="603"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">603</button>
+                                            <button type="button" data-grado="701"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">701</button>
+                                            <button type="button" data-grado="702"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">702</button>
+                                            <button type="button" data-grado="703"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">703</button>
+                                            <button type="button" data-grado="801"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">801</button>
+                                            <button type="button" data-grado="802"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">802</button>
+                                            <button type="button" data-grado="803"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">803</button>
+                                            <button type="button" data-grado="901"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">901</button>
+                                            <button type="button" data-grado="902"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">902</button>
+                                            <button type="button" data-grado="903"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">903</button>
+                                            <button type="button" data-grado="1001"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1001</button>
+                                            <button type="button" data-grado="1002"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1002</button>
+                                            <button type="button" data-grado="1003"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1003</button>
+                                            <button type="button" data-grado="1101"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1101</button>
+                                            <button type="button" data-grado="1102"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1102</button>
+                                            <button type="button" data-grado="1103"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1103</button>
+                                        </div>
+                                    </div>
+                                    <div class="filtro-con-submenu relative">
+                                        <button type="button" data-filtro="materia" aria-expanded="false"
+                                            aria-controls="submenu-materias-docentes"
+                                            class="opcion-filtro opcion-materia relative flex h-[42px] w-full items-center justify-center gap-2 rounded-[13px] border-2 border-black bg-[#f5f5f5] px-3 text-base font-bold text-[#222] transition hover:bg-[#a846a8] hover:text-white">
+                                            Materia <i aria-hidden="true"
+                                                class="fa-solid fa-chevron-right absolute right-3 text-xs transition group-aria-expanded:rotate-90"></i>
+                                        </button>
+                                        <div id="submenu-materias-docentes" aria-label="Filtrar por materia"
+                                            class="submenu-materias absolute left-1/2 top-[calc(100%+8px)] z-[110] hidden max-h-[260px] w-[170px] -translate-x-1/2 flex-col gap-[6px] overflow-y-auto rounded-xl border-2 border-[#222] bg-[#8163ad] p-[10px] [&.visible]:flex">
+                                            <button type="button" data-materia="Español"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Español</button>
+                                            <button type="button" data-materia="Matemáticas"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Matemáticas</button>
+                                            <button type="button" data-materia="Sociales"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Sociales</button>
+                                            <button type="button" data-materia="Ciencias Naturales"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Ciencias
+                                                Naturales</button>
+                                            <button type="button" data-materia="Inglés"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Inglés</button>
+                                            <button type="button" data-materia="Física"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Física</button>
+                                            <button type="button" data-materia="Química"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Química</button>
+                                            <button type="button" data-materia="Tecnología"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Tecnología</button>
+                                            <button type="button" data-materia="Educación Física"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Educación
+                                                Física</button>
+                                            <button type="button" data-materia="Artes"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Artes</button>
+                                            <button type="button" data-materia="Filosofía"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Filosofía</button>
+                                        </div>
+                                    </div>
+                                    <div class="filtro-con-submenu relative">
+                                        <button type="button" data-filtro="rango" aria-expanded="false"
+                                            aria-controls="submenu-rangos-docentes"
+                                            class="opcion-filtro opcion-rango relative flex h-[42px] w-full items-center justify-center gap-2 rounded-[13px] border-2 border-black bg-[#f5f5f5] px-3 text-base font-bold text-[#222] transition hover:bg-[#a846a8] hover:text-white">
+                                            Rango <i aria-hidden="true"
+                                                class="fa-solid fa-chevron-right absolute right-3 text-xs transition group-aria-expanded:rotate-90"></i>
+                                        </button>
+                                        <div id="submenu-rangos-docentes" aria-label="Filtrar por rango"
+                                            class="submenu-rangos absolute left-1/2 top-[calc(100%+8px)] z-[110] hidden max-h-[260px] w-[170px] -translate-x-1/2 flex-col gap-[6px] overflow-y-auto rounded-xl border-2 border-[#222] bg-[#8163ad] p-[10px] [&.visible]:flex">
+                                            <button type="button" data-rango="docente"
+                                                class="opcion-rango-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Docente</button>
+                                            <button type="button" data-rango="admin"
+                                                class="opcion-rango-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Administrativo</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- (el aria-live: polite) le dice al lector de pantalla que espere a que el usuario termine su acción actual o a que el sistema esté inactivo antes de anunciar los nuevos datos agregados -->
+                        <div aria-live="polite"
+                            class="lista-docentes grid grid-cols-2 gap-4 text-left max-[560px]:mx-auto max-[560px]:max-w-[320px] max-[560px]:grid-cols-1">
+                            <!-- targgetass de la base de datos -->
+                        </div>
+                        <p hidden class="sin-resultados mt-[30px] text-[#55677a]">No se encontraron docentes.</p>
+                    </section>
+
+                    <!-- Agregar docente -->
+                    <section data-vista="agregar" hidden
+                        class="vista-docentes vista-agregar mt-5 hidden w-[min(100%,620px)] [&:not([hidden])]:block">
+                        <form id="formAgregarDocente"
+                            class="formulario-docente mt-[11px] flex min-h-[330px] w-full flex-row-reverse items-start justify-end gap-[26px] rounded-[20px] border border-[#e1e9f0] bg-white p-8 text-left shadow-[0_10px_26px_rgba(22,50,79,.1)] max-[560px]:flex-col max-[560px]:items-center">
+                            <div
+                                class="campos-docente grid w-full grid-cols-2 items-start gap-x-[18px] gap-y-4 max-[560px]:grid-cols-1">
+                                <label for="nombre"
+                                    class="col-span-full mb-[-8px] w-auto text-[12.5px] font-bold text-[#16324f] [font-family:Poppins,_Segoe_UI,_sans-serif]">Nombre:</label>
+                                <input type="text" id="nombre"
+                                    class="col-span-full h-11 w-full min-w-0 rounded-xl border border-[#e1e9f0] bg-[#f4f8fb] px-[14px] text-sm text-[#16232f] outline-none transition focus:border-[#1f6fb2] focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]"
+                                    required>
+                                <label for="apellido"
+                                    class="col-span-full mb-[-8px] w-auto text-[12.5px] font-bold text-[#16324f] [font-family:Poppins,_Segoe_UI,_sans-serif]">Apellido:</label>
+                                <input type="text" id="apellido"
+                                    class="col-span-full h-11 w-full min-w-0 rounded-xl border border-[#e1e9f0] bg-[#f4f8fb] px-[14px] text-sm text-[#16232f] outline-none transition focus:border-[#1f6fb2] focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]"
+                                    required>
+                                <label for="materia"
+                                    class="col-span-full mb-[-8px] w-auto text-[12.5px] font-bold text-[#16324f] [font-family:Poppins,_Segoe_UI,_sans-serif]">Materia:</label>
+                                <input type="text" id="materia"
+                                    class="col-span-full h-11 w-full min-w-0 rounded-xl border border-[#e1e9f0] bg-[#f4f8fb] px-[14px] text-sm text-[#16232f] outline-none transition focus:border-[#1f6fb2] focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]"
+                                    required>
+                                <label for="grado_encargado"
+                                    class="col-span-full mb-[-8px] w-auto text-[12.5px] font-bold text-[#16324f] [font-family:Poppins,_Segoe_UI,_sans-serif]">Grado
+                                    encargado:</label>
+                                <input type="text" id="grado_encargado"
+                                    class="col-span-full h-11 w-full min-w-0 rounded-xl border border-[#e1e9f0] bg-[#f4f8fb] px-[14px] text-sm text-[#16232f] outline-none transition focus:border-[#1f6fb2] focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]"
+                                    required>
+                                <label for="contacto"
+                                    class="col-span-full mb-[-8px] w-auto text-[12.5px] font-bold text-[#16324f] [font-family:Poppins,_Segoe_UI,_sans-serif]">Contacto:</label>
+                                <input type="text" id="contacto"
+                                    class="col-span-full h-11 w-full min-w-0 rounded-xl border border-[#e1e9f0] bg-[#f4f8fb] px-[14px] text-sm text-[#16232f] outline-none transition focus:border-[#1f6fb2] focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]"
+                                    required>
+                                <label for="rango"
+                                    class="col-auto mb-[-8px] w-auto text-[12.5px] font-bold text-[#16324f] [font-family:Poppins,_Segoe_UI,_sans-serif]">Rango:</label>
+                                <select id="rango"
+                                    class="col-auto h-11 w-full min-w-0 rounded-xl border border-[#e1e9f0] bg-[#f4f8fb] px-[14px] text-sm text-[#16232f] outline-none transition focus:border-[#1f6fb2] focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]"
+                                    required>
+                                    <option value="Docente">Docente</option>
+                                    <option value="Administrativo">Administrativo</option>
+                                </select>
+                                <label for="correo-docente"
+                                    class="col-auto mb-[-8px] w-auto text-[12.5px] font-bold text-[#16324f] [font-family:Poppins,_Segoe_UI,_sans-serif]">Correo:</label>
+                                <input type="email" id="correo-docente"
+                                    class="col-auto h-11 w-full min-w-0 rounded-xl border border-[#e1e9f0] bg-[#f4f8fb] px-[14px] text-sm text-[#16232f] outline-none transition focus:border-[#1f6fb2] focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]"
+                                    required>
+                                <label for="contrasena"
+                                    class="col-auto mb-[-8px] w-auto text-[12.5px] font-bold text-[#16324f] [font-family:Poppins,_Segoe_UI,_sans-serif]">Contraseña:</label>
+                                <input type="password" id="contrasena"
+                                    class="col-auto h-11 w-full min-w-0 rounded-xl border border-[#e1e9f0] bg-[#f4f8fb] px-[14px] text-sm text-[#16232f] outline-none transition focus:border-[#1f6fb2] focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]"
+                                    required>
+                            </div>
+                            <!-- <label class="cargar-foto"><input type="file" aria-label="Seleccionar foto"><i aria-hidden="true" hidden class="fa-solid fa-user"></i><span>Agregar Foto</span></label> -->
+                        </form>
+                        <button type="button" id="btnAceptar"
+                            class="aceptar-docente mt-5 h-[46px] w-[200px] rounded-full border-0 bg-gradient-to-br from-[#6b4c9a] to-[#8b318b] text-sm font-bold text-white shadow-[0_10px_20px_-8px_rgba(119,31,178,.5)] transition hover:-translate-y-0.5 hover:shadow-[0_14px_24px_-8px_rgba(133,35,199,.5)]">Aceptar</button>
+                    </section>
+
+                    <!-- Pestaña Cambiar Rango -->
+                    <section data-vista="rango" hidden
+                        class="vista-docentes mt-5 hidden w-[min(100%,980px)] [&:not([hidden])]:block">
+                        <div
+                            class="barra-herramientas-docentes relative mx-auto mb-5 flex w-full items-center justify-between">
+                            <label for="buscar-rango"
+                                class="buscador-docentes flex h-[42px] w-[260px] items-center gap-2 rounded-full border border-[#e1e9f0] bg-white px-4 text-[#55677a] shadow-[0_4px_12px_rgba(22,50,79,.06)] max-[560px]:w-full">
+                                <i aria-hidden="true" class="fa-solid fa-magnifying-glass text-sm text-[#1f6fb2]"></i>
+                                <!-- el aria-hidden es para ocultar elementos de las tecnologías de asistencia, como los lectores de pantalla-->
+                                <span class="sr-only absolute size-px overflow-hidden whitespace-nowrap">Buscar
+                                    docente</span>
+                                <input id="buscar-rango" type="search" placeholder="Búsqueda:"
+                                    class="h-full w-full border-0 bg-transparent p-0 text-sm text-[#16232f] outline-none focus:shadow-none">
+                            </label>
+
+                            <div class="filtro-docentes relative flex items-center">
+                                <button type="button" id="abrir-filtro-rango" aria-label="Abrir filtros"
+                                    class="boton-filtro grid h-[42px] w-12 place-items-center rounded-xl border border-[#e1e9f0] bg-white p-0 text-[#16324f] shadow-[0_4px_12px_rgba(22,50,79,.06)] transition hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(22,50,79,.12)]">
+                                    <i class="fa-solid fa-filter"></i>
+                                </button>
+                                <div id="menu-filtros-rango"
+                                    class="menu-filtros absolute right-0 top-[52px] z-20 hidden w-[170px] flex-col gap-2 rounded-[18px] border-2 border-[#222] bg-[#8163ad] p-3 shadow-[0_8px_20px_rgba(0,0,0,.15)] [&.visible]:flex">
+                                    <button type="button" data-filtro="todos"
+                                        class="opcion-filtro seleccionado h-[42px] w-full rounded-[13px] border-2 border-black bg-[#a846a8] px-3 text-base font-bold text-white transition hover:bg-[#a846a8] hover:text-white">Todos</button>
+
+                                    <div class="filtro-con-submenu relative">
+                                        <button type="button" data-filtro="grado" aria-expanded="false"
+                                            aria-controls="submenu-grados-rango"
+                                            class="opcion-filtro opcion-grado relative flex h-[42px] w-full items-center justify-center gap-2 rounded-[13px] border-2 border-black bg-[#f5f5f5] px-3 text-base font-bold text-[#222] transition hover:bg-[#a846a8] hover:text-white">
+                                            Grado <i aria-hidden="true"
+                                                class="fa-solid fa-chevron-right absolute right-3 text-xs transition group-aria-expanded:rotate-90"></i>
+                                        </button>
+                                        <div id="submenu-grados-rango" aria-label="Filtrar por grado"
+                                            class="submenu-grados absolute left-1/2 top-[calc(100%+8px)] z-[110] hidden max-h-[260px] w-[170px] -translate-x-1/2 flex-col gap-[6px] overflow-y-auto rounded-xl border-2 border-[#222] bg-[#8163ad] p-[10px] [&.visible]:flex">
+                                            <button type="button" data-grado="601"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">601</button>
+                                            <button type="button" data-grado="602"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">602</button>
+                                            <button type="button" data-grado="603"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">603</button>
+                                            <button type="button" data-grado="701"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">701</button>
+                                            <button type="button" data-grado="702"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">702</button>
+                                            <button type="button" data-grado="703"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">703</button>
+                                            <button type="button" data-grado="801"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">801</button>
+                                            <button type="button" data-grado="802"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">802</button>
+                                            <button type="button" data-grado="803"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">803</button>
+                                            <button type="button" data-grado="901"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">901</button>
+                                            <button type="button" data-grado="902"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">902</button>
+                                            <button type="button" data-grado="903"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">903</button>
+                                            <button type="button" data-grado="1001"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1001</button>
+                                            <button type="button" data-grado="1002"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1002</button>
+                                            <button type="button" data-grado="1003"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1003</button>
+                                            <button type="button" data-grado="1101"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1101</button>
+                                            <button type="button" data-grado="1102"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1102</button>
+                                            <button type="button" data-grado="1103"
+                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1103</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="filtro-con-submenu relative">
+                                        <button type="button" data-filtro="materia" aria-expanded="false"
+                                            aria-controls="submenu-materias-rango"
+                                            class="opcion-filtro opcion-materia relative flex h-[42px] w-full items-center justify-center gap-2 rounded-[13px] border-2 border-black bg-[#f5f5f5] px-3 text-base font-bold text-[#222] transition hover:bg-[#a846a8] hover:text-white">
+                                            Materia <i aria-hidden="true"
+                                                class="fa-solid fa-chevron-right absolute right-3 text-xs transition group-aria-expanded:rotate-90"></i>
+                                        </button>
+                                        <div id="submenu-materias-rango" aria-label="Filtrar por materia"
+                                            class="submenu-materias absolute left-1/2 top-[calc(100%+8px)] z-[110] hidden max-h-[260px] w-[170px] -translate-x-1/2 flex-col gap-[6px] overflow-y-auto rounded-xl border-2 border-[#222] bg-[#8163ad] p-[10px] [&.visible]:flex">
+                                            <button type="button" data-materia="Español"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Español</button>
+                                            <button type="button" data-materia="Matemáticas"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Matemáticas</button>
+                                            <button type="button" data-materia="Sociales"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Sociales</button>
+                                            <button type="button" data-materia="Ciencias Naturales"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Ciencias
+                                                Naturales</button>
+                                            <button type="button" data-materia="Inglés"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Inglés</button>
+                                            <button type="button" data-materia="Física"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Física</button>
+                                            <button type="button" data-materia="Química"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Química</button>
+                                            <button type="button" data-materia="Tecnología"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Tecnología</button>
+                                            <button type="button" data-materia="Educación Física"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Educación
+                                                Física</button>
+                                            <button type="button" data-materia="Artes"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Artes</button>
+                                            <button type="button" data-materia="Filosofía"
+                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Filosofía</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="filtro-con-submenu relative">
+                                        <button type="button" data-filtro="rango" aria-expanded="false"
+                                            aria-controls="submenu-rangos-rango"
+                                            class="opcion-filtro opcion-rango relative flex h-[42px] w-full items-center justify-center gap-2 rounded-[13px] border-2 border-black bg-[#f5f5f5] px-3 text-base font-bold text-[#222] transition hover:bg-[#a846a8] hover:text-white">
+                                            Rango <i aria-hidden="true"
+                                                class="fa-solid fa-chevron-right absolute right-3 text-xs transition group-aria-expanded:rotate-90"></i>
+                                        </button>
+                                        <div id="submenu-rangos-rango" aria-label="Filtrar por rango"
+                                            class="submenu-rangos absolute left-1/2 top-[calc(100%+8px)] z-[110] hidden max-h-[260px] w-[170px] -translate-x-1/2 flex-col gap-[6px] overflow-y-auto rounded-xl border-2 border-[#222] bg-[#8163ad] p-[10px] [&.visible]:flex">
+                                            <button type="button" data-rango="Docente"
+                                                class="opcion-rango-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Docente</button>
+                                            <button type="button" data-rango="Administrativo"
+                                                class="opcion-rango-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Administrativo</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="lista-docentes lista-docentes-rango grid grid-cols-2 gap-4 text-left max-[560px]:mx-auto max-[560px]:max-w-[320px] max-[560px]:grid-cols-1">
+                            <!-- Las tarjetas se cargarán aquí  -->
+                        </div>
+                    </section>
+
+                    <!-- Modal para cambiar el rango -->
+                    <div id="modalRango" hidden
+                        class="modal-rango fixed inset-0 z-[1000] flex items-center justify-center bg-black/50 [&[hidden]]:hidden">
+
+                        <div
+                            class="contenido-modal w-80 rounded-xl bg-white p-[25px] text-center shadow-[0_5px_15px_rgba(0,0,0,.3)]">
+                            <h3>Cambiar Rango de Docente</h3>
+                            <p id="nombreDocenteModal"></p>
+
+                            <label for="selectNuevoRango">Nuevo Rango:</label>
+                            <select id="selectNuevoRango"
+                                class="my-[15px] w-full rounded-md border border-[#ccc] p-2 text-base">
+                                <option value="Docente">Docente</option>
+                                <option value="Administrativo">Administrativo</option>
+                            </select>
+
+                            <div class="acciones-modal mt-[10px] flex justify-center gap-[10px]">
+                                <button type="button" id="btnGuardarRango">Guardar</button>
+                                <button type="button" id="btnCancelarRango">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </section>
+    </header>
+
+    <script src="js/temporal.js"></script>
+</body>
+
+</html>
