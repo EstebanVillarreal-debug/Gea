@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        azuoscuro: '#16324f',
+                        azu: '#1f6fb2',
+                        aguama: '#2ca58d',
+                        orro: '#c98b2f',
+                        hue: '#f4f8fb',
+                        blan: '#ffffff',
+                        text: '#16232f',
+                        sua: '#55677a',
+                        borde: '#e1e9f0'
+                    },
+                    fontFamily: {
+                        display: ['Poppins', 'Segoe UI', 'sans-serif'],
+                        texto: ['Inter', 'Segoe UI', 'sans-serif'],
+                        titulo: ['Georgia', 'Times New Roman', 'serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <title>Gea</title>
+</head>
+
+<body
+    class="bg-hue m-0 p-0 font-texto text-text flex flex-col items-center justify-start text-center min-h-screen overflow-x-hidden">
+
+    <header class="w-full">
+        <!--login GEA-->
+        <div id="login"
+            class="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-hue px-4 py-8">
+
+            <!--circulos de color de fondo-->
+            <div class="pointer-events-none absolute -left-24 -top-24 h-80 w-80 rounded-full bg-aguama/25 blur-3xl">
+            </div>
+            <div class="pointer-events-none absolute -right-24 top-1/3 h-96 w-96 rounded-full bg-azu/20 blur-3xl"></div>
+            <div class="pointer-events-none absolute -bottom-24 left-1/4 h-72 w-72 rounded-full bg-orro/20 blur-3xl">
+            </div>
+
+            <div class="login relative w-[min(92vw,400px)]">
+
+                <!--color detrás de la tarjeta-->
+                <div
+                    class="absolute -inset-1 rounded-[26px] bg-gradient-to-r from-aguama via-azu to-orro opacity-30 blur-lg">
+                </div>
+
+                <div
+                    class="relative overflow-hidden rounded-[24px] border border-borde bg-white shadow-[0_20px_50px_rgba(22,50,79,0.15)]">
+
+                    <!--linea de arriba-->
+                    <div class="h-1.5 w-full bg-gradient-to-r from-azuoscuro via-azu to-aguama"></div>
+
+                    <div class="px-8 pb-7 pt-8 max-[480px]:px-5">
+
+                        <!--logo y bienvenida-->
+                        <div class="mb-6 flex flex-col items-center text-center">
+                            <img src="img/logo.png" alt="Logo GEA"
+                                class="mb-3 h-[84px] w-auto drop-shadow-[0_8px_14px_rgba(22,50,79,0.18)]">
+                            <h1 class="font-display text-[26px] font-extrabold leading-tight text-azuoscuro">Bienvenido
+                            </h1>
+                        </div>
+
+                        <form id="loginForm" class="flex w-full flex-col gap-4 text-left">
+
+                            <!--correo-->
+                            <div>
+                                <label for="correo"
+                                    class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Correo</label>
+                                <div class="group relative">
+                                    <div
+                                        class="absolute -inset-[2px] rounded-full bg-gradient-to-r from-aguama via-azu to-orro opacity-0 blur-[6px] transition-opacity duration-300 group-focus-within:opacity-60">
+                                    </div>
+                                    <div
+                                        class="relative flex h-12 items-center gap-3 rounded-full border border-borde bg-hue px-4 transition-colors duration-200 group-focus-within:border-azu group-focus-within:bg-white">
+                                        <i
+                                            class="fa-regular fa-envelope text-sua transition-colors group-focus-within:text-aguama"></i>
+                                        <input type="email" id="correo" placeholder="tucorreo@ejemplo.com"
+                                            autocomplete="email"
+                                            class="h-full w-full bg-transparent text-[15px] text-text outline-none placeholder:text-sua/60">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--contraseña-->
+                            <div>
+                                <label for="password"
+                                    class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Contraseña</label>
+                                <div class="group relative">
+                                    <div
+                                        class="absolute -inset-[2px] rounded-full bg-gradient-to-r from-aguama via-azu to-orro opacity-0 blur-[6px] transition-opacity duration-300 group-focus-within:opacity-60">
+                                    </div>
+                                    <div
+                                        class="relative flex h-12 items-center gap-3 rounded-full border border-borde bg-hue px-4 transition-colors duration-200 group-focus-within:border-azu group-focus-within:bg-white">
+                                        <i
+                                            class="fa-solid fa-lock text-sua transition-colors group-focus-within:text-aguama"></i>
+                                        <input type="password" id="password" placeholder="••••••••"
+                                            autocomplete="current-password"
+                                            class="h-full w-full bg-transparent text-[15px] text-text outline-none placeholder:text-sua/60">
+                                        <button type="button" id="verpassword" aria-label="Mostrar u ocultar contraseña"
+                                            class="text-sua transition-colors hover:text-azu">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- botón -->
+                            <button type="submit"
+                                class="button-login mt-2 h-12 w-full rounded-full bg-gradient-to-r from-aguama to-azu font-display text-[15px] font-semibold text-white shadow-[0_8px_20px_rgba(31,111,178,0.35)] transition-all duration-200 hover:-translate-y-[2px] hover:shadow-[0_12px_26px_rgba(31,111,178,0.45)] active:translate-y-0">
+                                Ingresar
+                                <i class="fa-solid fa-arrow-right ml-1.5 text-[13px]"></i>
+                            </button>
+
+                            <!-- enlaces -->
+                            <div class="mt-1 flex items-center justify-between text-[13px]">
+                                <a href="#" id="olvido" class="font-medium text-azu hover:underline">¿Olvidaste tu contraseña?</a>
+                                <a href="index.html" id="volver"
+                                    class="font-medium text-sua hover:text-azuoscuro hover:underline"><i class="fa-solid fa-arrow-left mr-1 text-[11px]"></i>Volver al inicio
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- institución aliada -->
+                    <div class="flex items-center gap-3 border-t border-borde bg-hue px-8 py-4 max-[480px]:px-5">
+                        <img src="img/escudo.png" alt="Escudo del colegio" class="h-10 w-auto">
+                        <div class="text-left leading-tight">
+                            <p class="text-[11px] font-semibold uppercase tracking-wider text-aguama">Institución aliada
+                            </p>
+                            <p class="text-[13px] font-medium text-azuoscuro">Colegio Nacional Ismael Perdomo Borrero
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script src="js/temporal.js"></script>
+</body>
+
+</html>
