@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio docentes | GEA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="min-h-screen m-0 bg-white text-[#222] [font-family:Arial,sans-serif]">
+    <section class="pagina-docentes-home min-h-screen">
+        <div class="home-docentes min-h-screen flex flex-col items-center px-4 py-8 max-[480px]:px-3 max-[480px]:py-5">
+            <header
+                class="header w-[min(95vw,520px)] bg-[#f5c6d0] rounded-[40px] px-5 py-3 flex items-center justify-between shadow-[0_4px_12px_rgba(0,0,0,0.08)] mb-[18px] max-[480px]:rounded-[30px] max-[480px]:px-[14px] max-[480px]:py-2.5">
+                <div class="perfil">
+                    <img src="img/usuario.png" alt="Perfil"
+                        class="w-[70px] h-[70px] rounded-full object-cover border-[3px] border-[#6b4c9a] bg-[#ddd] max-[480px]:w-[55px] max-[480px]:h-[55px]">
+                </div>
+                <div class="escudo">
+                    <img src="img/escudo.png" alt="Escudo institucional" class="w-[70px] h-auto max-[480px]:w-[55px]">
+                </div>
+            </header>
+
+            <div
+                class="bienvenida w-[min(95vw,520px)] flex justify-between gap-4 text-[0.95rem] text-[#333] px-2 mb-4 max-[480px]:text-[0.85rem]">
+                <span>Bienvenido, Docente</span>
+                <span id="fecha">Fecha: --/--/----</span>
+            </div>
+
+            <main class="menu w-[min(95vw,318px)] grid grid-cols-2 gap-[18px] max-[320px]:gap-[10px]"
+                aria-label="Opciones del docente">
+                <a href="#noticias"
+                    class="tarjeta amarillo w-full h-[90px] rounded-2xl flex items-center justify-between px-[18px] no-underline text-[#222] font-bold text-[1.05rem] shadow-[0_4px_10px_rgba(0,0,0,0.12)] transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-[0_8px_18px_rgba(0,0,0,0.15)] max-[480px]:h-20 max-[480px]:px-[14px] max-[480px]:text-[0.95rem] max-[320px]:px-3 max-[320px]:text-[0.88rem] bg-[#f9e79f]">
+                    <span>Noticias</span>
+                    <span class="icono text-[1.8rem] max-[480px]:text-[1.5rem]" aria-hidden="true">📰</span>
+                </a>
+                <a href="#reportes"
+                    class="tarjeta rojo w-full h-[90px] rounded-2xl flex items-center justify-between px-[18px] no-underline text-[#222] font-bold text-[1.05rem] shadow-[0_4px_10px_rgba(0,0,0,0.12)] transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-[0_8px_18px_rgba(0,0,0,0.15)] max-[480px]:h-20 max-[480px]:px-[14px] max-[480px]:text-[0.95rem] max-[320px]:px-3 max-[320px]:text-[0.88rem] bg-[#f5b7b1]">
+                    <span>Reportes</span>
+                    <span class="icono text-[1.8rem] max-[480px]:text-[1.5rem]" aria-hidden="true">📝</span>
+                </a>
+                <a href="#docentes"
+                    class="tarjeta morado w-full h-[90px] rounded-2xl flex items-center justify-between px-[18px] no-underline text-[#222] font-bold text-[1.05rem] shadow-[0_4px_10px_rgba(0,0,0,0.12)] transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-[0_8px_18px_rgba(0,0,0,0.15)] max-[480px]:h-20 max-[480px]:px-[14px] max-[480px]:text-[0.95rem] max-[320px]:px-3 max-[320px]:text-[0.88rem] bg-[#d2b4de]"
+                    id="abrir-docentes">
+                    <span>Docentes</span>
+                    <span class="icono text-[1.8rem] max-[480px]:text-[1.5rem]" aria-hidden="true">👥</span>
+                </a>
+                <a href="#calendario"
+                    class="tarjeta azul w-full h-[90px] rounded-2xl flex items-center justify-between px-[18px] no-underline text-[#222] font-bold text-[1.05rem] shadow-[0_4px_10px_rgba(0,0,0,0.12)] transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-[0_8px_18px_rgba(0,0,0,0.15)] max-[480px]:h-20 max-[480px]:px-[14px] max-[480px]:text-[0.95rem] max-[320px]:px-3 max-[320px]:text-[0.88rem] bg-[#aed6f1]">
+                    <span>Calendario</span>
+                    <span class="icono text-[1.8rem] max-[480px]:text-[1.5rem]" aria-hidden="true">📅</span>
+                </a>
+            </main>
+        </div>
+    </section>
+
+    <section class="pagina-docentes flex w-full min-h-screen bg-[#f4f8fb] text-[#16232f]" id="docentes" hidden
+        aria-labelledby="titulo-docentes">
+        <aside
+            class="barra-lateral w-[72px] min-h-screen shrink-0 bg-[linear-gradient(180deg,#16324f,#0e2036)] max-[560px]:w-[56px] max-[560px]:basis-[56px]"
+            aria-label="Navegación del módulo docentes">
+            <div
+                class="informacion-pagina-docentes fixed flex flex-col gap-2.5 px-[10px] py-[22px] max-[560px]:px-[6px] max-[560px]:py-4">
+                <button
+                    class="nav-icono volver-home grid place-items-center w-[46px] h-[46px] p-0 border-0 rounded-xl bg-transparent text-white/55 text-[19px] cursor-pointer hover:bg-white/[0.08] hover:text-white max-[560px]:w-10 max-[560px]:h-10 max-[560px]:text-[17px]"
+                    type="button" aria-label="Volver al inicio"><i class="fa-solid fa-house"
+                        aria-hidden="true"></i></button>
+                <button
+                    class="nav-icono grid place-items-center w-[46px] h-[46px] p-0 border-0 rounded-xl bg-transparent text-white/55 text-[19px] cursor-pointer hover:bg-white/[0.08] hover:text-white max-[560px]:w-10 max-[560px]:h-10 max-[560px]:text-[17px]"
+                    type="button" aria-label="Registro"><i class="fa-solid fa-clipboard-list"
+                        aria-hidden="true"></i></button>
+                <button
+                    class="nav-icono grid place-items-center w-[46px] h-[46px] p-0 border-0 rounded-xl bg-transparent text-white/55 text-[19px] cursor-pointer hover:bg-white/[0.08] hover:text-white max-[560px]:w-10 max-[560px]:h-10 max-[560px]:text-[17px]"
+                    type="button" aria-label="Reportes"><i class="fa-solid fa-newspaper"
+                        aria-hidden="true"></i></button>
+                <button
+                    class="nav-icono activo volver-opciones-docentes grid place-items-center w-[46px] h-[46px] p-0 border-0 rounded-xl bg-transparent text-white/55 text-[19px] cursor-pointer hover:bg-white/[0.08] hover:text-white max-[560px]:w-10 max-[560px]:h-10 max-[560px]:text-[17px] bg-[linear-gradient(135deg,#2ca58d,#1f6fb2)] text-white"
+                    type="button" aria-label="Volver a las opciones de docentes"><i class="fa-solid fa-users"
+                        aria-hidden="true"></i></button>
+                <button
+                    class="nav-icono grid place-items-center w-[46px] h-[46px] p-0 border-0 rounded-xl bg-transparent text-white/55 text-[19px] cursor-pointer hover:bg-white/[0.08] hover:text-white max-[560px]:w-10 max-[560px]:h-10 max-[560px]:text-[17px]"
+                    type="button" aria-label="Calendario"><i class="fa-solid fa-calendar-days"
+                        aria-hidden="true"></i></button>
+                <button
+                    class="nav-icono grid place-items-center w-[46px] h-[46px] p-0 border-0 rounded-xl bg-transparent text-white/55 text-[19px] cursor-pointer hover:bg-white/[0.08] hover:text-white max-[560px]:w-10 max-[560px]:h-10 max-[560px]:text-[17px]"
+                    type="button" aria-label="Perfil"><i class="fa-solid fa-circle-user"
+                        aria-hidden="true"></i></button>
+            </div>
+        </aside>
+
+        <main
+            class="contenido-docentes flex-1 flex flex-col items-center pt-10 px-6 pb-[60px] max-[560px]:pt-7 max-[560px]:px-[14px] max-[560px]:pb-10">
+            <section class="inicio-docentes flex flex-col items-center w-full" aria-label="Opciones de docentes">
+                <h1
+                    class="w-[min(100%,380px)] m-0 px-5 py-[14px] rounded-full bg-[linear-gradient(90deg,#6b4c9a,#8b318b)] text-white text-center text-[clamp(30px,5vw,40px)] leading-[1.05] font-bold [font-family:Poppins,Arial,sans-serif]">
+                    Docentes</h1>
+                <div
+                    class="acciones-docentes flex flex-wrap justify-center gap-[22px] w-full mt-[clamp(56px,12vh,120px)] max-[560px]:flex-col max-[560px]:items-center max-[560px]:mt-14">
+                    <button
+                        class="opcion-docente opcion-lista-docentes abrir-lista-docentes w-[235px] h-[84px] px-[22px] border border-[#e1e9f0] border-t-4 border-t-[#1f6fb2] rounded-[18px] bg-white text-[#16324f] flex items-center justify-between shadow-[0_8px_20px_rgba(22,50,79,0.10)] [font-family:Poppins,Arial,sans-serif] text-[19px] font-bold cursor-pointer transition-[transform,box-shadow] hover:-translate-y-[3px] hover:shadow-[0_14px_26px_rgba(22,50,79,0.16)] border-t-[#8b318b]"
+                        type="button">
+                        <span>Docentes
+                        </span><i class="fa-solid fa-chalkboard-user text-[28px] text-[#8b318b]" aria-hidden="true"></i>
+                    </button>
+                    <button
+                        class="opcion-docente opcion-horario w-[235px] h-[84px] px-[22px] border border-[#e1e9f0] border-t-4 border-t-[#1f6fb2] rounded-[18px] bg-white text-[#16324f] flex items-center justify-between shadow-[0_8px_20px_rgba(22,50,79,0.10)] [font-family:Poppins,Arial,sans-serif] text-[19px] font-bold cursor-pointer transition-[transform,box-shadow] hover:-translate-y-[3px] hover:shadow-[0_14px_26px_rgba(22,50,79,0.16)] border-t-[#b91661]"
+                        type="button">
+                        <span>Horario</span>
+                        <i class="fa-solid fa-user-clock text-[28px] text-[#b91661]" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </section>
+
+            <section class="detalle-docentes flex flex-col items-center w-full" hidden>
+                <h1 id="titulo-docentes"
+                    class="w-[min(100%,380px)] m-0 px-5 py-[14px] rounded-full bg-[linear-gradient(90deg,#6b4c9a,#8b318b)] text-white text-center text-[clamp(30px,5vw,40px)] leading-[1.05] font-bold [font-family:Poppins,Arial,sans-serif]">
+                    Docentes</h1>
+                <div class="docentes-linea w-[min(400px,90%)] h-[3px] my-3 mb-[22px] rounded-[3px] bg-[#6b4c9a]"
+                    aria-hidden="true"></div>
+                <section class="vista-docentes perfil-docente mt-5 w-[min(100%,520px)]"
+                    aria-label="Información del docente">
+                    <article
+                        class="tarjeta-perfil flex justify-between gap-5 p-[22px] text-left rounded-[18px] bg-[#e6e6e6] shadow-[0_5px_14px_rgba(22,50,79,0.12)] max-[560px]:gap-3 max-[560px]:p-[18px]">
+                        <div
+                            class="datos-docente [&>p]:mb-[5px] [&>p]:text-[13px] [&>p]:leading-[1.25] [&>p]:[font-family:Georgia,serif]">
+                            <p><b>Nombre:</b> <span data-dato="nombre">José</span></p>
+                            <p><b>Apellido:</b> <span data-dato="apellido">Pérez</span></p>
+                            <p><b>Materia:</b> <span data-dato="materia">Artística</span></p>
+                            <p><b>Grado encargado:</b> <span data-dato="grado">102</span></p>
+                            <p><b>Contacto:</b> <span data-dato="contacto">3152955830</span></p>
+                            <p><b>N.° de excusas:</b> <span id="total-excusas">2</span></p>
+                            <p><b>N.° de reportes:</b> <span>2</span></p>
+                        </div>
+                        <div class="foto-perfil-docente flex flex-col items-center gap-[7px]">
+                            <img src="img/Jose Perez.jpg" alt="Foto de José Pérez"
+                                class="w-[76px] h-[76px] object-cover max-[560px]:w-[66px] max-[560px]:h-[66px]">
+                            <button
+                                class="enlace-editar abrir-editar border-0 bg-transparent text-[#222] [font-family:Georgia,serif] text-[12px] font-bold underline cursor-pointer"
+                                type="button">Editar información</button>
+                        </div>
+                    </article>
+                    <article
+                        class="tarjeta-excusas mt-[18px] p-[14px_18px] text-left rounded-[18px] bg-[#e6e6e6] shadow-[0_5px_14px_rgba(22,50,79,0.12)] [&>h2]:m-0 [&>h2]:mb-[7px] [&>h2]:text-[14px] [&>h2]:font-bold [&>h2]:[font-family:Georgia,serif]">
+                        <h2 class="m-0 mb-[7px] text-[14px] font-bold [font-family:Georgia,serif]">Excusas</h2>
+                        <ul class="lista-excusas m-0 pl-5 [&>li]:mb-[5px] [&>li]:text-[11px] [&>li]:leading-[1.2] [&>li]:[font-family:Arial,sans-serif]"
+                            id="lista-excusas">
+                            <li>Retraso por revisión del colegio antes de iniciar la clase debido a un evento deportivo
+                                previo.</li>
+                            <li>Ausencia parcial por acompañamiento a un grupo durante una actividad externa de
+                                atletismo.</li>
+                        </ul>
+                    </article>
+                    <button
+                        class="boton-excusa abrir-excusa block mx-auto mt-[10px] px-[14px] py-[5px] border-0 rounded-full bg-[#e6e6e6] text-[#333] shadow-[0_3px_7px_rgba(22,50,79,0.15)] [font-family:Georgia,serif] text-[13px] font-bold cursor-pointer hover:bg-[#d5d5d5]"
+                        type="button">Agregar excusa</button>
+                </section>
+                <section class="vista-docentes hidden w-[min(100%,980px)] mt-5">
+                    <div class="barra-herramientas-docentes flex justify-between items-center mb-5 gap-3">
+                        <label
+                            class="buscador-docentes w-[260px] h-[42px] flex items-center gap-2 px-4 border border-[#e1e9f0] rounded-full bg-white max-[560px]:w-full">⌕
+                            <input type="search" placeholder="Buscar docente"
+                                class="w-full border-0 outline-none text-[14px] [font-family:Inter,Arial,sans-serif]"></label>
+                    </div>
+                    <div class="lista-docentes grid grid-cols-2 gap-4 text-left max-[560px]:grid-cols-1">
+                        <article
+                            class="tarjeta-docente min-h-[205px] p-[18px] border border-[#e1e9f0] rounded-2xl bg-white shadow-[0_6px_18px_rgba(22,50,79,0.08)]">
+                            <strong>Lista de docentes</strong>
+                            <p>Desde esta sección podrás consultar, agregar y administrar los docentes.</p>
+                        </article>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </section>
+    <dialog
+        class="modal-docente relative w-[min(92vw,390px)] p-0 border-0 rounded-2xl shadow-[0_16px_40px_rgba(0,0,0,0.25)] backdrop:bg-[rgba(14,32,54,0.45)]"
+        id="modal-editar">
+        <form method="dialog" class="formulario-docente grid gap-3 p-[22px]" id="form-editar">
+            <div
+                class="encabezado-modal flex justify-between items-center [&>h2]:m-0 [&>h2]:text-[20px] [&>h2]:font-bold [&>h2]:text-[#16324f] [&>h2]:[font-family:Poppins,Arial,sans-serif]">
+                <h2>Editar información</h2><button
+                    class="cerrar-modal absolute right-0 translate-x-[-20px] translate-y-[10px] border-0 bg-transparent text-[26px] cursor-pointer"
+                    value="cancel" aria-label="Cerrar">×</button>
+            </div>
+            <label class="grid gap-[5px] text-[#16324f] text-[13px] font-bold">Nombre<input
+                    class="w-full p-[10px] border border-[#cbd9e4] rounded-[9px] text-[14px] resize-y [font-family:Arial,sans-serif]"
+                    name="nombre" value="José" required></label>
+            <label class="grid gap-[5px] text-[#16324f] text-[13px] font-bold">Apellido<input
+                    class="w-full p-[10px] border border-[#cbd9e4] rounded-[9px] text-[14px] resize-y [font-family:Arial,sans-serif]"
+                    name="apellido" value="Pérez" required></label>
+            <label class="grid gap-[5px] text-[#16324f] text-[13px] font-bold">Materia<input
+                    class="w-full p-[10px] border border-[#cbd9e4] rounded-[9px] text-[14px] resize-y [font-family:Arial,sans-serif]"
+                    name="materia" value="Artística" required></label>
+            <label class="grid gap-[5px] text-[#16324f] text-[13px] font-bold">Grado encargado<input
+                    class="w-full p-[10px] border border-[#cbd9e4] rounded-[9px] text-[14px] resize-y [font-family:Arial,sans-serif]"
+                    name="grado" value="102" required></label>
+            <label class="grid gap-[5px] text-[#16324f] text-[13px] font-bold">Contacto<input
+                    class="w-full p-[10px] border border-[#cbd9e4] rounded-[9px] text-[14px] resize-y [font-family:Arial,sans-serif]"
+                    name="contacto" value="3152955830" required></label>
+            <button
+                class="boton-guardar p-[11px] border-0 rounded-[9px] bg-[#1f6fb2] text-white font-bold cursor-pointer"
+                value="default">Guardar cambios</button>
+        </form>
+    </dialog>
+    <dialog
+        class="modal-docente relative w-[min(92vw,390px)] p-0 border-0 rounded-2xl shadow-[0_16px_40px_rgba(0,0,0,0.25)] backdrop:bg-[rgba(14,32,54,0.45)]"
+        id="modal-excusa">
+        <button
+            class="cerrar-modal absolute right-0 translate-x-[-20px] translate-y-[10px] border-0 bg-transparent text-[26px] cursor-pointer"
+            value="cancel" aria-label="Cerrar">×</button>
+        <form method="dialog" class="formulario-docente grid gap-3 p-[22px]" id="form-excusa">
+            <div
+                class="encabezado-modal flex justify-between items-center [&>h2]:m-0 [&>h2]:text-[20px] [&>h2]:font-bold [&>h2]:text-[#16324f] [&>h2]:[font-family:Poppins,Arial,sans-serif]">
+                <h2>Agregar excusa</h2>
+            </div>
+            <label class="grid gap-[5px] text-[#16324f] text-[13px] font-bold">Fecha<input
+                    class="w-full p-[10px] border border-[#cbd9e4] rounded-[9px] text-[14px] resize-y [font-family:Arial,sans-serif]"
+                    name="fecha" type="date" required></label>
+            <label class="grid gap-[5px] text-[#16324f] text-[13px] font-bold">Motivo<textarea
+                    class="w-full p-[10px] border border-[#cbd9e4] rounded-[9px] text-[14px] resize-y [font-family:Arial,sans-serif]"
+                    name="motivo" rows="4" required></textarea></label>
+            <button
+                class="boton-guardar p-[11px] border-0 rounded-[9px] bg-[#1f6fb2] text-white font-bold cursor-pointer"
+                value="default">Guardar excusa</button>
+        </form>
+    </dialog>
+    <script src="script_docentes.js"></script>
+</body>
+
+</html>
