@@ -51,6 +51,24 @@ if (iconohome) {
     });
 }
 
+//ir a principal - not found...
+const found = document.getElementById('volverPrincipal');
+if (found) {
+    found.addEventListener('click', (e) => {
+        e.preventDefault();
+        location.href = '/admin/principal.html';
+    });
+}
+
+//ir a not found - principal
+const modulo = document.getElementById('notfound');
+if (modulo) {
+    modulo.addEventListener('click', (e) => {
+        e.preventDefault();
+        location.href = '/notfound.html';
+    });
+}
+
 //ver contraseña
 const verp = document.getElementById('verpassword');
 const pass = document.getElementById('password');
@@ -105,8 +123,21 @@ if (formLogin) {
             return;
         }
 
-        // ambos llenos: aquí va tu validación real
-        mostrarAviso('Correo o contraseña incorrectos.', 'error');
+        // ---- NUEVO: usuario de prueba ----
+        const USUARIO = { correo: 'admin@gea.com', clave: 'gea1234' };
+
+        const correo = inputCorreo.value.trim().toLowerCase();
+        const clave = inputClave.value;
+
+        if (correo === USUARIO.correo && clave === USUARIO.clave) {
+            sessionStorage.setItem('gea_sesion', 'activa');
+            mostrarAviso('¡Bienvenido a GEA!', 'ok');
+            setTimeout(() => { location.href = 'admin/principal.html'; }, 600);
+        } else {
+            marcarError(inputCorreo);
+            marcarError(inputClave);
+            mostrarAviso('Correo o contraseña incorrectos.', 'error');
+        }
     });
 }
 

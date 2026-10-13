@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        azuoscuro: '#16324f',
+                        azu: '#1f6fb2',
+                        aguama: '#2ca58d',
+                        orro: '#c98b2f',
+                        hue: '#f4f8fb',
+                        blan: '#ffffff',
+                        text: '#16232f',
+                        sua: '#55677a',
+                        borde: '#e1e9f0'
+                    },
+                    fontFamily: {
+                        display: ['Poppins', 'Segoe UI', 'sans-serif'],
+                        texto: ['Inter', 'Segoe UI', 'sans-serif'],
+                        titulo: ['Georgia', 'Times New Roman', 'serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <title>Gea | Fuera de línea</title>
+</head>
+
+<body class="m-0 flex min-h-screen flex-col items-center justify-center overflow-x-hidden bg-hue p-0 px-4 py-8 text-center font-texto text-text">
+
+    <main class="relative w-[min(92vw,460px)]">
+
+        <!--luces de la tarjeta-->
+        <div class="absolute -inset-1 rounded-[26px] bg-gradient-to-r from-aguama via-azu to-orro opacity-30 blur-lg"></div>
+
+        <div class="relative overflow-hidden rounded-[24px] border border-borde bg-white shadow-[0_20px_50px_rgba(22,50,79,0.15)]">
+            <div class="h-1.5 w-full bg-gradient-to-r from-azuoscuro via-azu to-aguama"></div>
+
+            <div class="px-8 pb-8 pt-9 max-[480px]:px-5">
+
+                <!--icono-->
+                <div class="mx-auto mb-5 grid size-[84px] place-items-center rounded-full bg-hue">
+                    <i class="fa-solid fa-wifi text-[34px] text-orro"></i>
+                </div>
+
+                <p class="text-[11px] font-semibold uppercase tracking-wider text-orro">Módulo no disponible</p>
+                <h1 class="mt-1 font-display text-[28px] font-extrabold leading-tight text-azuoscuro">Fuera de línea</h1>
+
+                <p class="mx-auto mt-3 max-w-[340px] text-[15px] leading-[1.6] text-sua">
+                    Este modulo aún no está disponible. Por favor intente nuevamente más tarde.
+                </p>
+
+                <a href="/admin/principal.html" id="volverPrincipal"
+                    class="mt-7 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-aguama to-azu font-display text-[15px] font-semibold text-white shadow-[0_8px_20px_rgba(31,111,178,0.35)] transition-all duration-200 hover:-translate-y-[2px] hover:shadow-[0_12px_26px_rgba(31,111,178,0.45)]">
+                    <i class="fa-solid fa-arrow-left text-[13px]"></i>Volver al panel
+                </a>
+            </div>
+
+            <!-- institución aliada -->
+            <div class="flex items-center gap-3 border-t border-borde bg-hue px-8 py-4 text-left max-[480px]:px-5">
+                <img src="../img/escudo.png" alt="Escudo del colegio" class="h-10 w-auto">
+                <div class="leading-tight">
+                    <p class="text-[11px] font-semibold uppercase tracking-wider text-aguama">Institución aliada</p>
+                    <p class="text-[13px] font-medium text-azuoscuro">Colegio Nacional Ismael Perdomo Borrero</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/temporal.js"></script>
+</body>
+
+</html>
