@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        azuoscuro: '#16324f',
+                        azu: '#1f6fb2',
+                        aguama: '#2ca58d',
+                        orro: '#c98b2f',
+                        hue: '#f4f8fb',
+                        blan: '#ffffff',
+                        text: '#16232f',
+                        sua: '#55677a',
+                        borde: '#e1e9f0'
+                    },
+                    fontFamily: {
+                        display: ['Poppins', 'Segoe UI', 'sans-serif'],
+                        texto: ['Inter', 'Segoe UI', 'sans-serif'],
+                        titulo: ['Georgia', 'Times New Roman', 'serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <title>Gea | IPB</title>
+</head>
+
+<body
+    class="bg-hue m-0 p-0 font-texto text-text flex flex-col items-center justify-start text-center min-h-screen overflow-x-hidden">
+
+    <header class="w-full">
+
+        <section
+            class="pagina_gea relative flex min-h-screen w-full justify-center overflow-hidden bg-gradient-to-b from-hue from-70% to-[#e2f8e8]"">
+
+            <div class=" homeadmin relative flex w-full max-w-[1000px] flex-col px-5 pb-12 pt-8 text-left">
+
+            <!--barra superior-->
+            <div
+                class="relative flex items-center justify-between gap-4 overflow-hidden rounded-[22px] border border-borde bg-white px-5 py-4 shadow-[0_8px_24px_rgba(22,50,79,0.08)]">
+
+                <!--linea de colores-->
+                <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-azuoscuro via-azu to-aguama">
+                </div>
+
+                <!--usuario-->
+                <div class="flex items-center gap-4">
+                    <div class="relative size-[68px] shrink-0">
+                        <!-- foto del usuario -->
+                        <img src="../img/usuario.png" alt="Foto de perfil"
+                            class="absolute inset-[8%] h-[84%] w-[84%] rounded-full bg-hue object-cover">
+                        <!-- marco por defecto -->
+                        <img src="../img/alrededor.png" alt=""
+                            class="pointer-events-none absolute inset-0 h-full w-full object-contain">
+                    </div>
+                    <div>
+                        <p class="text-[11px] font-semibold uppercase tracking-wider text-aguama">Panel principal
+                            Docentes
+                        </p>
+                        <h1
+                            class="font-display text-[20px] font-bold leading-tight text-azuoscuro max-[480px]:text-[17px]">
+                            Bienvenido, Maria Gomez</h1>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <a href="../login.html"
+                        class="hidden items-center gap-2 rounded-full border border-borde px-4 py-2 text-[13px] font-medium text-sua transition-colors hover:border-azu hover:text-azu sm:flex">
+                        <i class="fa-solid fa-arrow-right-from-bracket text-[12px]"></i>Cerrar sesión
+                    </a>
+                    <img src="../img/escudo.png" alt="Escudo del colegio" class="h-12 w-auto">
+                </div>
+            </div>
+
+            <!--fecha-->
+            <div class="mt-5 flex items-center gap-2 px-1 text-sm text-sua">
+                <i class="fa-regular fa-calendar text-aguama"></i>
+                <span id="fecha">Fecha: --/--/----</span>
+            </div>
+
+            <!--tarjetas-->
+            <main class="menu mt-6 flex flex-wrap justify-center gap-5">
+
+                <!--noticias-->
+                <a href="/notfound.html" id="notfound"
+                    class="tarjeta group relative flex w-[calc((100%-40px)/3)] flex-col rounded-[18px] border border-borde border-t-4 border-t-orro bg-white p-6 shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] max-[900px]:w-[calc((100%-20px)/2)] max-[560px]:w-full">
+                    <span class="mb-4 flex size-[46px] items-center justify-center rounded-[12px] bg-hue">
+                        <i class="fa-solid fa-bullhorn text-[20px] text-orro"></i></span>
+                    <h3 class="font-display text-[18px] font-bold text-azuoscuro">Noticias</h3>
+                    <p class="mt-1 pr-6 text-[14.5px] leading-[1.5] text-sua">
+                        Comunicados y avisos</p>
+                </a>
+
+                <a href="/notfound.html" id="notfound"
+                    class="tarjeta group relative flex w-[calc((100%-40px)/3)] flex-col rounded-[18px] border border-borde border-t-4 border-t-[#e73525] bg-white p-6 shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] max-[900px]:w-[calc((100%-20px)/2)] max-[560px]:w-full">
+                    <span class="mb-4 flex size-[46px] items-center justify-center rounded-[12px] bg-hue">
+                        <i class="fa-solid fa-file-lines text-[20px] text-[#e73525]"></i></span>
+                    <h3 class="font-display text-[18px] font-bold text-azuoscuro">Reportes</h3>
+                    <p class="mt-1 pr-6 text-[14.5px] leading-[1.5] text-sua">
+                        Informes y seguimiento</p>
+                </a>
+
+                <a href="modulo-docentes.html" id="abrir-docentes"
+                    class="tarjeta group relative flex w-[calc((100%-40px)/3)] flex-col rounded-[18px] border border-borde border-t-4 border-t-[#851baf] bg-white p-6 shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] max-[900px]:w-[calc((100%-20px)/2)] max-[560px]:w-full">
+                    <span class="mb-4 flex size-[46px] items-center justify-center rounded-[12px] bg-hue">
+                        <i class="fa-solid fa-chalkboard-user text-[20px] text-[#851baf]"></i></span>
+                    <h3 class="font-display text-[18px] font-bold text-azuoscuro">Docentes</h3>
+                    <p class="mt-1 pr-6 text-[14.5px] leading-[1.5] text-sua">Perfiles, materias y horarios, excusas y
+                        rangos.</p>
+                </a>
+
+                <a href="/notfound.html" id="notfound"
+                    class="tarjeta group relative flex w-[calc((100%-40px)/3)] flex-col rounded-[18px] border border-borde border-t-4 border-t-azu bg-white p-6 shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] max-[900px]:w-[calc((100%-20px)/2)] max-[560px]:w-full">
+                    <span class="mb-4 flex size-[46px] items-center justify-center rounded-[12px] bg-hue">
+                        <i class="fa-regular fa-calendar-days text-[20px] text-azu"></i></span>
+                    <h3 class="font-display text-[18px] font-bold text-azuoscuro">Calendario</h3>
+                    <p class="mt-1 pr-6 text-[14.5px] leading-[1.5] text-sua">Evaluaciones, reuniones y eventos.</p>
+                </a>
+            </main>
+            </div>
+        </section>
+    </header>
+
+    <script src="js/temporal.js"></script>
+</body>
+
+</html>
