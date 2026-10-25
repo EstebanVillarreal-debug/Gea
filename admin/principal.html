@@ -10,7 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -36,115 +36,302 @@
             }
         };
     </script>
-    <title>Gea | IPB</title>
+    <title>GEA | Noticias</title>
 </head>
 
-<body
-    class="bg-hue m-0 p-0 font-texto text-text flex flex-col items-center justify-start text-center min-h-screen overflow-x-hidden">
+<body class="m-0 min-h-screen overflow-x-hidden bg-hue p-0 font-texto text-text">
 
-    <header class="w-full">
+    <!-- BARRA LATERAL  -->
+    <aside aria-label="Navegación principal"
+        class="fixed inset-y-0 left-0 z-30 flex w-[76px] flex-col items-center gap-2 bg-gradient-to-b from-azuoscuro to-[#0e2036] py-5 max-[640px]:top-auto max-[640px]:bottom-4 max-[640px]:left-1/2 max-[640px]:h-[66px] max-[640px]:w-[min(calc(100%-32px),420px)] max-[640px]:-translate-x-1/2 max-[640px]:flex-row max-[640px]:justify-around max-[640px]:gap-0 max-[640px]:rounded-full max-[640px]:px-3 max-[640px]:py-0 max-[640px]:shadow-[0_16px_40px_rgba(14,32,54,0.45)] max-[640px]:ring-1 max-[640px]:ring-white/10">
 
-        <section
-            class="pagina_gea relative flex min-h-screen w-full justify-center overflow-hidden bg-gradient-to-b from-hue from-70% to-[#d9edfa]">
+        <img src="../img/escudo.png" alt="Escudo del colegio" class="mb-3 h-10 w-auto max-[640px]:hidden">
 
-            <div class=" homeadmin relative flex w-full max-w-[1000px] flex-col px-5 pb-12 pt-8 text-left">
+        <!-- Noticias (activo) -->
+        <a href="principal.html" aria-label="Noticias" aria-current="page"
+            class="group relative grid size-[46px] place-items-center rounded-xl bg-gradient-to-br from-aguama to-azu text-[19px] text-white shadow-[0_6px_16px_-6px_rgba(44,165,141,.55)]">
+            <i class="fa-solid fa-newspaper"></i>
+            <span
+                class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Noticias</span>
+        </a>
 
-            <!--barra superior-->
+        <a href="/notfound.html" aria-label="Registro"
+            class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <span
+                class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Registro</span>
+        </a>
+
+        <a href="/notfound.html" aria-label="Reportes"
+            class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white">
+            <i class="fa-solid fa-file-lines"></i>
+            <span
+                class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Reportes</span>
+        </a>
+
+        <a href="modulo-docentes.html" aria-label="Docentes"
+            class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white">
+            <i class="fa-solid fa-chalkboard-user"></i>
+            <span
+                class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Docentes</span>
+        </a>
+
+        <a href="/notfound.html" aria-label="Calendario"
+            class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white">
+            <i class="fa-regular fa-calendar-days"></i>
+            <span
+                class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Calendario</span>
+        </a>
+
+        <!-- perfil -->
+        <a href="/notfound.html" aria-label="Mi perfil"
+            class="group relative mt-auto block size-[52px] shrink-0 max-[640px]:mt-0">
+            <img src="../img/usuario.png" alt="Foto de perfil"
+                class="absolute inset-[8%] h-[84%] w-[84%] rounded-full bg-hue object-cover">
+            <img src="../img/alrededor.png" alt=""
+                class="pointer-events-none absolute inset-0 h-full w-full object-contain">
+            <span
+                class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Mi
+                perfil</span>
+        </a>
+    </aside>
+
+    <!-- CONTENIDO  -->
+    <div
+        class="min-h-screen bg-gradient-to-b from-hue from-70% to-[#d9edfa] pl-[76px] max-[640px]:pb-[80px] max-[640px]:pl-0">
+        <div class="mx-auto w-full max-w-[1040px] px-5 pb-12 pt-6">
+
+            <!-- encabezado: la persona -->
             <div
-                class="relative flex items-center justify-between gap-4 overflow-hidden rounded-[22px] border border-borde bg-white px-5 py-4 shadow-[0_8px_24px_rgba(22,50,79,0.08)]">
+                class="relative flex flex-wrap items-center justify-between gap-4 overflow-hidden rounded-[22px] border border-borde bg-white px-6 py-5 shadow-[0_8px_24px_rgba(22,50,79,0.08)]">
+                <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-azuoscuro via-azu to-aguama"></div>
 
-                <!--linea de colores-->
-                <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-azuoscuro via-azu to-aguama">
-                </div>
-
-                <!--usuario-->
-                <div class="flex items-center gap-4">
-                    <div class="relative size-[68px] shrink-0">
-                        <!-- foto del usuario -->
+                <div class="flex items-center gap-5">
+                    <div class="relative size-[84px] shrink-0 max-[480px]:size-[68px]">
                         <img src="../img/usuario.png" alt="Foto de perfil"
                             class="absolute inset-[8%] h-[84%] w-[84%] rounded-full bg-hue object-cover">
-                        <!-- marco por defecto -->
                         <img src="../img/alrededor.png" alt=""
                             class="pointer-events-none absolute inset-0 h-full w-full object-contain">
                     </div>
                     <div>
-                        <p class="text-[11px] font-semibold uppercase tracking-wider text-aguama">Panel principal
-                            Administrativo
-                        </p>
-                        <h1
-                            class="font-display text-[20px] font-bold leading-tight text-azuoscuro max-[480px]:text-[17px]">
-                            Bienvenido, Pepito Perez</h1>
+                        <p class="text-[13px] font-medium text-sua">Bienvenido</p>
+                        <p class="font-display text-[clamp(24px,4vw,32px)] font-extrabold leading-tight text-azuoscuro">
+                            Pepito Perez</p>
+                        <span
+                            class="mt-1.5 inline-flex items-center gap-1.5 rounded-full bg-aguama/10 px-3 py-1 text-[11.5px] font-semibold uppercase tracking-wider text-aguama">
+                            <i class="fa-solid fa-user-shield text-[10px]"></i>Administrativo
+                        </span>
                     </div>
                 </div>
 
                 <div class="flex items-center gap-4">
-                    <a href="../login.html"
-                        class="hidden items-center gap-2 rounded-full border border-borde px-4 py-2 text-[13px] font-medium text-sua transition-colors hover:border-azu hover:text-azu sm:flex">
-                        <i class="fa-solid fa-arrow-right-from-bracket text-[12px]"></i>Cerrar sesión
+                    <a href="../login.html" id="cerrar"
+                        class="flex items-center gap-2 rounded-full border border-borde px-4 py-2 text-[13px] font-medium text-sua transition-colors hover:border-azu hover:text-azu">
+                        <i class="fa-solid fa-arrow-right-from-bracket text-[12px]"></i>
+                        <span class="max-[480px]:hidden">Cerrar sesión</span>
                     </a>
-                    <img src="../img/escudo.png" alt="Escudo del colegio" class="h-12 w-auto">
+                    <img src="../img/escudo.png" alt="Escudo del colegio" class="h-14 w-auto max-[480px]:hidden">
                 </div>
             </div>
 
-            <!--fecha-->
-            <div class="mt-5 flex items-center gap-2 px-1 text-sm text-sua">
-                <i class="fa-regular fa-calendar text-aguama"></i>
-                <span id="fecha">Fecha: --/--/----</span>
+            <!-- título de sección + buscador + fecha -->
+            <div class="mt-8 flex flex-wrap items-center justify-between gap-4">
+                <div>
+                    <h1 class="font-display text-[clamp(22px,3vw,26px)] font-bold leading-none text-azuoscuro">Noticias
+                    </h1>
+                    <div class="mt-2 h-[5px] w-full rounded-full bg-gradient-to-r from-aguama to-azu"></div>
+                </div>
+
+                <div class="flex items-center gap-3 max-[640px]:w-full">
+                    <label for="buscar"
+                        class="flex h-[42px] w-[260px] items-center gap-2.5 rounded-full border border-borde bg-white px-4 text-sua shadow-[0_4px_12px_rgba(22,50,79,0.06)] focus-within:border-azu max-[640px]:w-auto max-[640px]:flex-1">
+                        <i class="fa-solid fa-magnifying-glass text-sm text-azu"></i>
+                        <input id="buscar" type="search" placeholder="Buscar noticia..."
+                            class="h-full w-full bg-transparent text-sm text-text outline-none placeholder:text-sua/60">
+                    </label>
+
+                    <!-- recuadro de fecha + calendario -->
+                    <div class="relative">
+                        <button type="button" id="btnFecha" aria-haspopup="dialog" aria-expanded="false"
+                            class="flex h-[42px] items-center gap-2.5 rounded-full border border-borde bg-white px-4 text-sm font-medium text-azuoscuro shadow-[0_4px_12px_rgba(22,50,79,0.06)] transition-colors hover:border-azu">
+                            <i class="fa-regular fa-calendar text-aguama"></i>
+                            <span id="textoFecha">Fecha</span>
+                            <i id="flechaFecha"
+                                class="fa-solid fa-chevron-down text-[11px] text-sua transition-transform duration-200"></i>
+                        </button>
+
+                        <div id="calendario" hidden role="dialog" aria-label="Calendario"
+                            class="absolute right-0 top-[calc(100%+10px)] z-40 w-[300px] max-w-[calc(100vw-40px)] rounded-[18px] border border-borde bg-white p-4 shadow-[0_20px_50px_rgba(22,50,79,0.18)]">
+
+                            <div class="mb-3 flex items-center justify-between">
+                                <button type="button" id="mesAnterior" aria-label="Mes anterior"
+                                    class="grid size-8 place-items-center rounded-full text-sua transition hover:bg-hue hover:text-azu">
+                                    <i class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <p id="tituloMes" class="font-display text-[15px] font-bold text-azuoscuro"></p>
+                                <button type="button" id="mesSiguiente" aria-label="Mes siguiente"
+                                    class="grid size-8 place-items-center rounded-full text-sua transition hover:bg-hue hover:text-azu">
+                                    <i class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+
+                            <div class="mb-1 grid grid-cols-7 text-center text-[11px] font-semibold uppercase text-sua">
+                                <span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span>
+                            </div>
+                            <div id="diasCal" class="grid grid-cols-7 gap-1 text-center"></div>
+
+                            <div
+                                class="mt-3 flex items-center justify-between border-t border-borde pt-3 text-[12px] text-sua">
+                                <span class="flex items-center gap-1.5"><span
+                                        class="size-1.5 rounded-full bg-orro"></span>Días con noticias</span>
+                                <button type="button" id="limpiarFecha" hidden
+                                    class="font-semibold text-azu hover:underline">Ver todas</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!--tarjetas-->
-            <main class="menu mt-6 flex flex-wrap justify-center gap-5">
+            <!-- pestañas -->
+            <div
+                class="mt-4 flex flex-wrap items-center justify-between gap-3 rounded-[26px] border border-borde bg-white p-1.5 shadow-[0_6px_18px_rgba(22,50,79,0.08)]">
+                <nav aria-label="Tipo de noticia" class="flex gap-1">
+                    <button type="button" data-tab="general"
+                        class="activa rounded-full px-5 py-2 text-[14.5px] font-semibold text-sua transition hover:bg-hue hover:text-azuoscuro [&.activa]:bg-gradient-to-br [&.activa]:from-aguama [&.activa]:to-azu [&.activa]:text-white [&.activa]:shadow-[0_6px_14px_-6px_rgba(31,111,178,.6)]">General</button>
+                    <button type="button" data-tab="publica"
+                        class="rounded-full px-5 py-2 text-[14.5px] font-semibold text-sua transition hover:bg-hue hover:text-azuoscuro [&.activa]:bg-gradient-to-br [&.activa]:from-aguama [&.activa]:to-azu [&.activa]:text-white [&.activa]:shadow-[0_6px_14px_-6px_rgba(31,111,178,.6)]">Pública</button>
+                    <button type="button" data-tab="privada"
+                        class="rounded-full px-5 py-2 text-[14.5px] font-semibold text-sua transition hover:bg-hue hover:text-azuoscuro [&.activa]:bg-gradient-to-br [&.activa]:from-aguama [&.activa]:to-azu [&.activa]:text-white [&.activa]:shadow-[0_6px_14px_-6px_rgba(31,111,178,.6)]">Privada</button>
+                </nav>
 
-                <!--noticias-->
-                <a href="/notfound.html" id="notfound"
-                    class="tarjeta group relative flex w-[calc((100%-40px)/3)] flex-col rounded-[18px] border border-borde border-t-4 border-t-orro bg-white p-6 shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] max-[900px]:w-[calc((100%-20px)/2)] max-[560px]:w-full">
-                    <span class="mb-4 flex size-[46px] items-center justify-center rounded-[12px] bg-hue">
-                        <i class="fa-solid fa-bullhorn text-[20px] text-orro"></i></span>
-                    <h3 class="font-display text-[18px] font-bold text-azuoscuro">Noticias</h3>
-                    <p class="mt-1 pr-6 text-[14.5px] leading-[1.5] text-sua">
-                        Comunicados y avisos</p>
+                <a href="/notfound.html"
+                    class="flex items-center gap-2 rounded-full bg-gradient-to-r from-orro to-[#dba14a] px-5 py-2 text-[14.5px] font-semibold text-white shadow-[0_6px_14px_-6px_rgba(201,139,47,.7)] transition hover:-translate-y-[2px]">
+                    <i class="fa-solid fa-plus text-[12px]"></i>Agregar noticia
                 </a>
-
-                <a href="/notfound.html" id="notfound"
-                    class="tarjeta group relative flex w-[calc((100%-40px)/3)] flex-col rounded-[18px] border border-borde border-t-4 border-t-aguama bg-white p-6 shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] max-[900px]:w-[calc((100%-20px)/2)] max-[560px]:w-full">
-                    <span class="mb-4 flex size-[46px] items-center justify-center rounded-[12px] bg-hue">
-                        <i class="fa-solid fa-clipboard-list text-[20px] text-aguama"></i></span>
-                    <h3 class="font-display text-[18px] font-bold text-azuoscuro">Registro</h3>
-                    <p class="mt-1 pr-6 text-[14.5px] leading-[1.5] text-sua">Seguimiento de salidas
-                    </p>
-                </a>
-
-                <a href="/notfound.html" id="notfound"
-                    class="tarjeta group relative flex w-[calc((100%-40px)/3)] flex-col rounded-[18px] border border-borde border-t-4 border-t-[#e73525] bg-white p-6 shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] max-[900px]:w-[calc((100%-20px)/2)] max-[560px]:w-full">
-                    <span class="mb-4 flex size-[46px] items-center justify-center rounded-[12px] bg-hue">
-                        <i class="fa-solid fa-file-lines text-[20px] text-[#e73525]"></i></span>
-                    <h3 class="font-display text-[18px] font-bold text-azuoscuro">Reportes</h3>
-                    <p class="mt-1 pr-6 text-[14.5px] leading-[1.5] text-sua">
-                        Informes y seguimiento</p>
-                </a>
-
-                <a href="modulo-docentes.html" id="abrir-docentes"
-                    class="tarjeta group relative flex w-[calc((100%-40px)/3)] flex-col rounded-[18px] border border-borde border-t-4 border-t-[#851baf] bg-white p-6 shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] max-[900px]:w-[calc((100%-20px)/2)] max-[560px]:w-full">
-                    <span class="mb-4 flex size-[46px] items-center justify-center rounded-[12px] bg-hue">
-                        <i class="fa-solid fa-chalkboard-user text-[20px] text-[#851baf]"></i></span>
-                    <h3 class="font-display text-[18px] font-bold text-azuoscuro">Docentes</h3>
-                    <p class="mt-1 pr-6 text-[14.5px] leading-[1.5] text-sua">Perfiles, materias y horarios, excusas y
-                        rangos.</p>
-                </a>
-
-                <a href="/notfound.html" id="notfound"
-                    class="tarjeta group relative flex w-[calc((100%-40px)/3)] flex-col rounded-[18px] border border-borde border-t-4 border-t-azu bg-white p-6 shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)] max-[900px]:w-[calc((100%-20px)/2)] max-[560px]:w-full">
-                    <span class="mb-4 flex size-[46px] items-center justify-center rounded-[12px] bg-hue">
-                        <i class="fa-regular fa-calendar-days text-[20px] text-azu"></i></span>
-                    <h3 class="font-display text-[18px] font-bold text-azuoscuro">Calendario</h3>
-                    <p class="mt-1 pr-6 text-[14.5px] leading-[1.5] text-sua">Evaluaciones, reuniones y eventos.</p>
-                </a>
-            </main>
             </div>
-        </section>
-    </header>
 
-    <script src="js/temporal.js"></script>
+            <!-- aviso destacado -->
+            <article
+                class="mt-6 flex items-center gap-5 rounded-[18px] border border-borde border-l-4 border-l-orro bg-white p-5 shadow-[0_6px_18px_rgba(22,50,79,0.08)] max-[560px]:flex-col max-[560px]:text-center">
+                <span class="grid size-[64px] shrink-0 place-items-center rounded-2xl bg-orro/10 text-[28px] text-orro">
+                    <i class="fa-solid fa-gears"></i></span>
+                <div class="flex-1">
+                    <span
+                        class="inline-flex items-center gap-1.5 rounded-full bg-orro/10 px-2.5 py-1 text-[11px] font-semibold text-orro">
+                        <i class="fa-solid fa-triangle-exclamation text-[10px]"></i>Aviso importante</span>
+                    <h2 class="mt-2 font-display text-[20px] font-bold leading-snug text-azuoscuro">Sistema en
+                        mantenimiento</h2>
+                    <p class="mt-1 text-[14.5px] leading-[1.55] text-sua">
+                        Se informa a toda la comunidad que el acceso al sistema estará en mantenimiento el próximo
+                        viernes de 2:00 p. m. a 4:00 p. m.</p>
+                </div>
+            </article>
+
+            <!-- noticias -->
+            <section aria-label="Lista de noticias"
+                class="mt-5 grid grid-cols-3 gap-5 max-[900px]:grid-cols-2 max-[560px]:grid-cols-1">
+
+                <article data-tipo="publica"
+                    class="noticia flex flex-col rounded-[18px] border border-borde border-t-4 border-t-aguama bg-white p-5 shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)]">
+                    <div class="mb-3 flex items-center justify-between gap-2">
+                        <span
+                            class="inline-flex items-center gap-1.5 rounded-full bg-aguama/10 px-2.5 py-1 text-[11px] font-semibold text-aguama"><i
+                                class="fa-solid fa-globe text-[10px]"></i>Pública</span>
+                        <span class="text-[12px] text-sua">19/03/2026</span>
+                    </div>
+                    <h3 class="font-display text-[17px] font-bold leading-snug text-azuoscuro">Módulo de horario</h3>
+                    <p class="mt-2 flex-1 text-[14px] leading-[1.55] text-sua">El área administrativa informa que ya
+                        están disponibles los horarios actualizados para estudiantes y docentes.</p>
+                    <a href="/notfound.html"
+                        class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-azu transition-all hover:gap-2.5">Ver
+                        más <i class="fa-solid fa-arrow-right text-[11px]"></i></a>
+                </article>
+
+                <article data-tipo="privada"
+                    class="noticia flex flex-col rounded-[18px] border border-borde border-t-4 border-t-azu bg-white p-5 shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)]">
+                    <div class="mb-3 flex items-center justify-between gap-2">
+                        <span
+                            class="inline-flex items-center gap-1.5 rounded-full bg-azu/10 px-2.5 py-1 text-[11px] font-semibold text-azu"><i
+                                class="fa-solid fa-lock text-[10px]"></i>Privada</span>
+                        <span class="text-[12px] text-sua">18/03/2026</span>
+                    </div>
+                    <h3 class="font-display text-[17px] font-bold leading-snug text-azuoscuro">Gestión administrativa
+                    </h3>
+                    <p class="mt-2 flex-1 text-[14px] leading-[1.55] text-sua">El sistema de escaneo reportó
+                        inconsistencias en algunos ID. Revisar los registros recientes.</p>
+                    <a href="/notfound.html"
+                        class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-azu transition-all hover:gap-2.5">Ver
+                        más <i class="fa-solid fa-arrow-right text-[11px]"></i></a>
+                </article>
+
+                <article data-tipo="publica"
+                    class="noticia flex flex-col rounded-[18px] border border-borde border-t-4 border-t-aguama bg-white p-5 shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)]">
+                    <div class="mb-3 flex items-center justify-between gap-2">
+                        <span
+                            class="inline-flex items-center gap-1.5 rounded-full bg-aguama/10 px-2.5 py-1 text-[11px] font-semibold text-aguama"><i
+                                class="fa-solid fa-globe text-[10px]"></i>Pública</span>
+                        <span class="text-[12px] text-sua">16/03/2026</span>
+                    </div>
+                    <h3 class="font-display text-[17px] font-bold leading-snug text-azuoscuro">Celebración 50 años</h3>
+                    <p class="mt-2 flex-1 text-[14px] leading-[1.55] text-sua">El IPB celebra hoy sus 50 años.
+                        Recordarle a los docentes las diferentes actividades programadas para el día.</p>
+                    <a href="/notfound.html"
+                        class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-azu transition-all hover:gap-2.5">Ver
+                        más <i class="fa-solid fa-arrow-right text-[11px]"></i></a>
+                </article>
+
+                <article data-tipo="privada"
+                    class="noticia flex flex-col rounded-[18px] border border-borde border-t-4 border-t-azu bg-white p-5 shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)]">
+                    <div class="mb-3 flex items-center justify-between gap-2">
+                        <span
+                            class="inline-flex items-center gap-1.5 rounded-full bg-azu/10 px-2.5 py-1 text-[11px] font-semibold text-azu"><i
+                                class="fa-solid fa-lock text-[10px]"></i>Privada</span>
+                        <span class="text-[12px] text-sua">12/03/2026</span>
+                    </div>
+                    <h3 class="font-display text-[17px] font-bold leading-snug text-azuoscuro">Control interno</h3>
+                    <p class="mt-2 flex-1 text-[14px] leading-[1.55] text-sua">Ajustes de seguridad aplicados al acceso
+                        de personal. Revisar permisos asignados.</p>
+                    <a href="/notfound.html"
+                        class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-azu transition-all hover:gap-2.5">Ver
+                        más <i class="fa-solid fa-arrow-right text-[11px]"></i></a>
+                </article>
+
+                <article data-tipo="publica"
+                    class="noticia flex flex-col rounded-[18px] border border-borde border-t-4 border-t-aguama bg-white p-5 shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)]">
+                    <div class="mb-3 flex items-center justify-between gap-2">
+                        <span
+                            class="inline-flex items-center gap-1.5 rounded-full bg-aguama/10 px-2.5 py-1 text-[11px] font-semibold text-aguama"><i
+                                class="fa-solid fa-globe text-[10px]"></i>Pública</span>
+                        <span class="text-[12px] text-sua">10/03/2026</span>
+                    </div>
+                    <h3 class="font-display text-[17px] font-bold leading-snug text-azuoscuro">Entrega de informes</h3>
+                    <p class="mt-2 flex-1 text-[14px] leading-[1.55] text-sua">Se recuerda a los docentes entregar los
+                        informes semanales antes del viernes al mediodía.</p>
+                    <a href="/notfound.html"
+                        class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-azu transition-all hover:gap-2.5">Ver
+                        más <i class="fa-solid fa-arrow-right text-[11px]"></i></a>
+                </article>
+
+                <article data-tipo="privada"
+                    class="noticia flex flex-col rounded-[18px] border border-borde border-t-4 border-t-azu bg-white p-5 shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)]">
+                    <div class="mb-3 flex items-center justify-between gap-2">
+                        <span
+                            class="inline-flex items-center gap-1.5 rounded-full bg-azu/10 px-2.5 py-1 text-[11px] font-semibold text-azu"><i
+                                class="fa-solid fa-lock text-[10px]"></i>Privada</span>
+                        <span class="text-[12px] text-sua">05/03/2026</span>
+                    </div>
+                    <h3 class="font-display text-[17px] font-bold leading-snug text-azuoscuro">Comunicación interna</h3>
+                    <p class="mt-2 flex-1 text-[14px] leading-[1.55] text-sua">La rectoría solicita confirmar la
+                        asistencia de los docentes a la reunión pedagógica del próximo lunes.</p>
+                    <a href="/notfound.html"
+                        class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-azu transition-all hover:gap-2.5">Ver
+                        más <i class="fa-solid fa-arrow-right text-[11px]"></i></a>
+                </article>
+            </section>
+
+            <p id="sinNoticias" class="mt-8 hidden text-center text-sua">No se encontraron noticias.</p>
+        </div>
+    </div>
+
+    <script src="../js/temporal.js"></script>
 </body>
 
 </html>
