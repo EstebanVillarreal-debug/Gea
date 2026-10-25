@@ -10,7 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -36,439 +36,290 @@
             }
         };
     </script>
-    <title>Gea | IPB</title>
+    <title>GEA | Docentes</title>
 </head>
 
-<body
-    class="bg-hue m-0 p-0 font-texto text-text flex flex-col items-center justify-start text-center min-h-screen overflow-x-hidden">
+<body class="m-0 min-h-screen overflow-x-hidden bg-hue p-0 font-texto text-text">
 
-    <header class="w-full">
-        
-        <!-- Módulo de docentes -->
-        <section aria-labelledby="titulo-docentes"
-            class="pagina-docentes flex min-h-screen w-full flex-row bg-[#f4f8fb] text-center text-[#16232f] [background-image:...]">
-            <aside aria-label="Navegación principal"
-                class="barra-lateral flex min-h-screen w-[72px] shrink-0 flex-col items-center gap-[10px] border-r-0 bg-gradient-to-b from-[#16324f] to-[#0e2036] px-[10px] py-[22px] max-[560px]:w-12 max-[560px]:px-[3px] max-[560px]:py-2">
-                <button href="principal.html" id="abrir-principal" type="button" aria-label="Volver al panel principal"
-                    class="nav-icono volver-panel grid size-[46px] place-items-center rounded-xl border-0 bg-transparent p-0 text-[19px] text-white/55 shadow-none transition hover:bg-white/10 hover:text-white max-[560px]:size-10">
-                    <i class="fa-solid fa-house"></i>
-                </button>
-                <button type="button" aria-label="Registro"
-                    class="nav-icono grid size-[46px] place-items-center rounded-xl border-0 bg-transparent p-0 text-[19px] text-white/55 shadow-none transition hover:bg-white/10 hover:text-white max-[560px]:size-10">
-                    <i class="fa-solid fa-clipboard-list"></i>
-                </button>
-                <button type="button" aria-label="Reportes"
-                    class="nav-icono grid size-[46px] place-items-center rounded-xl border-0 bg-transparent p-0 text-[19px] text-white/55 shadow-none transition hover:bg-white/10 hover:text-white max-[560px]:size-10">
-                    <i class="fa-solid fa-newspaper"></i>
-                </button>
-                <button type="button" aria-label="Docentes"
-                    class="nav-icono activo grid size-[46px] place-items-center rounded-xl border-0 bg-gradient-to-br from-[#2ca58d] to-[#1f6fb2] p-0 text-[19px] text-white shadow-[0_6px_16px_-6px_rgba(44,165,141,.55)] max-[560px]:size-10">
-                    <i class="fa-solid fa-users"></i>
-                </button>
-                <button type="button" aria-label="Calendario"
-                    class="nav-icono grid size-[46px] place-items-center rounded-xl border-0 bg-transparent p-0 text-[19px] text-white/55 shadow-none transition hover:bg-white/10 hover:text-white max-[560px]:size-10">
-                    <i class="fa-solid fa-calendar-days"></i>
-                </button>
-                <button type="button" aria-label="Perfil"
-                    class="nav-icono grid size-[46px] place-items-center rounded-xl border-0 bg-transparent p-0 text-[19px] text-white/55 shadow-none transition hover:bg-white/10 hover:text-white max-[560px]:size-10">
-                    <i class="fa-solid fa-circle-user"></i>
-                </button>
-            </aside>
+    <!-- BARRA LATERAL -->
+    <aside aria-label="Navegación principal"
+        class="fixed inset-y-0 left-0 z-30 flex w-[76px] flex-col items-center gap-2 bg-gradient-to-b from-azuoscuro to-[#0e2036] py-5 max-[640px]:top-auto max-[640px]:bottom-4 max-[640px]:left-1/2 max-[640px]:h-[66px] max-[640px]:w-[min(calc(100%-32px),420px)] max-[640px]:-translate-x-1/2 max-[640px]:flex-row max-[640px]:justify-around max-[640px]:gap-0 max-[640px]:rounded-full max-[640px]:px-3 max-[640px]:py-0 max-[640px]:shadow-[0_16px_40px_rgba(14,32,54,0.45)] max-[640px]:ring-1 max-[640px]:ring-white/10">
 
-            <main
-                class="contenido-docentes flex flex-1 flex-col items-center px-6 pb-[60px] pt-10 max-[560px]:px-[10px]">
-                <section aria-label="Opciones de docentes"
-                    class="inicio-docentes flex w-full flex-col items-center [&[hidden]]:hidden">
-                    <h1
-                        class="mb-0 w-[min(100%,380px)] rounded-full bg-gradient-to-r from-[#6b4c9a] to-[#8b318b] px-5 py-[14px] text-[clamp(30px,5vw,40px)] font-bold leading-[1.05] text-white shadow-[0_10px_26px_-12px_rgba(58,22,79,.45)] [font-family:Poppins,_Segoe_UI,_sans-serif]">
-                        Docentes</h1>
-                    <div
-                        class="acciones-docentes mt-[clamp(56px,12vh,120px)] flex w-full flex-wrap items-center justify-center gap-[22px] max-[560px]:flex-col">
-                        <button type="button"
-                            class="opcion-docente opcion-lista-docentes abrir-lista-docentes flex h-[84px] w-[235px] items-center justify-between rounded-[18px] border border-[#e1e9f0] border-t-4 border-t-[#8b318b] bg-white px-[22px] text-[19px] font-bold text-[#16324f] shadow-[0_8px_20px_rgba(22,50,79,.1)] transition hover:-translate-y-[3px] hover:shadow-[0_14px_26px_rgba(22,50,79,.16)] [font-family:Poppins,_Segoe_UI,_sans-serif]">
-                            <span>Docentes</span>
-                            <i aria-hidden="true" class="fa-solid fa-chalkboard-user text-[28px] text-[#8b318b]"></i>
+        <img src="../img/escudo.png" alt="Escudo del colegio" class="mb-3 h-10 w-auto max-[640px]:hidden">
+
+        <a href="principal.html" aria-label="Noticias"
+            class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white max-[640px]:rounded-full">
+            <i class="fa-solid fa-newspaper"></i>
+            <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Noticias</span></a>
+
+        <a href="notfound.html" aria-label="Registro"
+            class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white max-[640px]:rounded-full">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Registro</span></a>
+
+        <a href="notfound.html" aria-label="Reportes"
+            class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white max-[640px]:rounded-full">
+            <i class="fa-solid fa-file-lines"></i>
+            <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Reportes</span></a>
+
+        <!-- activo -->
+        <a href="modulo-docentes.html" aria-label="Docentes" aria-current="page"
+            class="group relative grid size-[46px] place-items-center rounded-xl bg-gradient-to-br from-aguama to-azu text-[19px] text-white shadow-[0_6px_16px_-6px_rgba(44,165,141,.55)] max-[640px]:rounded-full">
+            <i class="fa-solid fa-chalkboard-user"></i>
+            <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Docentes</span></a>
+
+        <a href="notfound.html" aria-label="Calendario"
+            class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white max-[640px]:rounded-full">
+            <i class="fa-regular fa-calendar-days"></i>
+            <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Calendario</span></a>
+
+        <a href="notfound.html" aria-label="Mi perfil"
+            class="group relative mt-auto block size-[52px] shrink-0 max-[640px]:mt-0">
+            <img src="../img/usuario.png" alt="Foto de perfil"
+                class="absolute inset-[8%] h-[84%] w-[84%] rounded-full bg-hue object-cover">
+            <img src="../img/alrededor.png" alt=""
+                class="pointer-events-none absolute inset-0 h-full w-full object-contain">
+            <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Mi perfil</span>
+        </a>
+    </aside>
+
+    <!-- CONTENIDO-->
+    <div class="min-h-screen bg-gradient-to-b from-hue from-70% to-[#d9edfa] pl-[76px] max-[640px]:pb-[110px] max-[640px]:pl-0">
+        <main class="mx-auto w-full max-w-[1040px] px-5 pb-12 pt-8">
+
+            <!-- título -->
+            <div class="w-fit">
+                <h1 class="font-display text-[clamp(22px,3vw,26px)] font-bold leading-none text-azuoscuro">Docentes</h1>
+                <div class="mt-2 h-[5px] w-full rounded-full bg-gradient-to-r from-aguama to-azu"></div>
+            </div>
+            <p class="mt-2 text-[14.5px] text-sua">Perfiles, materias, rangos y excusas del personal.</p>
+
+            <!-- pestañas -->
+            <div class="mt-5 flex flex-wrap items-center justify-between gap-2 rounded-[26px] border border-borde bg-white p-1.5 shadow-[0_6px_18px_rgba(22,50,79,0.08)]">
+                <nav aria-label="Opciones de docentes" class="flex flex-wrap gap-1">
+                    <button type="button" data-vista-docente="lista"
+                        class="activa whitespace-nowrap rounded-full px-5 py-2 text-[14.5px] font-semibold text-sua transition hover:bg-hue hover:text-azuoscuro [&.activa]:bg-gradient-to-br [&.activa]:from-aguama [&.activa]:to-azu [&.activa]:text-white [&.activa]:shadow-[0_6px_14px_-6px_rgba(31,111,178,.6)] [&.activa]:hover:text-white">Docentes</button>
+                    <button type="button" data-vista-docente="agregar"
+                        class="whitespace-nowrap rounded-full px-5 py-2 text-[14.5px] font-semibold text-sua transition hover:bg-hue hover:text-azuoscuro [&.activa]:bg-gradient-to-br [&.activa]:from-aguama [&.activa]:to-azu [&.activa]:text-white [&.activa]:shadow-[0_6px_14px_-6px_rgba(31,111,178,.6)] [&.activa]:hover:text-white">Agregar docente</button>
+                    <button type="button" data-vista-docente="rango"
+                        class="whitespace-nowrap rounded-full px-5 py-2 text-[14.5px] font-semibold text-sua transition hover:bg-hue hover:text-azuoscuro [&.activa]:bg-gradient-to-br [&.activa]:from-aguama [&.activa]:to-azu [&.activa]:text-white [&.activa]:shadow-[0_6px_14px_-6px_rgba(31,111,178,.6)] [&.activa]:hover:text-white">Cambiar rango</button>
+                </nav>
+                <a href="/notfound.html"
+                    class="flex items-center gap-2 whitespace-nowrap rounded-full px-5 py-2 text-[14.5px] font-semibold text-sua transition hover:bg-hue hover:text-azuoscuro">
+                    <i class="fa-solid fa-user-clock text-xs"></i>Horario</a>
+            </div>
+
+            <!-- búsqueda + filtros (se oculta en "Agregar docente") -->
+            <div id="barraDocentes">
+                <div class="mt-5 flex items-center justify-between gap-3">
+                    <label for="buscar-docente"
+                        class="flex h-[42px] w-[280px] items-center gap-2.5 rounded-full border border-borde bg-white px-4 text-sua shadow-[0_4px_12px_rgba(22,50,79,0.06)] focus-within:border-azu max-[640px]:flex-1">
+                        <i class="fa-solid fa-magnifying-glass text-sm text-azu"></i>
+                        <input id="buscar-docente" type="search" placeholder="Buscar docente..."
+                            class="h-full w-full bg-transparent text-sm text-text outline-none placeholder:text-sua/60">
+                    </label>
+
+                    <div class="relative">
+                        <button type="button" id="abrir-filtro-docentes" aria-haspopup="true" aria-expanded="false"
+                            class="flex h-[42px] items-center gap-2.5 rounded-full border border-borde bg-white px-4 text-sm font-medium text-azuoscuro shadow-[0_4px_12px_rgba(22,50,79,0.06)] transition-colors hover:border-azu">
+                            <i class="fa-solid fa-sliders text-aguama"></i>Filtros
+                            <i id="flechaFiltro" class="fa-solid fa-chevron-down text-[11px] text-sua transition-transform duration-200"></i>
                         </button>
-                        <button type="button"
-                            class="opcion-docente opcion-horario flex h-[84px] w-[235px] items-center justify-between rounded-[18px] border border-[#e1e9f0] border-t-4 border-t-[#b91661] bg-white px-[22px] text-[19px] font-bold text-[#16324f] shadow-[0_8px_20px_rgba(22,50,79,.1)] transition hover:-translate-y-[3px] hover:shadow-[0_14px_26px_rgba(22,50,79,.16)] [font-family:Poppins,_Segoe_UI,_sans-serif]">
-                            <span>Horario</span>
-                            <i aria-hidden="true" class="fa-solid fa-user-clock text-[28px] text-[#b91661]"></i>
-                        </button>
+
+                        <div id="menu-filtros-docentes" hidden
+                            class="absolute right-0 top-[calc(100%+10px)] z-40 max-h-[70vh] w-[340px] max-w-[calc(100vw-40px)] overflow-y-auto rounded-[18px] border border-borde bg-white p-4 shadow-[0_20px_50px_rgba(22,50,79,0.18)]">
+
+                            <div class="mb-3 flex items-center justify-between">
+                                <p class="font-display text-[15px] font-bold text-azuoscuro">Filtrar por</p>
+                                <button type="button" data-filtro="todos" class="text-[13px] font-semibold text-azu hover:underline">Limpiar</button>
+                            </div>
+
+                            <p class="mb-1.5 text-[11px] font-semibold uppercase tracking-wider text-aguama">Grado</p>
+                            <div class="mb-4 grid grid-cols-4 gap-1.5">
+                                <button type="button" data-grado="601" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">601</button>
+                                <button type="button" data-grado="602" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">602</button>
+                                <button type="button" data-grado="603" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">603</button>
+                                <button type="button" data-grado="701" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">701</button>
+                                <button type="button" data-grado="702" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">702</button>
+                                <button type="button" data-grado="703" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">703</button>
+                                <button type="button" data-grado="801" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">801</button>
+                                <button type="button" data-grado="802" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">802</button>
+                                <button type="button" data-grado="803" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">803</button>
+                                <button type="button" data-grado="901" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">901</button>
+                                <button type="button" data-grado="902" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">902</button>
+                                <button type="button" data-grado="903" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">903</button>
+                                <button type="button" data-grado="1001" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">1001</button>
+                                <button type="button" data-grado="1002" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">1002</button>
+                                <button type="button" data-grado="1003" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">1003</button>
+                                <button type="button" data-grado="1101" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">1101</button>
+                                <button type="button" data-grado="1102" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">1102</button>
+                                <button type="button" data-grado="1103" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">1103</button>
+                            </div>
+
+                            <p class="mb-1.5 text-[11px] font-semibold uppercase tracking-wider text-aguama">Materia</p>
+                            <div class="mb-4 flex flex-wrap gap-1.5">
+                                <button type="button" data-materia="Español" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">Español</button>
+                                <button type="button" data-materia="Matemáticas" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">Matemáticas</button>
+                                <button type="button" data-materia="Sociales" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">Sociales</button>
+                                <button type="button" data-materia="Ciencias Naturales" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">Ciencias Naturales</button>
+                                <button type="button" data-materia="Inglés" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">Inglés</button>
+                                <button type="button" data-materia="Física" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">Física</button>
+                                <button type="button" data-materia="Química" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">Química</button>
+                                <button type="button" data-materia="Tecnología" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">Tecnología</button>
+                                <button type="button" data-materia="Educación Física" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">Educación Física</button>
+                                <button type="button" data-materia="Artes" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">Artes</button>
+                                <button type="button" data-materia="Filosofía" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">Filosofía</button>
+                            </div>
+
+                            <p class="mb-1.5 text-[11px] font-semibold uppercase tracking-wider text-aguama">Rango</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <button type="button" data-rango="Docente" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">Docente</button>
+                                <button type="button" data-rango="Administrativo" class="chip rounded-lg border border-borde bg-hue px-2.5 py-1.5 text-[13px] font-semibold text-azuoscuro transition hover:border-azu hover:text-azu [&.seleccionado]:border-transparent [&.seleccionado]:bg-gradient-to-br [&.seleccionado]:from-aguama [&.seleccionado]:to-azu [&.seleccionado]:text-white [&.seleccionado]:hover:text-white">Administrativo</button>
+                            </div>
+                        </div>
                     </div>
-                </section>
+                </div>
+            </div>
 
-                <section aria-labelledby="titulo-docentes" hidden
-                    class="detalle-docentes hidden w-full flex-col items-center [&:not([hidden])]:flex">
-                    <h1 id="titulo-docentes"
-                        class="mb-0 w-[min(100%,440px)] rounded-full bg-gradient-to-r from-[#6b4c9a] to-[#8b318b] px-5 py-[14px] text-[clamp(30px,4.4vw,38px)] font-bold leading-[1.05] text-white shadow-[0_10px_26px_-12px_rgba(58,22,79,.45)] [font-family:Poppins,_Segoe_UI,_sans-serif]">
-                        Docentes</h1>
-                    <div aria-hidden="true" hidden class="docentes-linea"></div>
+            <!-- VISTA: lista -->
+            <section data-vista="lista" class="mt-5">
+                <div aria-live="polite" class="lista-docentes grid grid-cols-2 gap-4 text-left max-[640px]:grid-cols-1">
 
-                    <nav aria-label="Opciones de docentes"
-                        class="pestanas-docentes flex h-[46px] w-[min(100%,560px)] gap-1 overflow-hidden rounded-full border border-[#e1e9f0] bg-white p-1 shadow-[0_6px_18px_rgba(22,50,79,.08)]">
-                        <button type="button" data-vista-docente="lista"
-                            class="pestana-docente activa h-auto flex-1 whitespace-nowrap rounded-full border-0 bg-transparent px-3 py-[6px] text-[14.5px] font-semibold text-[#55677a] transition hover:bg-[#f4f8fb] hover:text-[#16324f] [&.activa]:bg-gradient-to-br [&.activa]:from-[#6b4c9a] [&.activa]:to-[#8b318b] [&.activa]:text-white [&.activa]:shadow-[0_6px_14px_-6px_rgba(119,31,178,.5)]">Docentes</button>
-                        <button type="button" data-vista-docente="agregar"
-                            class="pestana-docente h-auto flex-1 whitespace-nowrap rounded-full border-0 bg-transparent px-3 py-[6px] text-[14.5px] font-semibold text-[#55677a] transition hover:bg-[#f4f8fb] hover:text-[#16324f] [&.activa]:bg-gradient-to-br [&.activa]:from-[#6b4c9a] [&.activa]:to-[#8b318b] [&.activa]:text-white [&.activa]:shadow-[0_6px_14px_-6px_rgba(119,31,178,.5)]">Agregar
-                            Docente</button>
-                        <button type="button" data-vista-docente="rango"
-                            class="pestana-docente h-auto flex-1 whitespace-nowrap rounded-full border-0 bg-transparent px-3 py-[6px] text-[14.5px] font-semibold text-[#55677a] transition hover:bg-[#f4f8fb] hover:text-[#16324f] [&.activa]:bg-gradient-to-br [&.activa]:from-[#6b4c9a] [&.activa]:to-[#8b318b] [&.activa]:text-white [&.activa]:shadow-[0_6px_14px_-6px_rgba(119,31,178,.5)]">Cambiar
-                            Rango</button>
-                    </nav>
-
-                    <section data-vista="lista"
-                        class="vista-docentes vista-lista mt-5 block w-[min(100%,980px)] [&[hidden]]:hidden">
-                        <div
-                            class="barra-herramientas-docentes relative mx-auto mb-5 flex w-full items-center justify-between">
-                            <label for="buscar-docente"
-                                class="buscador-docentes flex h-[42px] w-[260px] items-center gap-2 rounded-full border border-[#e1e9f0] bg-white px-4 text-[#55677a] shadow-[0_4px_12px_rgba(22,50,79,.06)] max-[560px]:w-full">
-                                <i aria-hidden="true" class="fa-solid fa-magnifying-glass text-sm text-[#1f6fb2]"></i>
-                                <span class="sr-only absolute size-px overflow-hidden whitespace-nowrap">Buscar
-                                    docente</span>
-                                <input id="buscar-docente" type="search" placeholder="Búsqueda:"
-                                    class="h-full w-full border-0 bg-transparent p-0 text-sm text-[#16232f] outline-none focus:shadow-none">
-                            </label>
-
-                            <div class="filtro-docentes relative flex items-center">
-                                <button type="button" id="abrir-filtro-docentes" aria-label="Abrir filtros"
-                                    class="boton-filtro grid h-[42px] w-12 place-items-center rounded-xl border border-[#e1e9f0] bg-white p-0 text-[#16324f] shadow-[0_4px_12px_rgba(22,50,79,.06)] transition hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(22,50,79,.12)]">
-                                    <i class="fa-solid fa-filter"></i>
-                                </button>
-                                <div id="menu-filtros-docentes"
-                                    class="menu-filtros absolute right-0 top-[52px] z-20 hidden w-[170px] flex-col gap-2 rounded-[18px] border-2 border-[#222] bg-[#8163ad] p-3 shadow-[0_8px_20px_rgba(0,0,0,.15)] [&.visible]:flex">
-                                    <button type="button" data-filtro="todos"
-                                        class="opcion-filtro seleccionado h-[42px] w-full rounded-[13px] border-2 border-black bg-[#a846a8] px-3 text-base font-bold text-white transition hover:bg-[#a846a8] hover:text-white">
-                                        Todos
-                                    </button>
-
-                                    <!-- filtros apartes -->
-                                    <div class="filtro-con-submenu relative">
-                                        <button type="button" data-filtro="grado" aria-expanded="false"
-                                            aria-controls="submenu-grados-docentes"
-                                            class="opcion-filtro opcion-grado relative flex h-[42px] w-full items-center justify-center gap-2 rounded-[13px] border-2 border-black bg-[#f5f5f5] px-3 text-base font-bold text-[#222] transition hover:bg-[#a846a8] hover:text-white">
-                                            Grado <i aria-hidden="true"
-                                                class="fa-solid fa-chevron-right absolute right-3 text-xs transition group-aria-expanded:rotate-90"></i>
-                                        </button>
-                                        <div id="submenu-grados-docentes" aria-label="Filtrar por grado"
-                                            class="submenu-grados absolute left-1/2 top-[calc(100%+8px)] z-[110] hidden max-h-[260px] w-[170px] -translate-x-1/2 flex-col gap-[6px] overflow-y-auto rounded-xl border-2 border-[#222] bg-[#8163ad] p-[10px] [&.visible]:flex">
-                                            <button type="button" data-grado="601"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">601</button>
-                                            <button type="button" data-grado="602"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">602</button>
-                                            <button type="button" data-grado="603"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">603</button>
-                                            <button type="button" data-grado="701"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">701</button>
-                                            <button type="button" data-grado="702"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">702</button>
-                                            <button type="button" data-grado="703"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">703</button>
-                                            <button type="button" data-grado="801"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">801</button>
-                                            <button type="button" data-grado="802"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">802</button>
-                                            <button type="button" data-grado="803"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">803</button>
-                                            <button type="button" data-grado="901"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">901</button>
-                                            <button type="button" data-grado="902"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">902</button>
-                                            <button type="button" data-grado="903"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">903</button>
-                                            <button type="button" data-grado="1001"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1001</button>
-                                            <button type="button" data-grado="1002"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1002</button>
-                                            <button type="button" data-grado="1003"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1003</button>
-                                            <button type="button" data-grado="1101"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1101</button>
-                                            <button type="button" data-grado="1102"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1102</button>
-                                            <button type="button" data-grado="1103"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1103</button>
-                                        </div>
-                                    </div>
-                                    <div class="filtro-con-submenu relative">
-                                        <button type="button" data-filtro="materia" aria-expanded="false"
-                                            aria-controls="submenu-materias-docentes"
-                                            class="opcion-filtro opcion-materia relative flex h-[42px] w-full items-center justify-center gap-2 rounded-[13px] border-2 border-black bg-[#f5f5f5] px-3 text-base font-bold text-[#222] transition hover:bg-[#a846a8] hover:text-white">
-                                            Materia <i aria-hidden="true"
-                                                class="fa-solid fa-chevron-right absolute right-3 text-xs transition group-aria-expanded:rotate-90"></i>
-                                        </button>
-                                        <div id="submenu-materias-docentes" aria-label="Filtrar por materia"
-                                            class="submenu-materias absolute left-1/2 top-[calc(100%+8px)] z-[110] hidden max-h-[260px] w-[170px] -translate-x-1/2 flex-col gap-[6px] overflow-y-auto rounded-xl border-2 border-[#222] bg-[#8163ad] p-[10px] [&.visible]:flex">
-                                            <button type="button" data-materia="Español"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Español</button>
-                                            <button type="button" data-materia="Matemáticas"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Matemáticas</button>
-                                            <button type="button" data-materia="Sociales"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Sociales</button>
-                                            <button type="button" data-materia="Ciencias Naturales"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Ciencias
-                                                Naturales</button>
-                                            <button type="button" data-materia="Inglés"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Inglés</button>
-                                            <button type="button" data-materia="Física"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Física</button>
-                                            <button type="button" data-materia="Química"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Química</button>
-                                            <button type="button" data-materia="Tecnología"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Tecnología</button>
-                                            <button type="button" data-materia="Educación Física"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Educación
-                                                Física</button>
-                                            <button type="button" data-materia="Artes"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Artes</button>
-                                            <button type="button" data-materia="Filosofía"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Filosofía</button>
-                                        </div>
-                                    </div>
-                                    <div class="filtro-con-submenu relative">
-                                        <button type="button" data-filtro="rango" aria-expanded="false"
-                                            aria-controls="submenu-rangos-docentes"
-                                            class="opcion-filtro opcion-rango relative flex h-[42px] w-full items-center justify-center gap-2 rounded-[13px] border-2 border-black bg-[#f5f5f5] px-3 text-base font-bold text-[#222] transition hover:bg-[#a846a8] hover:text-white">
-                                            Rango <i aria-hidden="true"
-                                                class="fa-solid fa-chevron-right absolute right-3 text-xs transition group-aria-expanded:rotate-90"></i>
-                                        </button>
-                                        <div id="submenu-rangos-docentes" aria-label="Filtrar por rango"
-                                            class="submenu-rangos absolute left-1/2 top-[calc(100%+8px)] z-[110] hidden max-h-[260px] w-[170px] -translate-x-1/2 flex-col gap-[6px] overflow-y-auto rounded-xl border-2 border-[#222] bg-[#8163ad] p-[10px] [&.visible]:flex">
-                                            <button type="button" data-rango="docente"
-                                                class="opcion-rango-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Docente</button>
-                                            <button type="button" data-rango="admin"
-                                                class="opcion-rango-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Administrativo</button>
-                                        </div>
-                                    </div>
-                                </div>
+                    <article class="tarjeta-docente flex flex-col rounded-[18px] border border-borde border-t-4 border-t-aguama bg-white p-5 shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)]"
+                        data-nombre="Laura Gómez" data-materia="Matemáticas" data-grado="801 802" data-rango="Docente">
+                        <div class="flex items-start gap-4">
+                            <span class="grid size-[54px] shrink-0 place-items-center rounded-full bg-gradient-to-br from-aguama to-azu font-display text-lg font-bold text-white">LG</span>
+                            <div class="min-w-0 flex-1">
+                                <h3 class="font-display text-[17px] font-bold leading-snug text-azuoscuro">Laura Gómez</h3>
+                                <span class="rango-texto mt-1 inline-flex rounded-full bg-aguama/10 px-2.5 py-0.5 text-[11px] font-semibold text-aguama">Docente</span>
                             </div>
                         </div>
-                        <!-- (el aria-live: polite) le dice al lector de pantalla que espere a que el usuario termine su acción actual o a que el sistema esté inactivo antes de anunciar los nuevos datos agregados -->
-                        <div aria-live="polite"
-                            class="lista-docentes grid grid-cols-2 gap-4 text-left max-[560px]:mx-auto max-[560px]:max-w-[320px] max-[560px]:grid-cols-1">
-                            <!-- targgetass de la base de datos -->
-                        </div>
-                        <p hidden class="sin-resultados mt-[30px] text-[#55677a]">No se encontraron docentes.</p>
-                    </section>
+                        <ul class="mt-4 space-y-1.5 text-[14px] text-sua">
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-book w-4 text-center text-aguama"></i>Matemáticas</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-users-rectangle w-4 text-center text-aguama"></i>Grados: 801, 802</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-phone w-4 text-center text-aguama"></i>300 000 0000</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-regular fa-envelope w-4 text-center text-aguama"></i>laura.gomez@gea.com</li>
+                        </ul>
+                    </article>
 
-                    <!-- Agregar docente -->
-                    <section data-vista="agregar" hidden
-                        class="vista-docentes vista-agregar mt-5 hidden w-[min(100%,620px)] [&:not([hidden])]:block">
-                        <form id="formAgregarDocente"
-                            class="formulario-docente mt-[11px] flex min-h-[330px] w-full flex-row-reverse items-start justify-end gap-[26px] rounded-[20px] border border-[#e1e9f0] bg-white p-8 text-left shadow-[0_10px_26px_rgba(22,50,79,.1)] max-[560px]:flex-col max-[560px]:items-center">
-                            <div
-                                class="campos-docente grid w-full grid-cols-2 items-start gap-x-[18px] gap-y-4 max-[560px]:grid-cols-1">
-                                <label for="nombre"
-                                    class="col-span-full mb-[-8px] w-auto text-[12.5px] font-bold text-[#16324f] [font-family:Poppins,_Segoe_UI,_sans-serif]">Nombre:</label>
-                                <input type="text" id="nombre"
-                                    class="col-span-full h-11 w-full min-w-0 rounded-xl border border-[#e1e9f0] bg-[#f4f8fb] px-[14px] text-sm text-[#16232f] outline-none transition focus:border-[#1f6fb2] focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]"
-                                    required>
-                                <label for="apellido"
-                                    class="col-span-full mb-[-8px] w-auto text-[12.5px] font-bold text-[#16324f] [font-family:Poppins,_Segoe_UI,_sans-serif]">Apellido:</label>
-                                <input type="text" id="apellido"
-                                    class="col-span-full h-11 w-full min-w-0 rounded-xl border border-[#e1e9f0] bg-[#f4f8fb] px-[14px] text-sm text-[#16232f] outline-none transition focus:border-[#1f6fb2] focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]"
-                                    required>
-                                <label for="materia"
-                                    class="col-span-full mb-[-8px] w-auto text-[12.5px] font-bold text-[#16324f] [font-family:Poppins,_Segoe_UI,_sans-serif]">Materia:</label>
-                                <input type="text" id="materia"
-                                    class="col-span-full h-11 w-full min-w-0 rounded-xl border border-[#e1e9f0] bg-[#f4f8fb] px-[14px] text-sm text-[#16232f] outline-none transition focus:border-[#1f6fb2] focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]"
-                                    required>
-                                <label for="grado_encargado"
-                                    class="col-span-full mb-[-8px] w-auto text-[12.5px] font-bold text-[#16324f] [font-family:Poppins,_Segoe_UI,_sans-serif]">Grado
-                                    encargado:</label>
-                                <input type="text" id="grado_encargado"
-                                    class="col-span-full h-11 w-full min-w-0 rounded-xl border border-[#e1e9f0] bg-[#f4f8fb] px-[14px] text-sm text-[#16232f] outline-none transition focus:border-[#1f6fb2] focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]"
-                                    required>
-                                <label for="contacto"
-                                    class="col-span-full mb-[-8px] w-auto text-[12.5px] font-bold text-[#16324f] [font-family:Poppins,_Segoe_UI,_sans-serif]">Contacto:</label>
-                                <input type="text" id="contacto"
-                                    class="col-span-full h-11 w-full min-w-0 rounded-xl border border-[#e1e9f0] bg-[#f4f8fb] px-[14px] text-sm text-[#16232f] outline-none transition focus:border-[#1f6fb2] focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]"
-                                    required>
-                                <label for="rango"
-                                    class="col-auto mb-[-8px] w-auto text-[12.5px] font-bold text-[#16324f] [font-family:Poppins,_Segoe_UI,_sans-serif]">Rango:</label>
-                                <select id="rango"
-                                    class="col-auto h-11 w-full min-w-0 rounded-xl border border-[#e1e9f0] bg-[#f4f8fb] px-[14px] text-sm text-[#16232f] outline-none transition focus:border-[#1f6fb2] focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]"
-                                    required>
-                                    <option value="Docente">Docente</option>
-                                    <option value="Administrativo">Administrativo</option>
-                                </select>
-                                <label for="correo-docente"
-                                    class="col-auto mb-[-8px] w-auto text-[12.5px] font-bold text-[#16324f] [font-family:Poppins,_Segoe_UI,_sans-serif]">Correo:</label>
-                                <input type="email" id="correo-docente"
-                                    class="col-auto h-11 w-full min-w-0 rounded-xl border border-[#e1e9f0] bg-[#f4f8fb] px-[14px] text-sm text-[#16232f] outline-none transition focus:border-[#1f6fb2] focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]"
-                                    required>
-                                <label for="contrasena"
-                                    class="col-auto mb-[-8px] w-auto text-[12.5px] font-bold text-[#16324f] [font-family:Poppins,_Segoe_UI,_sans-serif]">Contraseña:</label>
-                                <input type="password" id="contrasena"
-                                    class="col-auto h-11 w-full min-w-0 rounded-xl border border-[#e1e9f0] bg-[#f4f8fb] px-[14px] text-sm text-[#16232f] outline-none transition focus:border-[#1f6fb2] focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]"
-                                    required>
+                    <article class="tarjeta-docente flex flex-col rounded-[18px] border border-borde border-t-4 border-t-azu bg-white p-5 shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)]"
+                        data-nombre="Carlos Ruiz" data-materia="Español" data-grado="901" data-rango="Administrativo">
+                        <div class="flex items-start gap-4">
+                            <span class="grid size-[54px] shrink-0 place-items-center rounded-full bg-gradient-to-br from-azu to-azuoscuro font-display text-lg font-bold text-white">CR</span>
+                            <div class="min-w-0 flex-1">
+                                <h3 class="font-display text-[17px] font-bold leading-snug text-azuoscuro">Carlos Ruiz</h3>
+                                <span class="rango-texto mt-1 inline-flex rounded-full bg-azu/10 px-2.5 py-0.5 text-[11px] font-semibold text-azu">Administrativo</span>
                             </div>
-                            <!-- <label class="cargar-foto"><input type="file" aria-label="Seleccionar foto"><i aria-hidden="true" hidden class="fa-solid fa-user"></i><span>Agregar Foto</span></label> -->
-                        </form>
+                        </div>
+                        <ul class="mt-4 space-y-1.5 text-[14px] text-sua">
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-book w-4 text-center text-azu"></i>Español</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-users-rectangle w-4 text-center text-azu"></i>Grados: 901</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-phone w-4 text-center text-azu"></i>300 111 1111</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-regular fa-envelope w-4 text-center text-azu"></i>carlos.ruiz@gea.com</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <!-- VISTA: agregar docente -->
+            <section data-vista="agregar" hidden class="mt-5">
+                <form id="formAgregarDocente"
+                    class="mx-auto grid w-full max-w-[640px] grid-cols-2 gap-x-4 gap-y-4 rounded-[20px] border border-borde bg-white p-7 text-left shadow-[0_10px_26px_rgba(22,50,79,0.1)] max-[560px]:grid-cols-1 max-[560px]:p-5">
+
+                    <div><label for="nombre" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Nombre</label>
+                        <input type="text" id="nombre" class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]" required></div>
+                    <div><label for="apellido" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Apellido</label>
+                        <input type="text" id="apellido" class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]" required></div>
+
+                    <div><label for="materia" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Materia</label>
+                        <input type="text" id="materia" class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]" required></div>
+                    <div><label for="grado_encargado" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Grado encargado</label>
+                        <input type="text" id="grado_encargado" class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]" required></div>
+
+                    <div><label for="contacto" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Contacto</label>
+                        <input type="text" id="contacto" class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]" required></div>
+                    <div><label for="rango" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Rango</label>
+                        <select id="rango" class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]" required>
+                            <option value="Docente">Docente</option>
+                            <option value="Administrativo">Administrativo</option>
+                        </select></div>
+
+                    <div><label for="correo-docente" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Correo</label>
+                        <input type="email" id="correo-docente" class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]" required></div>
+                    <div><label for="contrasena" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Contraseña</label>
+                        <input type="password" id="contrasena" class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]" required></div>
+
+                    <div class="col-span-full mt-2 flex justify-end">
                         <button type="button" id="btnAceptar"
-                            class="aceptar-docente mt-5 h-[46px] w-[200px] rounded-full border-0 bg-gradient-to-br from-[#6b4c9a] to-[#8b318b] text-sm font-bold text-white shadow-[0_10px_20px_-8px_rgba(119,31,178,.5)] transition hover:-translate-y-0.5 hover:shadow-[0_14px_24px_-8px_rgba(133,35,199,.5)]">Aceptar</button>
-                    </section>
-
-                    <!-- Pestaña Cambiar Rango -->
-                    <section data-vista="rango" hidden
-                        class="vista-docentes mt-5 hidden w-[min(100%,980px)] [&:not([hidden])]:block">
-                        <div
-                            class="barra-herramientas-docentes relative mx-auto mb-5 flex w-full items-center justify-between">
-                            <label for="buscar-rango"
-                                class="buscador-docentes flex h-[42px] w-[260px] items-center gap-2 rounded-full border border-[#e1e9f0] bg-white px-4 text-[#55677a] shadow-[0_4px_12px_rgba(22,50,79,.06)] max-[560px]:w-full">
-                                <i aria-hidden="true" class="fa-solid fa-magnifying-glass text-sm text-[#1f6fb2]"></i>
-                                <!-- el aria-hidden es para ocultar elementos de las tecnologías de asistencia, como los lectores de pantalla-->
-                                <span class="sr-only absolute size-px overflow-hidden whitespace-nowrap">Buscar
-                                    docente</span>
-                                <input id="buscar-rango" type="search" placeholder="Búsqueda:"
-                                    class="h-full w-full border-0 bg-transparent p-0 text-sm text-[#16232f] outline-none focus:shadow-none">
-                            </label>
-
-                            <div class="filtro-docentes relative flex items-center">
-                                <button type="button" id="abrir-filtro-rango" aria-label="Abrir filtros"
-                                    class="boton-filtro grid h-[42px] w-12 place-items-center rounded-xl border border-[#e1e9f0] bg-white p-0 text-[#16324f] shadow-[0_4px_12px_rgba(22,50,79,.06)] transition hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(22,50,79,.12)]">
-                                    <i class="fa-solid fa-filter"></i>
-                                </button>
-                                <div id="menu-filtros-rango"
-                                    class="menu-filtros absolute right-0 top-[52px] z-20 hidden w-[170px] flex-col gap-2 rounded-[18px] border-2 border-[#222] bg-[#8163ad] p-3 shadow-[0_8px_20px_rgba(0,0,0,.15)] [&.visible]:flex">
-                                    <button type="button" data-filtro="todos"
-                                        class="opcion-filtro seleccionado h-[42px] w-full rounded-[13px] border-2 border-black bg-[#a846a8] px-3 text-base font-bold text-white transition hover:bg-[#a846a8] hover:text-white">Todos</button>
-
-                                    <div class="filtro-con-submenu relative">
-                                        <button type="button" data-filtro="grado" aria-expanded="false"
-                                            aria-controls="submenu-grados-rango"
-                                            class="opcion-filtro opcion-grado relative flex h-[42px] w-full items-center justify-center gap-2 rounded-[13px] border-2 border-black bg-[#f5f5f5] px-3 text-base font-bold text-[#222] transition hover:bg-[#a846a8] hover:text-white">
-                                            Grado <i aria-hidden="true"
-                                                class="fa-solid fa-chevron-right absolute right-3 text-xs transition group-aria-expanded:rotate-90"></i>
-                                        </button>
-                                        <div id="submenu-grados-rango" aria-label="Filtrar por grado"
-                                            class="submenu-grados absolute left-1/2 top-[calc(100%+8px)] z-[110] hidden max-h-[260px] w-[170px] -translate-x-1/2 flex-col gap-[6px] overflow-y-auto rounded-xl border-2 border-[#222] bg-[#8163ad] p-[10px] [&.visible]:flex">
-                                            <button type="button" data-grado="601"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">601</button>
-                                            <button type="button" data-grado="602"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">602</button>
-                                            <button type="button" data-grado="603"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">603</button>
-                                            <button type="button" data-grado="701"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">701</button>
-                                            <button type="button" data-grado="702"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">702</button>
-                                            <button type="button" data-grado="703"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">703</button>
-                                            <button type="button" data-grado="801"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">801</button>
-                                            <button type="button" data-grado="802"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">802</button>
-                                            <button type="button" data-grado="803"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">803</button>
-                                            <button type="button" data-grado="901"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">901</button>
-                                            <button type="button" data-grado="902"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">902</button>
-                                            <button type="button" data-grado="903"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">903</button>
-                                            <button type="button" data-grado="1001"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1001</button>
-                                            <button type="button" data-grado="1002"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1002</button>
-                                            <button type="button" data-grado="1003"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1003</button>
-                                            <button type="button" data-grado="1101"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1101</button>
-                                            <button type="button" data-grado="1102"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1102</button>
-                                            <button type="button" data-grado="1103"
-                                                class="opcion-grado-aula my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">1103</button>
-                                        </div>
-                                    </div>
-
-                                    <div class="filtro-con-submenu relative">
-                                        <button type="button" data-filtro="materia" aria-expanded="false"
-                                            aria-controls="submenu-materias-rango"
-                                            class="opcion-filtro opcion-materia relative flex h-[42px] w-full items-center justify-center gap-2 rounded-[13px] border-2 border-black bg-[#f5f5f5] px-3 text-base font-bold text-[#222] transition hover:bg-[#a846a8] hover:text-white">
-                                            Materia <i aria-hidden="true"
-                                                class="fa-solid fa-chevron-right absolute right-3 text-xs transition group-aria-expanded:rotate-90"></i>
-                                        </button>
-                                        <div id="submenu-materias-rango" aria-label="Filtrar por materia"
-                                            class="submenu-materias absolute left-1/2 top-[calc(100%+8px)] z-[110] hidden max-h-[260px] w-[170px] -translate-x-1/2 flex-col gap-[6px] overflow-y-auto rounded-xl border-2 border-[#222] bg-[#8163ad] p-[10px] [&.visible]:flex">
-                                            <button type="button" data-materia="Español"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Español</button>
-                                            <button type="button" data-materia="Matemáticas"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Matemáticas</button>
-                                            <button type="button" data-materia="Sociales"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Sociales</button>
-                                            <button type="button" data-materia="Ciencias Naturales"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Ciencias
-                                                Naturales</button>
-                                            <button type="button" data-materia="Inglés"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Inglés</button>
-                                            <button type="button" data-materia="Física"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Física</button>
-                                            <button type="button" data-materia="Química"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Química</button>
-                                            <button type="button" data-materia="Tecnología"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Tecnología</button>
-                                            <button type="button" data-materia="Educación Física"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Educación
-                                                Física</button>
-                                            <button type="button" data-materia="Artes"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Artes</button>
-                                            <button type="button" data-materia="Filosofía"
-                                                class="opcion-materia-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Filosofía</button>
-                                        </div>
-                                    </div>
-
-                                    <div class="filtro-con-submenu relative">
-                                        <button type="button" data-filtro="rango" aria-expanded="false"
-                                            aria-controls="submenu-rangos-rango"
-                                            class="opcion-filtro opcion-rango relative flex h-[42px] w-full items-center justify-center gap-2 rounded-[13px] border-2 border-black bg-[#f5f5f5] px-3 text-base font-bold text-[#222] transition hover:bg-[#a846a8] hover:text-white">
-                                            Rango <i aria-hidden="true"
-                                                class="fa-solid fa-chevron-right absolute right-3 text-xs transition group-aria-expanded:rotate-90"></i>
-                                        </button>
-                                        <div id="submenu-rangos-rango" aria-label="Filtrar por rango"
-                                            class="submenu-rangos absolute left-1/2 top-[calc(100%+8px)] z-[110] hidden max-h-[260px] w-[170px] -translate-x-1/2 flex-col gap-[6px] overflow-y-auto rounded-xl border-2 border-[#222] bg-[#8163ad] p-[10px] [&.visible]:flex">
-                                            <button type="button" data-rango="Docente"
-                                                class="opcion-rango-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Docente</button>
-                                            <button type="button" data-rango="Administrativo"
-                                                class="opcion-rango-docente my-1 flex min-h-[38px] w-full items-center justify-center self-center rounded-[7px] border border-[#222] bg-[#f1f1f1] px-[10px] py-[6px] text-center font-serif text-[15px] font-bold text-[#222] hover:bg-[#a846a8] hover:text-white">Administrativo</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            class="lista-docentes lista-docentes-rango grid grid-cols-2 gap-4 text-left max-[560px]:mx-auto max-[560px]:max-w-[320px] max-[560px]:grid-cols-1">
-                            <!-- Las tarjetas se cargarán aquí  -->
-                        </div>
-                    </section>
-
-                    <!-- Modal para cambiar el rango -->
-                    <div id="modalRango" hidden
-                        class="modal-rango fixed inset-0 z-[1000] flex items-center justify-center bg-black/50 [&[hidden]]:hidden">
-
-                        <div
-                            class="contenido-modal w-80 rounded-xl bg-white p-[25px] text-center shadow-[0_5px_15px_rgba(0,0,0,.3)]">
-                            <h3>Cambiar Rango de Docente</h3>
-                            <p id="nombreDocenteModal"></p>
-
-                            <label for="selectNuevoRango">Nuevo Rango:</label>
-                            <select id="selectNuevoRango"
-                                class="my-[15px] w-full rounded-md border border-[#ccc] p-2 text-base">
-                                <option value="Docente">Docente</option>
-                                <option value="Administrativo">Administrativo</option>
-                            </select>
-
-                            <div class="acciones-modal mt-[10px] flex justify-center gap-[10px]">
-                                <button type="button" id="btnGuardarRango">Guardar</button>
-                                <button type="button" id="btnCancelarRango">Cancelar</button>
-                            </div>
-                        </div>
+                            class="h-12 w-[200px] rounded-full bg-gradient-to-r from-aguama to-azu font-display text-[15px] font-semibold text-white shadow-[0_8px_20px_rgba(31,111,178,0.35)] transition-all duration-200 hover:-translate-y-[2px] hover:shadow-[0_12px_26px_rgba(31,111,178,0.45)] max-[560px]:w-full">
+                            Aceptar</button>
                     </div>
-                </section>
-            </main>
-        </section>
-    </header>
+                </form>
+            </section>
 
-    <script src="/js/temporal.js"></script>
+            <!-- VISTA: cambiar rango -->
+            <section data-vista="rango" hidden class="mt-5">
+                <p class="mb-3 text-[14px] text-sua">Toca un docente para cambiar su rango.</p>
+                <div class="lista-docentes-rango grid grid-cols-2 gap-4 text-left max-[640px]:grid-cols-1">
+
+                    <article class="tarjeta-docente tarjeta-cambiar-rango flex cursor-pointer flex-col rounded-[18px] border border-borde border-t-4 border-t-aguama bg-white p-5 shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)]"
+                        data-nombre="Laura Gómez" data-materia="Matemáticas" data-grado="801 802" data-rango="Docente">
+                        <div class="flex items-start gap-4">
+                            <span class="grid size-[54px] shrink-0 place-items-center rounded-full bg-gradient-to-br from-aguama to-azu font-display text-lg font-bold text-white">LG</span>
+                            <div class="min-w-0 flex-1">
+                                <h3 class="font-display text-[17px] font-bold leading-snug text-azuoscuro">Laura Gómez</h3>
+                                <span class="rango-texto mt-1 inline-flex rounded-full bg-aguama/10 px-2.5 py-0.5 text-[11px] font-semibold text-aguama">Docente</span>
+                            </div>
+                        </div>
+                        <span class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-azu">
+                            <i class="fa-solid fa-arrow-right-arrow-left text-[11px]"></i>Cambiar rango</span>
+                    </article>
+
+                    <article class="tarjeta-docente tarjeta-cambiar-rango flex cursor-pointer flex-col rounded-[18px] border border-borde border-t-4 border-t-azu bg-white p-5 shadow-[0_6px_18px_rgba(22,50,79,0.08)] transition-[transform,box-shadow] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_24px_rgba(22,50,79,0.12)]"
+                        data-nombre="Carlos Ruiz" data-materia="Español" data-grado="901" data-rango="Administrativo">
+                        <div class="flex items-start gap-4">
+                            <span class="grid size-[54px] shrink-0 place-items-center rounded-full bg-gradient-to-br from-azu to-azuoscuro font-display text-lg font-bold text-white">CR</span>
+                            <div class="min-w-0 flex-1">
+                                <h3 class="font-display text-[17px] font-bold leading-snug text-azuoscuro">Carlos Ruiz</h3>
+                                <span class="rango-texto mt-1 inline-flex rounded-full bg-azu/10 px-2.5 py-0.5 text-[11px] font-semibold text-azu">Administrativo</span>
+                            </div>
+                        </div>
+                        <span class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-azu">
+                            <i class="fa-solid fa-arrow-right-arrow-left text-[11px]"></i>Cambiar rango</span>
+                    </article>
+                </div>
+            </section>
+
+            <p id="sinDocentes" hidden class="mt-8 text-center text-sua">No se encontraron docentes.</p>
+        </main>
+    </div>
+
+    <!-- MODAL: cambiar rango -->
+    <div id="modalRango" hidden class="fixed inset-0 z-[1000] bg-azuoscuro/50 backdrop-blur-[2px]">
+        <div role="dialog" aria-modal="true" aria-labelledby="tituloModalRango"
+            class="absolute left-1/2 top-1/2 w-[min(92vw,360px)] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[22px] border border-borde bg-white shadow-[0_20px_50px_rgba(22,50,79,0.3)]">
+            <div class="h-1.5 w-full bg-gradient-to-r from-azuoscuro via-azu to-aguama"></div>
+            <div class="p-6 text-center">
+                <h3 id="tituloModalRango" class="font-display text-[18px] font-bold text-azuoscuro">Cambiar rango</h3>
+                <p id="nombreDocenteModal" class="mt-1 text-[14.5px] text-sua"></p>
+
+                <label for="selectNuevoRango" class="mb-1.5 mt-5 block text-left font-display text-[12.5px] font-bold text-azuoscuro">Nuevo rango</label>
+                <select id="selectNuevoRango" class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]">
+                    <option value="Docente">Docente</option>
+                    <option value="Administrativo">Administrativo</option>
+                </select>
+
+                <div class="mt-6 flex gap-3">
+                    <button type="button" id="btnCancelarRango"
+                        class="h-11 flex-1 rounded-full border border-borde font-display text-[14.5px] font-semibold text-sua transition-colors hover:border-azu hover:text-azu">Cancelar</button>
+                    <button type="button" id="btnGuardarRango"
+                        class="h-11 flex-1 rounded-full bg-gradient-to-r from-aguama to-azu font-display text-[14.5px] font-semibold text-white shadow-[0_8px_20px_rgba(31,111,178,0.35)] transition-all hover:-translate-y-[1px]">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/temporal.js"></script>
 </body>
 
 </html>
