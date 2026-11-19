@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        azuoscuro: '#16324f',
+                        azu: '#1f6fb2',
+                        aguama: '#2ca58d',
+                        orro: '#c98b2f',
+                        hue: '#f4f8fb',
+                        blan: '#ffffff',
+                        text: '#16232f',
+                        sua: '#55677a',
+                        borde: '#e1e9f0'
+                    },
+                    fontFamily: {
+                        display: ['Poppins', 'Segoe UI', 'sans-serif'],
+                        texto: ['Inter', 'Segoe UI', 'sans-serif'],
+                        titulo: ['Georgia', 'Times New Roman', 'serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <title>GEA | Calendario</title>
+</head>
+
+<body class="m-0 min-h-screen overflow-x-hidden bg-hue p-0 font-texto text-text">
+
+    <!-- BARRA LATERAL -->
+    <aside aria-label="Navegación principal"
+        class="fixed inset-y-0 left-0 z-30 flex w-[76px] flex-col items-center gap-2 bg-gradient-to-b from-azuoscuro to-[#0e2036] py-5 max-[640px]:top-auto max-[640px]:bottom-4 max-[640px]:left-1/2 max-[640px]:h-[66px] max-[640px]:w-[min(calc(100%-32px),420px)] max-[640px]:-translate-x-1/2 max-[640px]:flex-row max-[640px]:justify-around max-[640px]:gap-0 max-[640px]:rounded-full max-[640px]:px-3 max-[640px]:py-0 max-[640px]:shadow-[0_16px_40px_rgba(14,32,54,0.45)] max-[640px]:ring-1 max-[640px]:ring-white/10">
+
+        <img src="../img/escudo.png" alt="Escudo del colegio" class="mb-3 h-10 w-auto max-[640px]:hidden">
+
+        <a href="../admin/principal.html" aria-label="Noticias-Principal"
+            class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white max-[640px]:rounded-full">
+            <i class="fa-solid fa-newspaper"></i>
+            <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Noticias</span></a>
+
+        <a href="../admin/notfound.html" aria-label="Registro"
+            class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white max-[640px]:rounded-full">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Registro</span></a>
+
+        <a href="../admin/modulo-reportes.html" aria-label="Reportes"
+            class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white max-[640px]:rounded-full">
+            <i class="fa-solid fa-file-lines"></i>
+            <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Reportes</span></a>
+
+        <a href="../admin/modulo-docentes.html" aria-label="Docentes" aria-current="page"
+            class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white max-[640px]:rounded-full ">
+            <i class="fa-solid fa-chalkboard-user"></i>
+            <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Docentes</span></a>
+
+        <a href="../admin/modulo-calendario.html" aria-label="Calendario"
+            class="group relative grid size-[46px] place-items-center rounded-xl bg-gradient-to-br from-aguama to-azu text-[19px] text-white shadow-[0_6px_16px_-6px_rgba(44,165,141,.55)] max-[640px]:rounded-full">
+            <i class="fa-regular fa-calendar-days"></i>
+            <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Calendario</span></a>
+
+        <a href="../admin/modulo-perfil.html" aria-label="Mi perfil"
+            class="group relative mt-auto block size-[52px] shrink-0 max-[640px]:mt-0">
+            <img src="../img/usuario.png" alt="Foto de perfil"
+                class="absolute inset-[8%] h-[84%] w-[84%] rounded-full bg-hue object-cover">
+            <img src="../img/alrededor.png" alt=""
+                class="pointer-events-none absolute inset-0 h-full w-full object-contain">
+            <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Mi perfil</span>
+        </a>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <div class="min-h-screen bg-gradient-to-b from-hue from-70% to-[#d9edfa] pl-[76px] max-[640px]:pb-[110px] max-[640px]:pl-0">
+        <main class="mx-auto w-full max-w-[1040px] px-5 pb-12 pt-8">
+
+            <!-- título -->
+            <div class="w-fit">
+                <h1 class="font-display text-[clamp(22px,3vw,26px)] font-bold leading-none text-azuoscuro">Calendario</h1>
+                <div class="mt-2 h-[5px] w-full rounded-full bg-gradient-to-r from-aguama to-azu"></div>
+            </div>
+            <p class="mt-2 text-[14.5px] text-sua">Evaluaciones, reuniones y eventos del colegio.</p>
+
+            <!-- búsqueda -->
+            <div class="mt-5">
+                <label for="buscar-evento"
+                    class="flex h-[42px] w-[300px] items-center gap-2.5 rounded-full border border-borde bg-white px-4 text-sua shadow-[0_4px_12px_rgba(22,50,79,0.06)] focus-within:border-azu max-[640px]:w-full">
+                    <i class="fa-solid fa-magnifying-glass text-sm text-azu"></i>
+                    <input id="buscar-evento" type="search" placeholder="Buscar evento..."
+                        class="h-full w-full bg-transparent text-sm text-text outline-none placeholder:text-sua/60">
+                </label>
+            </div>
+
+            <div class="mt-5 grid grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] items-start gap-5 max-[900px]:grid-cols-1">
+
+                <!-- CALENDARIO -->
+                <section aria-label="Calendario mensual"
+                    class="rounded-[20px] border border-borde bg-white p-5 shadow-[0_10px_26px_rgba(22,50,79,0.1)]">
+                    <div class="mb-4 flex items-center justify-between">
+                        <p id="tituloMes" class="font-display text-[19px] font-bold text-azuoscuro"></p>
+                        <div class="flex items-center gap-1">
+                            <button type="button" id="btnHoy"
+                                class="mr-1 rounded-full border border-borde px-3.5 py-1.5 text-[13px] font-semibold text-azu transition hover:border-azu">Hoy</button>
+                            <button type="button" id="mesAnterior" aria-label="Mes anterior"
+                                class="grid size-9 place-items-center rounded-full text-sua transition hover:bg-hue hover:text-azu">
+                                <i class="fa-solid fa-chevron-left text-xs"></i></button>
+                            <button type="button" id="mesSiguiente" aria-label="Mes siguiente"
+                                class="grid size-9 place-items-center rounded-full text-sua transition hover:bg-hue hover:text-azu">
+                                <i class="fa-solid fa-chevron-right text-xs"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="mb-2 grid grid-cols-7 gap-1.5 text-center text-[11.5px] font-semibold uppercase tracking-wider text-sua">
+                        <span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span>
+                    </div>
+                    <div id="diasCalendario" class="grid grid-cols-7 gap-1.5"></div>
+
+                    <div class="mt-4 flex flex-wrap items-center gap-x-5 gap-y-1 border-t border-borde pt-3 text-[12px] text-sua">
+                        <span class="flex items-center gap-1.5"><span class="size-1.5 rounded-full bg-orro"></span>Día con eventos</span>
+                        <span class="flex items-center gap-1.5"><span class="size-2.5 rounded-md ring-1 ring-azu/50"></span>Hoy</span>
+                    </div>
+                </section>
+
+                <!-- EVENTOS + FORMULARIO -->
+                <div class="space-y-5">
+
+                    <section aria-live="polite"
+                        class="rounded-[20px] border border-borde border-t-4 border-t-aguama bg-white p-5 shadow-[0_6px_18px_rgba(22,50,79,0.08)]">
+                        <div class="flex items-start justify-between gap-3">
+                            <div class="min-w-0">
+                                <p id="etiquetaLista" class="text-[11px] font-semibold uppercase tracking-wider text-aguama">Eventos del día</p>
+                                <h2 id="tituloDia" class="mt-0.5 font-display text-[17px] font-bold leading-snug text-azuoscuro"></h2>
+                            </div>
+                            <span id="contadorEventos"
+                                class="shrink-0 rounded-full bg-aguama/10 px-2.5 py-1 text-[12px] font-semibold text-aguama"></span>
+                        </div>
+                        <div

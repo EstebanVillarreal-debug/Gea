@@ -273,7 +273,7 @@ async function cargarDocentesRango() {
 }
 
 // buscador y filtro
-// ========== BUSCADOR / FILTRO (idéntico en las dos pestañas) ==========
+// BUSCADOR / FILTRO (idéntico en las dos pestañas)
 function normalizar(texto) {
     return (texto || "")
         .toLowerCase()
