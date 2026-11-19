@@ -29,8 +29,7 @@
                     },
                     fontFamily: {
                         display: ['Poppins', 'Segoe UI', 'sans-serif'],
-                        texto: ['Inter', 'Segoe UI', 'sans-serif'],
-                        titulo: ['Georgia', 'Times New Roman', 'serif']
+                        texto: ['Inter', 'Segoe UI', 'sans-serif']
                     }
                 }
             }
@@ -42,36 +41,38 @@
 <body
     class="bg-hue m-0 p-0 font-texto text-text flex flex-col items-center justify-start text-center min-h-screen overflow-x-hidden">
 
-    <header class="landing w-full">
+    <header>
         <!-- Zona de Landing -->
         <!--class="landing"-->
         <div class="w-full min-h-screen pt-[118px] px-6 pb-[70px] relative flex flex-col items-center gap-[26px]">
             <!--class="titulo"-->
-            <div
-                class="titulo w-full min-h-[45px] top-0 left-0 px-[34px] py-[14px] flex flex-col justify-center items-center bg-gradient-to-r from-azuoscuro via-azu to-aguama rounded-b-[22px] shadow-[0_8px_20px_rgba(22,50,79,0.25)] fixed z-10">
+            <div class="w-full min-h-[45px] top-0 left-0 px-[34px] py-[14px] flex flex-col justify-center items-center bg-gradient-to-r from-azuoscuro via-azu to-aguama rounded-b-[22px] shadow-[0_8px_20px_rgba(22,50,79,0.25)] fixed z-10" >
                 <!--class="h1"-->
                 <h1
                     class="m-0 font-serif text-[clamp(50px,6vw,44px)] font-extrabold tracking-[1px] text-white leading-none">
                     GEA</h1>
-                <!--class="perro"-->
-                <p
-                    class="mt-[6px] mb-0 mx-0 font-serif text-[clamp(12px,2vw,15px)] font-medium tracking-[0.5px] text-white/90 leading-[normal]">
-                    Gestion Estudiantil Avanzada</p>
+                    <!--class="p"-->
+                <p class="mt-[6px] mb-0 mx-0 font-serif text-[clamp(12px,2vw,15px)] font-medium tracking-[0.5px] text-white/90"
+                >Gestion Estudiantil Avanzada</p>
             </div>
 
             <!--class="insignia"-->
             <div class="insignia w-full flex flex-wrap justify-center gap-[12px]">
                 <!--class="pila"-->
+<<<<<<< HEAD
+                <span class="inline-flex items-center gap-2 px-[18px] py-2 rounded-full bg-blan border border-borde shadow-[0_3px_10px_rgba(22,50,79,0.08)] text-sm font-semibold text-azuoscuro">
+=======
                 <span
                     class="pila inline-flex items-center gap-2 px-[18px] py-2 rounded-full bg-blan border border-borde shadow-[0_3px_10px_rgba(22,50,79,0.08)] text-sm font-semibold text-azuoscuro transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_8px_14px_rgba(22,50,79,0.12)]">
+>>>>>>> 562f5230bb4887d353a7c312f9d1ca21a1a6d3ec
                     <!--class="i"-->
-                    <i class="pila fa-solid fa-bolt text-aguama text-sm animate-pulse"></i>
+                    <i class="fa-solid fa-bolt text-aguama text-sm"></i> 
                     Eficiente</span>
                 <!--class="pila"-->
                 <span
                     class="inline-flex items-center gap-2 px-[18px] py-2 rounded-full bg-blan border border-borde shadow-[0_3px_10px_rgba(22,50,79,0.08)] text-sm font-semibold text-azuoscuro transition-[transform,box-shadow] duration-200 ease-in-out hover:-translate-y-[3px] hover:shadow-[0_8px_14px_rgba(22,50,79,0.12)]">
                     <!--class="i"-->
-                    <i class="pila fa-solid fa-shield-halved text-aguama text-sm animate-pulse"></i>
+                    <i class="fa-solid fa-shield-halved text-aguama text-sm"></i> 
                     Segura</span>
                 <!--class="pila"-->
                 <span
@@ -93,12 +94,7 @@
                         plataforma web sencilla, pensada para colegios.
                     </p>
                 </div>
-
-                <div
-                    class="intro max-w-[350px] justify-self-end max-[900px]:justify-self-center rounded-[18px] shadow-[0_12px_28px_rgba(22,50,79,0.14)] overflow-hidden">
-                    <img src="img/logo.png" alt="logo" class="block w-full h-auto">
-                </div>
-            </section>
+            </div>
 
             <!-- fila de tarjetas -->
             <!--class="fila-carac"-->
@@ -369,6 +365,8 @@
                         </ul>
                     </div>
                 </div>
+<<<<<<< HEAD
+=======
 
                 <!-- beneficios por usuario -->
                 <section class="w-[min(100%,1120px)] flex flex-col items-center gap-2 mt-6">
@@ -414,17 +412,36 @@
                     </div>
                 </section>
 
+>>>>>>> 57a95153ccc0e61422742e791b3fb901bdb8f66c
             </div>
 
             <!--class="ingresar"-->
             <div class="ingresar">
                 <!--class="btn-ingresar"-->
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <button class="bg-gradient-to-r from-aguama to-azu border-none w-[190px] h-[42px] font-display text-base font-semibold text-white fixed top-[26px] right-[42px] rounded-full shadow-[0_6px_16px_rgba(31,111,178,0.35)] z-[11] cursor-pointer transition-[transform,box-shadow] duration-150 ease-in-out hover:-translate-y-[2px] hover:shadow-[0_10px_22px_rgba(31,111,178,0.45)]">Ingresa ahora</button>
+=======
+                <button
+                    href="login.html" class="btn-ingresar fixed top-[26px] right-[42px] z-[11] w-[190px] h-[42px] rounded-full border border-white/25 bg-gradient-to-r from-aguama to-azu backdrop-blur-md font-display text-[16px] font-semibold text-white shadow-[0_4px_14px_rgba(0,0,0,0.12)] cursor-pointer transition-all duration-200 ease-in-out hover:bg-azuoscuro hover:-translate-y-[2px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.2)] max-md:top-auto max-md:right-auto max-md:left-1/2 max-md:-translate-x-1/2 max-md:bottom-[15px] max-md:w-[min(280px,calc(100%-40px))] max-md:z-[30] max-md:h-[45px] max-md:border-0 max-md:text-white max-md:bg-gradient-to-r max-md:from-aguama max-md:to-azu">
+=======
                 <button href="login.html"
                     class="btn-ingresar fixed top-[26px] right-[42px] z-[11] w-[190px] h-[42px] rounded-full border border-white/25 bg-gradient-to-r from-aguama to-azu backdrop-blur-md font-display text-[16px] font-semibold text-white shadow-[0_4px_14px_rgba(0,0,0,0.12)] cursor-pointer transition-all duration-200 ease-in-out hover:bg-azuoscuro hover:-translate-y-[2px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.2)] max-md:top-auto max-md:right-auto max-md:left-1/2 max-md:-translate-x-1/2 max-md:bottom-[15px] max-md:w-[min(280px,calc(100%-40px))] max-md:z-[30] max-md:h-[45px] max-md:border-0 max-md:text-white max-md:bg-gradient-to-r max-md:from-aguama max-md:to-azu">
+>>>>>>> 562f5230bb4887d353a7c312f9d1ca21a1a6d3ec
                     Ingresa ahora</button>
+>>>>>>> 57a95153ccc0e61422742e791b3fb901bdb8f66c
             </div>
         </div>
 
+<<<<<<< HEAD
+
+        <!-- Footer  -->
+        <!--class="footer-gea"-->
+        <footer class="w-full mt-5 bg-gradient-to-b from-azuoscuro to-[#0e2036] border-t-[3px] border-t-aguama pt-[48px] px-[24px] pb-[36px] text-left text-white">
+            <!--class="footer-inner"-->
+            <div class="footer-inner w-[min(100%,1120px)] my-0 mx-auto flex flex-wrap gap-[40px]">
+                <!--class="footer-marca"-->
+=======
         <!--footer-->
         <footer
             class="footer-gea w-full mt-5 bg-gradient-to-b from-azuoscuro to-[#0e2036] border-t-[3px] border-t-aguama pt-[48px] px-[24px] pb-[28px] text-left text-white">
@@ -432,6 +449,7 @@
             <!--fila 1: columnas -->
             <div class="footer-inner w-[min(100%,1120px)] mx-auto flex flex-wrap gap-[40px]">
 
+>>>>>>> 562f5230bb4887d353a7c312f9d1ca21a1a6d3ec
                 <div class="footer-marca flex-[1_1_240px] max-w-[280px]">
                     <h2 class="font-display text-[26px] font-extrabold mb-[10px] tracking-[1px] text-white">GEA</h2>
                     <p class="text-[14px] leading-[1.5] text-white/70 mb-[8px]">GEA - Gestión Estudiantil Avanzada</p>
