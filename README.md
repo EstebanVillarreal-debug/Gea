@@ -67,21 +67,25 @@ El proyecto contempla la posibilidad de incorporar posteriormente más escuelas,
 ## 🛠️ Tecnologías utilizadas
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 
-El sitio web utiliza además **Google Fonts**, **Font Awesome** y un mapa integrado de Google Maps.
+El sitio web utiliza además **Google Fonts**, **Font Awesome** y un mapa integrado de **Google Maps**.
 
 ## 📁 Estructura básica del proyecto
 
 ```text
 GEA/
+├── 📁admin
+├── 📁docente
+├── 📁future
 ├── 📁img
-├── styles.css
-├── README.md
-├── script.js
-└── index.html
+├── 📁js
+├── index.html
+├── login.html
+├── notfound.html
+└── README.md
 ```
 
 ## ▶️ Ejecución
@@ -90,10 +94,7 @@ La versión actual corresponde a una **versión Beta (2026)**.
 
 Para visualizar la interfaz web:
 
-1. Descarga o clona el proyecto.
-2. Mantén la estructura de carpetas y archivos.
-3. Abre el archivo `index.html` en un navegador web.
-4. Asegúrate de que los archivos CSS, JavaScript e imágenes estén ubicados en las rutas correspondientes.
+1. Abre nuestro GitHHub pages y visualiza nuestro proyecto: https://estebanvillarreal-debug.github.io/Gea/
 
 ## 👥 Equipo de desarrollo
 
@@ -119,3 +120,6 @@ Para visualizar la interfaz web:
 
 **GEA — Gestión Estudiantil Avanzada**  
 Plataforma digital enfocada en la gestión académica y administrativa.
+
+---
+**© Todos los derechos reservados**
