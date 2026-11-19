@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        azuoscuro: '#16324f',
+                        azu: '#1f6fb2',
+                        aguama: '#2ca58d',
+                        orro: '#c98b2f',
+                        hue: '#f4f8fb',
+                        blan: '#ffffff',
+                        text: '#16232f',
+                        sua: '#55677a',
+                        borde: '#e1e9f0'
+                    },
+                    fontFamily: {
+                        display: ['Poppins', 'Segoe UI', 'sans-serif'],
+                        texto: ['Inter', 'Segoe UI', 'sans-serif'],
+                        titulo: ['Georgia', 'Times New Roman', 'serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <title>GEA | Perfil</title>
+</head>
+
+<body class="m-0 min-h-screen overflow-x-hidden bg-hue p-0 font-texto text-text">
+
+    <!-- BARRA LATERAL -->
+    <aside aria-label="Navegación principal"
+        class="fixed inset-y-0 left-0 z-30 flex w-[76px] flex-col items-center gap-2 bg-gradient-to-b from-azuoscuro to-[#0e2036] py-5 max-[640px]:top-auto max-[640px]:bottom-4 max-[640px]:left-1/2 max-[640px]:h-[66px] max-[640px]:w-[min(calc(100%-32px),420px)] max-[640px]:-translate-x-1/2 max-[640px]:flex-row max-[640px]:justify-around max-[640px]:gap-0 max-[640px]:rounded-full max-[640px]:px-3 max-[640px]:py-0 max-[640px]:shadow-[0_16px_40px_rgba(14,32,54,0.45)] max-[640px]:ring-1 max-[640px]:ring-white/10">
+
+        <img src="../img/escudo.png" alt="Escudo del colegio" class="mb-3 h-10 w-auto max-[640px]:hidden">
+
+        <a href="principal.html" aria-label="Noticias"
+            class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white max-[640px]:rounded-full">
+            <i class="fa-solid fa-newspaper"></i>
+            <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Noticias</span></a>
+
+        <a href="../notfound.html" aria-label="Registro"
+            class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white max-[640px]:rounded-full">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Registro</span></a>
+
+        <a href="modulo-reportes.html" aria-label="Reportes"
+            class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white max-[640px]:rounded-full">
+            <i class="fa-solid fa-file-lines"></i>
+            <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Reportes</span></a>
+
+        <a href="modulo-docentes.html" aria-label="Docentes"
+            class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white max-[640px]:rounded-full">
+            <i class="fa-solid fa-chalkboard-user"></i>
+            <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Docentes</span></a>
+
+        <a href="modulo-calendario.html" aria-label="Calendario"
+            class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white max-[640px]:rounded-full">
+            <i class="fa-regular fa-calendar-days"></i>
+            <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Calendario</span></a>
+
+        <!-- activo: perfil -->
+        <a href="modulo-perfil.html" aria-label="Mi perfil" aria-current="page"
+            class="group relative mt-auto block size-[52px] shrink-0 rounded-full ring-2 ring-aguama ring-offset-2 ring-offset-[#0e2036] max-[640px]:mt-0">
+            <img data-perfil-foto src="../img/usuario.png" alt="Foto de perfil"
+                class="absolute inset-[8%] h-[84%] w-[84%] rounded-full bg-hue object-cover">
+            <img src="../img/alrededor.png" alt=""
+                class="pointer-events-none absolute inset-0 h-full w-full object-contain">
+            <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Mi perfil</span>
+        </a>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <div class="min-h-screen bg-gradient-to-b from-hue from-70% to-[#d9edfa] pl-[76px] max-[640px]:pb-[110px] max-[640px]:pl-0">
+        <main class="mx-auto w-full max-w-[1040px] px-5 pb-12 pt-8">
+
+            <!-- título -->
+            <div class="w-fit">
+                <h1 class="font-display text-[clamp(22px,3vw,26px)] font-bold leading-none text-azuoscuro">Perfil</h1>
+                <div class="mt-2 h-[5px] w-full rounded-full bg-gradient-to-r from-aguama to-azu"></div>
+            </div>
+            <p class="mt-2 text-[14.5px] text-sua">Tu información y la configuración de tu cuenta.</p>
+
+            <div class="mt-6 grid grid-cols-[minmax(0,330px)_minmax(0,1fr)] items-start gap-5 max-[860px]:grid-cols-1">
+
+                <!-- tarjeta de la persona -->
+                <section
+                    class="relative overflow-hidden rounded-[22px] border border-borde bg-white p-7 text-center shadow-[0_8px_24px_rgba(22,50,79,0.08)]">
+                    <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-azuoscuro via-azu to-aguama"></div>
+
+                    <div class="relative mx-auto size-[160px]">
+                        <img id="perfilFoto" data-perfil-foto src="../img/usuario.png" alt="Foto de perfil"
+                            class="absolute inset-[8%] h-[84%] w-[84%] rounded-full bg-hue object-cover">
+                        <img src="../img/alrededor.png" alt=""
+                            class="pointer-events-none absolute inset-0 h-full w-full object-contain">
+                    </div>
+
+                    <h2 id="perfilNombre" data-perfil-nombre
+                        class="mt-4 break-words font-display text-[clamp(22px,3vw,26px)] font-extrabold leading-tight text-azuoscuro">
+                        Pepito Perez</h2>
+                    <span
+                        class="mt-2 inline-flex items-center gap-1.5 rounded-full bg-aguama/10 px-3 py-1 text-[11.5px] font-semibold uppercase tracking-wider text-aguama">
+                        <i class="fa-solid fa-user-shield text-[10px]"></i>Administrativo</span>
+                    <p class="mt-4 flex items-center justify-center gap-2 border-t border-borde pt-4 text-[13px] text-sua">
+                        <img src="../img/escudo.png" alt="" class="h-6 w-auto">Colegio Nacional Ismael Perdomo Borrero</p>
+                </section>
+
+                <!-- configuración -->
+                <section
+                    class="rounded-[22px] border border-borde border-t-4 border-t-aguama bg-white p-6 shadow-[0_6px_18px_rgba(22,50,79,0.08)]">
+                    <p class="text-[11px] font-semibold uppercase tracking-wider text-aguama">Cuenta</p>
+                    <h2 class="font-display text-[20px] font-bold text-azuoscuro">Configuración</h2>
+
+                    <div class="mt-5 grid grid-cols-2 gap-4 max-[560px]:grid-cols-1">
+                        <button type="button" data-abrir="modalFoto"
+                            class="group flex items-center gap-4 rounded-[16px] border border-borde bg-hue/60 p-4 text-left transition hover:-translate-y-[2px] hover:border-azu hover:bg-white">
+                            <span class="grid size-[46px] shrink-0 place-items-center rounded-[12px] bg-white text-[20px] text-aguama shadow-sm">
+                                <i class="fa-solid fa-camera"></i></span>
+                            <span class="min-w-0">
+                                <span class="block font-display text-[15px] font-bold text-azuoscuro">Cambiar foto</span>
+                                <span class="mt-0.5 block text-[13px] leading-snug text-sua">Toma una foto o elige una de tu galería.</span>
+                            </span>
+                        </button>
+
+                        <button type="button" data-abrir="modalNombre"
+                            class="group flex items-center gap-4 rounded-[16px] border border-borde bg-hue/60 p-4 text-left transition hover:-translate-y-[2px] hover:border-azu hover:bg-white">
+                            <span class="grid size-[46px] shrink-0 place-items-center rounded-[12px] bg-white text-[20px] text-orro shadow-sm">
+                                <i class="fa-solid fa-pen"></i></span>
+                            <span class="min-w-0">
+                                <span class="block font-display text-[15px] font-bold text-azuoscuro">Cambiar nombre</span>
+                                <span class="mt-0.5 block text-[13px] leading-snug text-sua">Así te verán en toda la plataforma.</span>
+                            </span>
+                        </button>
+                    </div>
+
+                    <a href="../index.html" id="cerrar"
+                        class="mt-6 flex h-12 w-full items-center justify-center gap-2 rounded-full border border-[#f3a9a9] font-display text-[14.5px] font-semibold text-[#e53935] transition-colors hover:bg-[#fdf1f1]">
+                        <i class="fa-solid fa-arrow-right-from-bracket text-[13px]"></i>Cerrar sesión</a>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- MODAL: cambiar foto -->
+    <div id="modalFoto" data-modal class="fixed inset-0 z-[1000] flex hidden items-center justify-center bg-azuoscuro/50 backdrop-blur-[2px]">
+        <div role="dialog" aria-modal="true" aria-labelledby="tituloModalFoto"
+            class="w-[min(92vw,380px)] overflow-hidden rounded-[22px] border border-borde bg-white shadow-[0_20px_50px_rgba(22,50,79,0.3)]">
+            <div class="h-1.5 w-full bg-gradient-to-r from-azuoscuro via-azu to-aguama"></div>
+            <div class="p-6 text-center">
+                <h3 id="tituloModalFoto" class="font-display text-[18px] font-bold text-azuoscuro">Cambiar foto</h3>
+
+                <div class="mt-5">
+
+                    <label for="fotoGaleria"
+                        class="flex w-full cursor-pointer flex-col items-center rounded-[16px] border border-borde bg-hue/60 px-3 py-5 text-[13.5px] font-semibold text-azuoscuro transition hover:border-azu">
+                        <i class="fa-solid fa-image text-[26px] text-orro"></i>Abrir galería</label>
+                </div>
+                <input type="file" id="fotoGaleria" accept="image/*" class="sr-only">
+
+                <button type="button" id="quitarFoto"
+                    class="mt-4 text-[13px] font-semibold text-sua transition-colors hover:text-azu">Usar la foto por defecto</button>
+
+                <button type="button" data-cerrar
+                    class="mt-4 h-11 w-full rounded-full border border-borde font-display text-[14.5px] font-semibold text-sua transition-colors hover:border-azu hover:text-azu">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: cambiar nombre -->
+    <div id="modalNombre" data-modal class="fixed inset-0 z-[1000] flex hidden items-center justify-center bg-azuoscuro/50 backdrop-blur-[2px]">
+        <form id="formNombre" role="dialog" aria-modal="true" aria-labelledby="tituloModalNombre"
+            class="w-[min(92vw,380px)] overflow-hidden rounded-[22px] border border-borde bg-white shadow-[0_20px_50px_rgba(22,50,79,0.3)]">
+            <div class="h-1.5 w-full bg-gradient-to-r from-azuoscuro via-azu to-aguama"></div>
+            <div class="p-6">
+                <h3 id="tituloModalNombre" class="text-center font-display text-[18px] font-bold text-azuoscuro">Cambiar nombre</h3>
+
+                <label for="inputNombre" class="mb-1.5 mt-5 block font-display text-[12.5px] font-bold text-azuoscuro">Nombre completo</label>
+                <input type="text" id="inputNombre" maxlength="60" required placeholder="Escribe aquí"
+                    class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition placeholder:text-sua/60 focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]">
+
+                <div class="mt-6 flex gap-3">
+                    <button type="button" data-cerrar
+                        class="h-11 flex-1 rounded-full border border-borde font-display text-[14.5px] font-semibold text-sua transition-colors hover:border-azu hover:text-azu">Cancelar</button>
+                    <button type="submit"
+                        class="h-11 flex-1 rounded-full bg-gradient-to-r from-aguama to-azu font-display text-[14.5px] font-semibold text-white shadow-[0_8px_20px_rgba(31,111,178,0.35)] transition-all hover:-translate-y-[1px]">Guardar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="../js/temporal.js"></script>
+</body>
+
+</html>
