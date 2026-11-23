@@ -47,32 +47,33 @@
 
         <img src="../img/escudo.png" alt="Escudo del colegio" class="mb-3 h-10 w-auto max-[640px]:hidden">
 
-        <a href="../admin/principal.html" aria-label="Noticias-Principal"
+        <a href="principal.html" aria-label="Noticias"
             class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white max-[640px]:rounded-full">
             <i class="fa-solid fa-newspaper"></i>
             <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Noticias</span></a>
 
-        <a href="../admin/notfound.html" aria-label="Registro"
+        <a href="notfound.html" aria-label="Registro"
             class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white max-[640px]:rounded-full">
             <i class="fa-solid fa-clipboard-list"></i>
             <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Registro</span></a>
 
-        <a href="../admin/modulo-reportes.html" aria-label="Reportes"
+        <a href="notfound.html" aria-label="Reportes"
             class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white max-[640px]:rounded-full">
             <i class="fa-solid fa-file-lines"></i>
             <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Reportes</span></a>
 
-        <a href="../admin/modulo-docentes.html" aria-label="Docentes" aria-current="page"
-            class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white max-[640px]:rounded-full ">
+        <a href="modulo-docentes.html" aria-label="Docentes"
+            class="group relative grid size-[46px] place-items-center rounded-xl text-[19px] text-white/55 transition hover:bg-white/10 hover:text-white max-[640px]:rounded-full">
             <i class="fa-solid fa-chalkboard-user"></i>
             <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Docentes</span></a>
 
-        <a href="../admin/modulo-calendario.html" aria-label="Calendario"
+        <!-- activo -->
+        <a href="modulo-calendario.html" aria-label="Calendario" aria-current="page"
             class="group relative grid size-[46px] place-items-center rounded-xl bg-gradient-to-br from-aguama to-azu text-[19px] text-white shadow-[0_6px_16px_-6px_rgba(44,165,141,.55)] max-[640px]:rounded-full">
             <i class="fa-regular fa-calendar-days"></i>
             <span class="pointer-events-none absolute left-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-azuoscuro px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 max-[640px]:hidden">Calendario</span></a>
 
-        <a href="../admin/modulo-perfil.html" aria-label="Mi perfil"
+        <a href="notfound.html" aria-label="Mi perfil"
             class="group relative mt-auto block size-[52px] shrink-0 max-[640px]:mt-0">
             <img src="../img/usuario.png" alt="Foto de perfil"
                 class="absolute inset-[8%] h-[84%] w-[84%] rounded-full bg-hue object-cover">
@@ -146,4 +147,54 @@
                             <span id="contadorEventos"
                                 class="shrink-0 rounded-full bg-aguama/10 px-2.5 py-1 text-[12px] font-semibold text-aguama"></span>
                         </div>
-                        <div
+                        <div id="listaEventos" class="mt-4 space-y-3"></div>
+                        <p id="sinEventos" hidden
+                            class="mt-4 rounded-xl border border-dashed border-borde px-4 py-6 text-center text-[14px] text-sua"></p>
+                    </section>
+
+                    <section class="rounded-[20px] border border-borde bg-white p-5 shadow-[0_10px_26px_rgba(22,50,79,0.1)]">
+                        <p class="text-[11px] font-semibold uppercase tracking-wider text-orro">Nuevo evento</p>
+                        <h2 id="fechaForm" class="mt-0.5 mb-4 font-display text-[16px] font-bold text-azuoscuro"></h2>
+
+                        <form id="formEvento" class="grid grid-cols-2 gap-x-4 gap-y-4 text-left max-[480px]:grid-cols-1">
+                            <div class="col-span-full">
+                                <label for="eventoNombre" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Nombre del evento</label>
+                                <input type="text" id="eventoNombre" required
+                                    class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]">
+                            </div>
+                            <div>
+                                <label for="eventoHora" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Hora</label>
+                                <input type="time" id="eventoHora" required
+                                    class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]">
+                            </div>
+                            <div>
+                                <label for="eventoLugar" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Lugar</label>
+                                <input type="text" id="eventoLugar"
+                                    class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]">
+                            </div>
+                            <div class="col-span-full">
+                                <label for="eventoInvitados" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Invitados</label>
+                                <input type="text" id="eventoInvitados"
+                                    class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]">
+                            </div>
+                            <div class="col-span-full">
+                                <label for="eventoExcusas" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Excusas</label>
+                                <textarea id="eventoExcusas" rows="2"
+                                    class="w-full min-w-0 resize-none rounded-xl border border-borde bg-hue px-3.5 py-2.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]"></textarea>
+                            </div>
+                            <div class="col-span-full mt-1 flex justify-end">
+                                <button type="submit"
+                                    class="h-12 w-[200px] rounded-full bg-gradient-to-r from-aguama to-azu font-display text-[15px] font-semibold text-white shadow-[0_8px_20px_rgba(31,111,178,0.35)] transition-all duration-200 hover:-translate-y-[2px] hover:shadow-[0_12px_26px_rgba(31,111,178,0.45)] max-[480px]:w-full">
+                                    Aceptar</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/admin/calendario.js"></script>
+</body>
+
+</html>
