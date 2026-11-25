@@ -31,21 +31,35 @@
     if (!estudiantes) {
         // datos de ejemplo
         estudiantes = [
-            { id: 1, nombre: 'Valentina', apellido: 'Castillo', grado: '1002', contacto: '300 111 2233', ingreso: '2021-02-04', acudiente: 'Andrea Castillo', contactoAcudiente: '300 222 3344', foto: '', reportes: [
-                { id: 11, fecha: '2026-03-10', profesor: 'Hector Toledo', texto: 'Se reportó distracción constante en clases.' },
-                { id: 12, fecha: '2026-03-12', profesor: 'Hector Toledo', texto: 'Presentó retrasos repetidos a primera hora.' }] },
-            { id: 2, nombre: 'Sofía', apellido: 'Rojas', grado: '702', contacto: '300 333 4455', ingreso: '2024-01-15', acudiente: 'Mauricio Rojas', contactoAcudiente: '300 444 5566', foto: '', reportes: [] },
-            { id: 3, nombre: 'Juan', apellido: 'Martínez', grado: '603', contacto: 'Sin número', ingreso: '2025-02-14', acudiente: 'Ana Martínez', contactoAcudiente: '300 555 6677', foto: '', reportes: [
-                { id: 31, fecha: '2026-03-05', profesor: 'Laura Gómez', texto: 'Faltó al respeto en clase y realizó llamado de atención.' },
-                { id: 32, fecha: '2026-03-14', profesor: 'Carlos Ruiz', texto: 'No entregó el trabajo asignado en dos oportunidades.' }] },
-            { id: 4, nombre: 'Camila', apellido: 'López', grado: '1002', contacto: '300 666 7788', ingreso: '2019-02-01', acudiente: 'María López', contactoAcudiente: '300 777 8899', foto: '', reportes: [
-                { id: 41, fecha: '2026-03-17', profesor: 'Carlos Ruiz', texto: 'Se incorporó a una pelea en el salón.' }] }
+            {
+                id: 1, tipo: 'TI', documento: '1000000101', codigo: '31220984457', nombre: 'Valentina', apellido: 'Castillo', grado: '1002', contacto: '300 111 2233', ingreso: '2021-02-04', acudiente: 'Andrea Castillo', contactoAcudiente: '300 222 3344', acuCorreo: 'andrea.castillo@example.com', cursaTecnico: true, foto: '', reportes: [
+                    { id: 11, fecha: '2026-03-10', profesor: 'Hector Toledo', texto: 'Se reportó distracción constante en clases.' },
+                    { id: 12, fecha: '2026-03-12', profesor: 'Hector Toledo', texto: 'Presentó retrasos repetidos a primera hora.' }]
+            },
+            { id: 2, tipo: 'TI', documento: '1000000102', codigo: '70451120893', nombre: 'Sofía', apellido: 'Rojas', grado: '702', contacto: '300 333 4455', ingreso: '2024-01-15', acudiente: 'Mauricio Rojas', contactoAcudiente: '300 444 5566', acuCorreo: '', cursaTecnico: false, foto: '', reportes: [] },
+            {
+                id: 3, tipo: 'RC', documento: '1000000103', codigo: '', nombre: 'Juan', apellido: 'Martínez', grado: '603', contacto: '', ingreso: '2025-02-14', acudiente: 'Ana Martínez', contactoAcudiente: '300 555 6677', acuCorreo: 'ana.martinez@example.com', cursaTecnico: false, foto: '', reportes: [
+                    { id: 31, fecha: '2026-03-05', profesor: 'Laura Gómez', texto: 'Faltó al respeto en clase y realizó llamado de atención.' },
+                    { id: 32, fecha: '2026-03-14', profesor: 'Carlos Ruiz', texto: 'No entregó el trabajo asignado en dos oportunidades.' }]
+            },
+            {
+                id: 4, tipo: 'TI', documento: '1000000104', codigo: '10290552731', nombre: 'Camila', apellido: 'López', grado: '1102', contacto: '300 666 7788', ingreso: '2019-02-01', acudiente: 'María López', contactoAcudiente: '300 777 8899', acuCorreo: '', cursaTecnico: false, foto: '', reportes: [
+                    { id: 41, fecha: '2026-03-17', profesor: 'Carlos Ruiz', texto: 'Se incorporó a una pelea en el salón.' }]
+            }
         ];
         guardar(K_EST, estudiantes);
     }
+    // se completan los campos nuevos
+    estudiantes.forEach((e) => {
+        e.tipo = e.tipo || '';
+        e.documento = e.documento || '';
+        e.codigo = e.codigo || '';
+        e.acuCorreo = e.acuCorreo || '';
+        e.cursaTecnico = !!e.cursaTecnico;
+    });
     let asist = leer(K_ASI, {});
 
-    // faltas: casillas sin marcar, en días que ya pasaron, de hojas guardadas
+    // faltas: casillas sin marcar, en días que ya pasaron
     const faltasDe = (id) => {
         let n = 0;
         Object.entries(asist).forEach(([clave, hoja]) => {
@@ -156,13 +170,23 @@
         const fila = el('div', 'flex items-start justify-between gap-4');
         const datos = el('div', 'min-w-0 space-y-1');
         datos.append(
-            dato('Nombre', e.nombre), dato('Apellido', e.apellido), dato('Grado', e.grado),
+            dato('Nombre', e.nombre), dato('Apellido', e.apellido),
+            dato('Documento', e.documento ? `${e.tipo} ${e.documento}` : '—'),
+            dato('Grado', e.grado),
             dato('Contacto', e.contacto || '—'), dato('Fecha de ingreso', fechaCorta(e.ingreso)),
             dato('Acudiente', e.acudiente), dato('Contacto acudiente', e.contactoAcudiente || '—'),
+            dato('Correo acudiente', e.acuCorreo || 'No tiene'),
             dato('N° de faltas', String(faltasDe(e.id))), dato('N° de reportes', String(e.reportes.length))
         );
         fila.append(datos, avatar(e, 'size-[84px]'));
         t.appendChild(fila);
+
+        if (e.cursaTecnico) {
+            const b = el('span', 'mt-3 inline-flex w-fit items-center gap-1.5 rounded-full bg-azu/10 px-2.5 py-1 text-[11.5px] font-semibold text-azu');
+            b.innerHTML = '<i class="fa-solid fa-laptop-code text-[10px]"></i>';
+            b.append('Técnico en sistemas');
+            t.appendChild(b);
+        }
 
         const hist = el('div', 'mt-4 border-t border-borde pt-3');
         hist.appendChild(el('p', 'font-display text-[13px] font-bold text-azuoscuro', 'Historial'));
@@ -206,8 +230,33 @@
     }
 
     // AGREGAR ESTUDIANTE
+    const TIPOS_DOC = [['TI', 'Tarjeta de identidad'], ['CC', 'Cédula de ciudadanía']];
+    const esMedia = (g) => /^(10|11)\d{2}$/.test(g); // décimo y once
+    const TEL = /^[0-9+ ]{7,20}$/;
+
+    $('estTipo').replaceChildren(...TIPOS_DOC.map(([v, t]) => {
+        const o = el('option', '', `${v} · ${t}`);
+        o.value = v;
+        return o;
+    }));
+    $('estTipo').value = 'TI';
     opciones($('estGrado'), GRADOS, 'Selecciona');
     $('estIngreso').value = hoyIso;
+
+    // campos que aparecen según lo que se elija
+    const actualizarCondicionales = () => {
+        const media = esMedia($('estGrado').value);
+        mostrar($('bloqueTecnico'), media);
+        if (!media) $('estTecnico').checked = false;
+
+        const conCorreo = $('estTieneCorreo').checked;
+        mostrar($('bloqueAcuCorreo'), conCorreo);
+        $('estAcuCorreo').required = conCorreo;
+        if (!conCorreo) $('estAcuCorreo').value = '';
+    };
+    $('estGrado').addEventListener('change', actualizarCondicionales);
+    $('estTieneCorreo').addEventListener('change', actualizarCondicionales);
+    actualizarCondicionales();
 
     let fotoNueva = '';
     const pintarPreview = () => {
@@ -231,6 +280,7 @@
         lector.onload = () => {
             const img = new Image();
             img.onload = () => {
+                // recorte cuadrado a 200 px 
                 const lado = Math.min(img.width, img.height);
                 const c = document.createElement('canvas');
                 c.width = c.height = 200;
@@ -249,18 +299,40 @@
     $('formEstudiante').addEventListener('submit', (ev) => {
         ev.preventDefault();
         const v = (id) => $(id).value.trim();
+
+        const documento = v('estDocumento').replace(/\s+/g, '');
+        const codigo = v('estCodigo');
+        const contacto = v('estContacto');
+        const contactoAcudiente = v('estContactoAcudiente');
+
+        // reglas equivalentes a las de la base de datos
+        if (!/^[A-Za-z0-9]{5,20}$/.test(documento)) { mostrarAviso('El documento debe tener entre 5 y 20 letras o números, sin espacios.', 'error'); return; }
+        if (estudiantes.some((e) => e.documento === documento)) { mostrarAviso('Ya existe un estudiante con ese documento.', 'error'); return; }
+        if (codigo && estudiantes.some((e) => e.codigo === codigo)) { mostrarAviso('Ese código de escaneo ya está asignado a otro estudiante.', 'error'); return; }
+        if (contacto && !TEL.test(contacto)) { mostrarAviso('El contacto del estudiante solo admite números, espacios y +.', 'error'); return; }
+        if (!TEL.test(contactoAcudiente)) { mostrarAviso('Escribe un contacto válido para el acudiente (7 a 20 números).', 'error'); return; }
+
+        const grado = $('estGrado').value;
+        const conCorreo = $('estTieneCorreo').checked;
+
         estudiantes.push({
-            id: Date.now(), nombre: v('estNombre'), apellido: v('estApellido'), grado: $('estGrado').value,
-            contacto: v('estContacto'), ingreso: $('estIngreso').value, acudiente: v('estAcudiente'),
-            contactoAcudiente: v('estContactoAcudiente'), foto: fotoNueva, reportes: []
+            id: Date.now(), tipo: $('estTipo').value, documento, codigo,
+            nombre: v('estNombre'), apellido: v('estApellido'), grado,
+            contacto, ingreso: $('estIngreso').value,
+            acudiente: v('estAcudiente'), contactoAcudiente,
+            acuCorreo: conCorreo ? v('estAcuCorreo').toLowerCase() : '',
+            cursaTecnico: esMedia(grado) && $('estTecnico').checked,
+            foto: fotoNueva, reportes: []
         });
         if (guardar(K_EST, estudiantes)) mostrarAviso('Estudiante agregado.', 'ok');
         else mostrarAviso('Estudiante agregado, pero no se pudo guardar en este navegador.', 'info');
 
         ev.target.reset();
+        $('estTipo').value = 'TI';
         $('estIngreso').value = hoyIso;
         fotoNueva = '';
         pintarPreview();
+        actualizarCondicionales();
         irTab('principal');
     });
 
