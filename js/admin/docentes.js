@@ -1,6 +1,4 @@
-
-
-// módulo docentes 
+// ---------- módulo docentes ----------
 (() => {
     const tabs = document.querySelectorAll('[data-vista-docente]');
     if (!tabs.length) return;
@@ -16,7 +14,7 @@
     const chips = document.querySelectorAll('.chip');
     const seleccion = { grado: null, materia: null, rango: null };
 
-    /* filtrar por búsqueda + chips */
+    /* ----- filtrar por búsqueda + chips ----- */
     const filtrar = () => {
         const texto = buscar.value.trim().toLowerCase();
 
@@ -36,7 +34,7 @@
 
     buscar.addEventListener('input', filtrar);
 
-    /* pestañas */
+    /* ----- pestañas ----- */
     tabs.forEach((t) => {
         t.addEventListener('click', () => {
             const destino = t.dataset.vistaDocente;
@@ -48,7 +46,7 @@
         });
     });
 
-    /* panel de filtros */
+    /* ----- panel de filtros ----- */
     const abrirMenu = (abrir) => {
         menu.hidden = !abrir;
         btnFiltros.setAttribute('aria-expanded', String(abrir));
@@ -80,7 +78,7 @@
         filtrar();
     });
 
-    /* agregar docente (falso)  */
+    /* ----- agregar docente (demostración) ----- */
     document.getElementById('btnAceptar').addEventListener('click', () => {
         const form = document.getElementById('formAgregarDocente');
         if (!form.reportValidity()) return;
@@ -88,7 +86,7 @@
         form.reset();
     });
 
-    /* modal cambiar rango */
+    /* ----- modal cambiar rango ----- */
     const modal = document.getElementById('modalRango');
     const nombreModal = document.getElementById('nombreDocenteModal');
     const selectRango = document.getElementById('selectNuevoRango');

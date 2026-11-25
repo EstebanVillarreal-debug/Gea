@@ -56,16 +56,7 @@ const found = document.getElementById('volverPrincipal');
 if (found) {
     found.addEventListener('click', (e) => {
         e.preventDefault();
-        location.href = '/admin/principal.html';
-    });
-}
-
-//ir a not found - principal
-const modulo = document.getElementById('notfound');
-if (modulo) {
-    modulo.addEventListener('click', (e) => {
-        e.preventDefault();
-        location.href = '/notfound.html';
+        location.href = 'principal.html';
     });
 }
 
