@@ -95,8 +95,8 @@ La versión actual corresponde a una **Beta Frontend (2026)** con almacenamiento
 
 ## 👥 Equipo de desarrollo
 
-- **Juan Esteban Villarreal Ramírez** — Desarrollo Frontend — [GitHub](https://github.com/EstebanVillarreal-debug)
-- **Samuel Gerardo Chavarro García** — Diseño y Módulo de Escaneo — [GitHub](https://github.com/sgchavarro)
+- **Juan Esteban Villarreal Ramírez** — Desarrollador y jefe — [GitHub](https://github.com/EstebanVillarreal-debug)
+- **Samuel Gerardo Chavarro García** — Desarrollador y co-jefe — [GitHub](https://github.com/sgchavarro)
 - **Héctor David Toledo** — Instructor y Acompañamiento SENA — [GitHub](https://github.com/hdtoledo)
 
 ---
