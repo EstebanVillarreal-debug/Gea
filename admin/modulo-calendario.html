@@ -11,7 +11,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="../img/favicon.png">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -128,8 +128,11 @@
                     </div>
                     <div id="diasCalendario" class="grid grid-cols-7 gap-1.5"></div>
 
-                    <div class="mt-4 flex flex-wrap items-center gap-x-5 gap-y-1 border-t border-borde pt-3 text-[12px] text-sua">
-                        <span class="flex items-center gap-1.5"><span class="size-1.5 rounded-full bg-orro"></span>Día con eventos</span>
+                    <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 border-t border-borde pt-3 text-[12px] text-sua">
+                        <span class="flex items-center gap-1.5"><span class="size-2 rounded-full bg-azu"></span>Académico</span>
+                        <span class="flex items-center gap-1.5"><span class="size-2 rounded-full bg-orro"></span>Festivo</span>
+                        <span class="flex items-center gap-1.5"><span class="size-2 rounded-full bg-aguama"></span>Reunión</span>
+                        <span class="flex items-center gap-1.5"><span class="size-2 rounded-full bg-[#e73525]"></span>Evaluación</span>
                         <span class="flex items-center gap-1.5"><span class="size-2.5 rounded-md ring-1 ring-azu/50"></span>Hoy</span>
                     </div>
                 </section>
@@ -148,8 +151,8 @@
                                 class="shrink-0 rounded-full bg-aguama/10 px-2.5 py-1 text-[12px] font-semibold text-aguama"></span>
                         </div>
                         <div id="listaEventos" class="mt-4 space-y-3"></div>
-                        <p id="sinEventos" hidden
-                            class="mt-4 rounded-xl border border-dashed border-borde px-4 py-6 text-center text-[14px] text-sua"></p>
+                        <p id="sinEventos"
+                            class="mt-4 hidden rounded-xl border border-dashed border-borde px-4 py-6 text-center text-[14px] text-sua"></p>
                     </section>
 
                     <section class="rounded-[20px] border border-borde bg-white p-5 shadow-[0_10px_26px_rgba(22,50,79,0.1)]">
@@ -158,18 +161,43 @@
 
                         <form id="formEvento" class="grid grid-cols-2 gap-x-4 gap-y-4 text-left max-[480px]:grid-cols-1">
                             <div class="col-span-full">
-                                <label for="eventoNombre" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Nombre del evento</label>
-                                <input type="text" id="eventoNombre" required
+                                <label for="eventoTitulo" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Título del evento</label>
+                                <input type="text" id="eventoTitulo" maxlength="100" required
                                     class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]">
                             </div>
                             <div>
-                                <label for="eventoHora" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Hora</label>
-                                <input type="time" id="eventoHora" required
+                                <label for="eventoTipo" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Tipo</label>
+                                <select id="eventoTipo" required
                                     class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]">
+                                    <option value="academico">Académico</option>
+                                    <option value="festivo">Festivo</option>
+                                    <option value="reunion">Reunión</option>
+                                    <option value="evaluacion">Evaluación</option>
+                                </select>
                             </div>
                             <div>
                                 <label for="eventoLugar" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Lugar</label>
-                                <input type="text" id="eventoLugar"
+                                <input type="text" id="eventoLugar" maxlength="100"
+                                    class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]">
+                            </div>
+                            <div>
+                                <label for="eventoFechaInicio" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Fecha de inicio</label>
+                                <input type="date" id="eventoFechaInicio" required
+                                    class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]">
+                            </div>
+                            <div>
+                                <label for="eventoHoraInicio" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Hora de inicio</label>
+                                <input type="time" id="eventoHoraInicio" required
+                                    class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]">
+                            </div>
+                            <div>
+                                <label for="eventoFechaFin" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Fecha de fin</label>
+                                <input type="date" id="eventoFechaFin" required
+                                    class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]">
+                            </div>
+                            <div>
+                                <label for="eventoHoraFin" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Hora de fin</label>
+                                <input type="time" id="eventoHoraFin" required
                                     class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]">
                             </div>
                             <div class="col-span-full">
@@ -178,8 +206,8 @@
                                     class="h-11 w-full min-w-0 rounded-xl border border-borde bg-hue px-3.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]">
                             </div>
                             <div class="col-span-full">
-                                <label for="eventoExcusas" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Excusas</label>
-                                <textarea id="eventoExcusas" rows="2"
+                                <label for="eventoDescripcion" class="mb-1.5 block font-display text-[12.5px] font-bold text-azuoscuro">Descripción</label>
+                                <textarea id="eventoDescripcion" rows="2"
                                     class="w-full min-w-0 resize-none rounded-xl border border-borde bg-hue px-3.5 py-2.5 text-sm text-text outline-none transition focus:border-azu focus:bg-white focus:shadow-[0_0_0_3px_rgba(31,111,178,.14)]"></textarea>
                             </div>
                             <div class="col-span-full mt-1 flex justify-end">
@@ -194,6 +222,7 @@
         </main>
     </div>
 
+    <script src="../js/temporal.js"></script>
     <script src="../js/admin/calendario.js"></script>
 </body>
 

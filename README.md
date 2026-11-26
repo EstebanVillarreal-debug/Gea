@@ -79,7 +79,6 @@ El sitio web utiliza además **Google Fonts**, **Font Awesome** y un mapa integr
 GEA/
 ├── 📁admin
 ├── 📁docente
-├── 📁future
 ├── 📁img
 ├── 📁js
 ├── index.html
